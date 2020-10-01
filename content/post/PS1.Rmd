@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Attitudes Towards Bike Lanes In Toronto"
 author: "Isaac Ehrlich"
 date: 2020-09-30
 categories: ["R"]

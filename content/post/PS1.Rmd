@@ -1,5 +1,5 @@
 ---
-title: "Attitudes Towards Bike Lanes In Toronto"
+title: "Preference for Physical Barriers for Bike Lanes In Toronto"
 author: "Isaac Ehrlich"
 date: 2020-09-30
 bibliography: references.bib
@@ -46,9 +46,9 @@ ggplot(q6_freq, aes(x="", y=Freq, fill=Var1)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0) + theme_void() + 
   labs(fill = "Response") + 
-  ggtitle("Bike Lanes on Bloor Provide a Safe Environment")
+  ggtitle("Fig.1 Bike Lanes on Bloor Provide a Safe Environment")
 ```
-As over 80% of responders indicate some sort of agreement, the resounding answer to this question is 'yes'. Unsurprisingly, this is also consistent with previous studies that have shown rubber barriers provided increased protection for bikers, leading to lower mortality rates (@Lusk2013). Reaffirming their support for this project, over 80% of responders also indicated interest in expanding bike lanes, both east, and west of where they are currently present.
+As Figure 1 shows that over 80% of responders indicate some sort of agreement, the resounding answer to this question is 'yes'. Unsurprisingly, this is also consistent with previous studies that have shown rubber barriers provided increased protection for bikers, leading to lower mortality rates (@Lusk2013). Reaffirming their support for this project, as shown in Figure 2 and Figure 3, over 80% of responders also indicated interest in expanding bike lanes, both east, and west of where they are currently present.
 ```{r, echo=FALSE}
 # subsets with response frequencies
 q8e_freq <- data.frame(table(bike_feedback_statistics$`[q8_east]`))[-1,]
@@ -61,12 +61,12 @@ plot_q8e <- ggplot(q8e_freq, aes(x="", y=Freq, fill=Var1)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0) + theme_void() + 
   labs(fill = "Response") + 
-  ggtitle("Bike Lanes Should Extend East on Bloor")
+  ggtitle("Fig.2 Bike Lanes Should Extend East")
 plot_q8w <- ggplot(q8w_freq, aes(x="", y=Freq, fill=Var1)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0) + theme_void() + 
   labs(fill = "Response") + 
-  ggtitle("Bike Lanes Should Extend West on Bloor")
+  ggtitle("Fig.3 Bike Lanes Should Extend West")
 
 # format charts
 grid.arrange(plot_q8e, plot_q8w, ncol=2)
@@ -75,7 +75,7 @@ grid.arrange(plot_q8e, plot_q8w, ncol=2)
 ### Barrier Types
 A more interesting, and perhaps less intuitive question, is which specific bike lane boundaries are preferred, and how biker and driver opinions might differ on the subject. As the survey was taken by both bikers and by drivers, differences in opinions can be investigated by group as well. 
 
-The graph below indicates that bikers were substantially more satisfied with the added rubber curbs than the painted lines.
+Figure 4 and Figure 5 indicate that bikers were substantially more satisfied with the added rubber curbs than the painted lines.
 ```{r, echo=FALSE}
 # subsets with response frequencies
 q17sep0_freq <- data.frame(table(bike_feedback_statistics$`[q17_cyc_separation.0] Paint only`))[-1,]
@@ -88,17 +88,17 @@ plot_17sep0 <- ggplot(q17sep0_freq, aes(x="", y=Freq, fill=Var1)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0) + theme_void() + 
   labs(fill = "Response") + 
-  ggtitle("Biker Satisfaction with Painted Lanes")
+  ggtitle("Fig.4 Biker Satisfaction with Bike Lanes")
 plot_17sep2 <- ggplot(q17sep2_freq, aes(x="", y=Freq, fill=Var1)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0) + theme_void() + 
   labs(fill = "Response") + 
-  ggtitle("Biker Satisfaction with Rubber Curbs")
+  ggtitle("Fig.5 Biker Satisfaction with Extra Curbs")
 
 # format charts
 grid.arrange(plot_17sep0, plot_17sep2, ncol=2)
 ```
-Most compelling in the argument for added curbs however, was the echoing of this support from drivers. In fact, despite narrowed lanes and reduced parking, only 25% of drivers were unsatisfied with rubber barriers. As it turns out, research into driver's attitudes towards bikers has suggested that drivers are in favor of increased separation between themselves and bikers, as they are willing to sacrifice the area of the road under their control for a decreased chance of accidents (@Foster2019).
+Most compelling in the argument for added curbs however, was the echoing of this support from drivers. In fact, despite narrowed lanes and reduced parking, Figure 7 shows only 25% of drivers were unsatisfied with rubber barriers. As it turns out, research into driver's attitudes towards bikers has suggested that drivers are in favor of increased separation between themselves and bikers, as they are willing to sacrifice the area of the road under their control for a decreased chance of accidents (@Foster2019).
 ```{r, echo=FALSE}
 # subsets with response frequencies
 q20sep0_freq <- data.frame(table(bike_feedback_statistics$`[q20_drive_separation.0] Paint only`))[-1,]
@@ -111,12 +111,12 @@ plot_17sep0 <- ggplot(q20sep0_freq, aes(x="", y=Freq, fill=Var1)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0) + theme_void() + 
   labs(fill = "Response") + 
-  ggtitle("Driver Satisfaction with Painted Lanes")
+  ggtitle("Fig.6 Driver Satisfaction with Bike Lanes")
 plot_17sep2 <- ggplot(q20sep2_freq, aes(x="", y=Freq, fill=Var1)) +
   geom_bar(stat="identity", width=1) +
   coord_polar("y", start=0) + theme_void() + 
   labs(fill = "Response") + 
-  ggtitle("Driver Satisfaction with Rubber Curbs")
+  ggtitle("Fig.7 Driver Satisfaction with Extra Curbs")
 
 # format charts
 grid.arrange(plot_17sep0, plot_17sep2, ncol=2)

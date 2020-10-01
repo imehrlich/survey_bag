@@ -9,11 +9,70 @@ bibliography: references.bib
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
+
+# install and load necessary packages
+
+install.packages("tidyverse")
+install.packages("blogdown")
+install.packages("opendatatoronto")
+install.packages("gridExtra")
+
+library(tidyverse)
+library(blogdown)
+library(opendatatoronto)
+library(gridExtra)
+
+# download data
+bike_feedback_package <- search_packages("Bloor Street Bike Lanes Feedback Survey")
+bike_feedback_resources <- bike_feedback_package %>%
+  list_package_resources()
+bike_feedback_statistics <- bike_feedback_resources[1,] %>%
+  get_resource()
 ```
 
 # Abstract
-Reference to @Wickham2019
+As biking increases in the City of Toronto, so does the need for biking safety and consciousness (@Habib2014). In an attempt to ease traffic and alleviate the dangers of biking, the City of Toronto painted bike lanes and installed rubber curbs on one of it's most prominent streets. After piloting this project, the City then conducted a survey of local pedestrians, bikers, and drivers to obtain feedback on their project (@odtBikes). An examination into the survey results reveals strong support for the changes made to protect bikers.
 
 # Introduction
+Navigating any metropolitan area can be difficult and dangerous, especially when your preferred vehicle of transport is a bicycle. As the demand for bicycles in the City of Toronto grew, so did the need for a conscious effort from the City to protect it's bikers (@Habib2014). While many streets in Toronto already sported painted bike lanes, in 2017, the City of Toronto took further action by placing rubber curbs in addition to painted bike lanes onto a small section Bloor Street, a prominent street with a healthy population of bikers (@otdBikes). A survey conducted after these changes were made explored the reception to this added protection from bikers, drivers, pedestrians, and local business owners. The results indicate general satisfaction with the rubber curbs that separate motorized and bicycle traffic, as well as overwhelming agreement on the protective efficacy of bike lanes and support for their expansion. 
+
+# The Data: Discussion and Graphs
+First, the simplest question about these changes to Bloor Street: are they effective? That is, do the added rubber curbs make it safer for bikers to use Bloor Street?
+```{r, echo=FALSE}
+# subset with response frequencies
+q6_freq <- data.frame(table(bike_feedback_statistics$`[q6_main_agree]`))[-1,]
+q6_freq$Var1 <- factor(q6_freq$Var1, levels = c("Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"))
+# pie chart
+ggplot(q6_freq, aes(x="", y=Freq, fill=Var1)) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0) + theme_void() + 
+  labs(fill = "Response") + 
+  ggtitle("Bike Lanes on Bloor Provide a Safe Environment")
+```
+As over 80% of responders indicate some sort of agreement, the resounding answer to this question is 'yes'. Unsurprisingly, this is also consistent with previous studies that have shown rubber barriers provided increased protection for bikers, leading to lower mortality rates (@Lusk2013). Reaffirming their support for this project, over 80% of responders also indicated interest in expanding bike lanes, both east, and west of where they are currently present.
+```{r, echo=FALSE}
+# subsets with response frequencies
+q8e_freq <- data.frame(table(bike_feedback_statistics$`[q8_east]`))[-1,]
+q8e_freq$Var1 <- factor(q8e_freq$Var1, levels = c("Strongly Object", "Somewhat Object", "Neutral", "Somewhat Support", "Strongly Support"))
+q8w_freq <- data.frame(table(bike_feedback_statistics$`[q8_west]`))[-1,]
+q8w_freq$Var1 <- factor(q8w_freq$Var1, levels = c("Strongly Object", "Somewhat Object", "Neutral", "Somewhat Support", "Strongly Support"))
+
+# pie charts
+plot_q8e <- ggplot(q8e_freq, aes(x="", y=Freq, fill=Var1)) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0) + theme_void() + 
+  labs(fill = "Response") + 
+  ggtitle("Bike Lanes Should Extend East on Bloor")
+plot_q8w <- ggplot(q8w_freq, aes(x="", y=Freq, fill=Var1)) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0) + theme_void() + 
+  labs(fill = "Response") + 
+  ggtitle("Bike Lanes Should Extend West on Bloor")
+
+# format charts
+grid.arrange(plot_q8e, plot_q8w, ncol=2)
+```
+
+# Weaknesses and Next Steps
 
 # References

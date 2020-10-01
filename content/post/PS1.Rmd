@@ -128,7 +128,7 @@ Based on the data presented above, an obvious next step is to increase the prese
 
 *The code supporting this analysis is available at <https://github.com/imehrlich/STA304>*
 
-*The original data used in this analysis can be found at <https://open.toronto.ca/dataset/bloor-street-bike-lanes-feedback-survey/>*
+*The original data used in this analysis is available at <https://open.toronto.ca/dataset/bloor-street-bike-lanes-feedback-survey/>*
 
 
 # References

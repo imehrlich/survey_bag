@@ -10,12 +10,12 @@ bibliography: references.bib
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
 
-# install and load necessary packages
+# install and load necessary packages (uncomment if not previously installed)
 
-install.packages("tidyverse")
-install.packages("blogdown")
-install.packages("opendatatoronto")
-install.packages("gridExtra")
+#install.packages("tidyverse")
+#install.packages("blogdown")
+#install.packages("opendatatoronto")
+#install.packages("gridExtra")
 
 library(tidyverse)
 library(blogdown)
@@ -73,6 +73,58 @@ plot_q8w <- ggplot(q8w_freq, aes(x="", y=Freq, fill=Var1)) +
 grid.arrange(plot_q8e, plot_q8w, ncol=2)
 ```
 
+
+A more interesting, and perhaps less intuitive question, is which specific bike lane boundaries are preferred, and how biker and driver opinions might differ on the subject. As the survey was taken by both bikers and by drivers, differences in opinions can be investigated by group as well. 
+
+The graph below indicates bikers were substantially more satisfied with the added rubber curbs than the painted lines.
+```{r, echo=FALSE}
+# subsets with response frequencies
+q17sep0_freq <- data.frame(table(bike_feedback_statistics$`[q17_cyc_separation.0] Paint only`))[-1,]
+q17sep0_freq$Var1 <- factor(q17sep0_freq$Var1, levels = c("Very Unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"))
+q17sep2_freq <- data.frame(table(bike_feedback_statistics$`[q17_cyc_separation.2] Rubber curbs`))[-1,]
+q17sep2_freq$Var1 <- factor(q17sep2_freq$Var1, levels = c("Very Unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"))
+
+# pie charts
+plot_17sep0 <- ggplot(q17sep0_freq, aes(x="", y=Freq, fill=Var1)) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0) + theme_void() + 
+  labs(fill = "Response") + 
+  ggtitle("Biker Satisfaction with Painted Lanes")
+plot_17sep2 <- ggplot(q17sep2_freq, aes(x="", y=Freq, fill=Var1)) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0) + theme_void() + 
+  labs(fill = "Response") + 
+  ggtitle("Biker Satisfaction with Rubber Curbs")
+
+# format charts
+grid.arrange(plot_17sep0, plot_17sep2, ncol=2)
+```
+Most compelling in the argument for added curbs however, was the echoing of this support from drivers. In fact, despite narrowed lanes and reduced parking, only 25% of drivers were unsatisfied with rubber barriers. As it turns out, research into driver's attitudes towards bikers has suggested that drivers are in favor of increased separation between themselves and bikers, as they are willing to sacrifice the area of the road under their control for a decreased chance of accidents (@Foster2019).
+```{r, echo=FALSE}
+# subsets with response frequencies
+q20sep0_freq <- data.frame(table(bike_feedback_statistics$`[q20_drive_separation.0] Paint only`))[-1,]
+q20sep0_freq$Var1 <- factor(q20sep0_freq$Var1, levels = c("Very Unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"))
+q20sep2_freq <- data.frame(table(bike_feedback_statistics$`[q20_drive_separation.2] Rubber curbs`))[-1,]
+q20sep2_freq$Var1 <- factor(q20sep2_freq$Var1, levels = c("Very Unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"))
+
+# pie charts
+plot_17sep0 <- ggplot(q20sep0_freq, aes(x="", y=Freq, fill=Var1)) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0) + theme_void() + 
+  labs(fill = "Response") + 
+  ggtitle("Driver Satisfaction with Painted Lanes")
+plot_17sep2 <- ggplot(q20sep2_freq, aes(x="", y=Freq, fill=Var1)) +
+  geom_bar(stat="identity", width=1) +
+  coord_polar("y", start=0) + theme_void() + 
+  labs(fill = "Response") + 
+  ggtitle("Driver Satisfaction with Rubber Curbs")
+
+# format charts
+grid.arrange(plot_17sep0, plot_17sep2, ncol=2)
+
+```
+
 # Weaknesses and Next Steps
+Based on the data presented above, an obvious next step is to increase the presence of physical barriers between roadways and bike lanes in Toronto. In order to achieve this however, further research is needed to develop a plan for where exactly these barriers are necessary. While the survey provides ample evidence that the general public supports increased physically protected bike lanes, more investigation is necessary before sweeping reform to bike lanes in Toronto should be made. This survey does not investigate factors such as biker traffic, street width, and necessity for parking -- all of which an adequate model for placement of increased bike lane protection should consider. Although this survey suggests that physical barriers between drivers and bikers are desirable, to develop an actionable plan these additional factors must be explored.
 
 # References

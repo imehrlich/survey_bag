@@ -126,4 +126,9 @@ grid.arrange(plot_17sep0, plot_17sep2, ncol=2)
 # Weaknesses and Next Steps
 Based on the data presented above, an obvious next step is to increase the presence of physical barriers between roadways and bike lanes in Toronto. In order to achieve this however, further research is needed to develop a plan for where exactly these barriers are necessary. While the survey provides ample evidence that the general public supports increased physically protected bike lanes, more investigation is necessary before sweeping reform to bike lanes in Toronto should be made. This survey does not investigate factors such as biker traffic, street width, and necessity for parking -- all of which an adequate model for placement of increased bike lane protection should consider. Although this survey suggests that physical barriers between drivers and bikers are desirable, to develop an actionable plan additional factors must be explored.
 
+*The code supporting this analysis is available at <https://github.com/imehrlich/STA304>*
+
+*The original data used in this analysis can be found at <https://open.toronto.ca/dataset/bloor-street-bike-lanes-feedback-survey/>*
+
+
 # References

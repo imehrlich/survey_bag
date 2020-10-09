@@ -92,7 +92,7 @@ ggplot(survey_responses, aes(x=gender)) +
 
 # Plot respondents' registration status
 ggplot(survey_responses, aes(x=registered)) + 
-  geom_bar(fill = "lightblue", color = "black") + theme_minimal() +
+  geom_bar(fill = "lightblue", color = "black", width = 0.5) + theme_minimal() +
   scale_x_discrete(limits = c("Yes", "No")) +
   labs(title = "Figure 2: Registration Status of Respondents",
        x = "Are You Registered?", y = "Number of Respondents")
@@ -108,7 +108,7 @@ ggplot(survey_responses, aes(x=age)) +
        x = "Age", y = "Number of Respondents")
 ```
 
-Further investigation into gender-related voting differences shows that in the Edmonton Centre riding, there is no difference in how voters of different genders make their decisions. Figure 4 shows the party for which voters cast ballots in the previous federal election. Consistent with the 2019 election results, there are more votes for the Conservative that the Liberal Party (ElectionsCanada, 2019). 
+Investigation into gender-related voting differences shows that in the Edmonton Centre riding, there is no difference in how voters of different genders make their decisions. Figure 4 shows the party for which voters cast ballots in the previous federal election. Consistent with the 2019 election results, there are more votes for the Conservative that the Liberal Party (ElectionsCanada, 2019). 
 ```{r, echo=FALSE, warning = FALSE, fig.height=3}
 # Plot repondents' last vote by gender
 ggplot(survey_responses, aes(x=last_vote, fill = gender)) + 

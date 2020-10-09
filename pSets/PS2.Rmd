@@ -160,6 +160,9 @@ ElectionsCanada. (2019). October 21, 2019 Federal Election Results. Government o
 
 Johnston, Richard, J. Scott Matthews, and Amanda Bittner. "Turnout and the party system in Canada, 1988-2004." Electoral Studies 26.4 (2007): 735-745.
 
+R Core Team (2019). R: A language and environment for statistical computing. R Foundation for Statistical
+  Computing, Vienna, Austria. URL https://www.R-project.org/.
+  
 StatisticsCanada. (2016). Edmonton Centre Federal Election Districs Census Profile. Retrieved from \url{https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/details/page.cfm?Lang=E&Geo1=FED&Code1=48014&Geo2=PR&Code2=48&SearchText=Edmonton%20Centre&SearchType=Begins&SearchPR=01&B1=All&GeoLevel=PR&GeoCode=48014&TABID=1&type=0}
 
 Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686,

@@ -1,7 +1,7 @@
 ---
 title: "Limited Justification to 'Computerphobia' in Canada in the 1980s"
 output: pdf_document
-author: Isaac Ehrlich (1004502102)
+author: Isaac Ehrlich
 date: October 19, 2020
 abstract: Whether or not these feelings are warranted, many members of the general public today fear job loss as a consequence of rapidly developing technology in the form of artificial intelligence and robotics (Smith, 2014). In the 1980s similar discomfort came from the adoption and expansion of the use of computers in the workplace (Rosen, 1987). Using data on education and work collected in 1989 as part of the Canadian General Social Survey (GSS), we examine the effect computers had on income and workplace satisfaction in the 1980s, as well as the implications these findings may have on technology-based fears faced by the modern workforce. Our analysis of the GSS data reveals that while Canadians experienced unease about the occupational effects of computing, there is little evidence to suggest negative impact on income and satisfaction.
 ---

@@ -1,0 +1,245 @@
+---
+title: "Limited Justification to 'Computerphobia' in Canada in the 1980s"
+output: pdf_document
+author: Isaac Ehrlich (1004502102)
+date: October 19, 2020
+abstract: Whether or not these feelings are warranted, many members of the general public today fear job loss as a consequence of rapidly developing technology in the form of artificial intelligence and robotics (Smith, 2014). In the 1980s similar discomfort came from the adoption and expansion of the use of computers in the workplace (Rosen, 1987). Using data on education and work collected in 1989 as part of the Canadian General Social Survey (GSS), we examine the effect computers had on income and workplace satisfaction in the 1980s, as well as the implications these findings may have on technology-based fears faced by the modern workforce. Our analysis of the GSS data reveals that while Canadians experienced unease about the occupational effects of computing, there is little evidence to suggest negative impact on income and satisfaction.
+---
+
+## Introduction
+While today's technicians, analysts, and even designers fear losing their jobs to artificially intelligent machines and advanced robotics, technology-induced workplace anxiety is not unique to workers of the present generation. Whether or not developing technology is indeed an unmitigable force in job elimination, the undeniable truth is that developing technology has long been a leading factor of insecurity among the workforce (Rosen, 1987). Similar to the fears exhibited today, in the 1980s, workers became wary of the introduction of computers to the workplace, and the potential effects this may have on their job security. 
+
+To determine the validity of these fears, we turn to data on education and work collected by the Canadian General Social Survey (GSS) in 1989. Using a regression model, we compare and investigate income and job satisfaction as computers are increasingly used in the workforce. Our analysis suggests that while Canadians in 1989 were indeed uneasy about the increased use of computing technology, there is little evidence to suggest that computers had an immediate negative effect on the workforce. The sections below detail the data and model used, as well as the interpretation of these results and the possible implication these results may have on technology-based fears today. Further links to data and analyses can also be found at [https://github.com/imehrlich/STA304](https://github.com/imehrlich/STA304).
+
+## Data
+The data used in this analysis was adapted from the GSS on education and work in 1989. Statistics Canada began collecting data under the umbrella of the GSS in 1985 as a means to investigate social trends and living conditions across the Canadian population, as well as accurately inform social policy issues. The population of this data set included all Canadians over the age of 15 living in Canada's 10 provinces (StatisticsCanada, 1989). In order to obtain a random cross-sectional sample, the surveyors used Random Digit Dialing (RDD) to contact respondents. The sample size of this survey was approximately 10,000 people, however, after removing respondents with missing data, we are left with approximately 4000 respondents.
+
+As the 1989 iteration of the GSS focused on education and work, it included several questions involving how respondents may have been affected by computers, and their opinions on developing technology. As this analysis is focused on investigating the relationship between income, job loss, and the emergence of computers, we focus in on these parts of the data set; specifically, questions involving experience with computers and opinions on their efficacy. Variables of key interest include whether or not respondents had taken classes on computing, whether or not respondents had computers in their workplace, as well as the number of hours respondents spend using a computer at work every week. The distributions of the answers to these questions, as well as questions pertaining to opinions on increased computing can be found in Figures 1-6.
+
+```{r, include = FALSE, warnings = FALSE}
+# load library and data", uncomment if package install is required
+#install.packages("tidyverse")
+#install.packages("gridExtra")
+#install.packages("kableExtra")
+
+library(tidyverse)
+library(gridExtra)
+library(kableExtra)
+
+gss <- read.csv("data/gss1989_clean.csv")
+```
+
+### Opinion Data
+Figures 1 and 2 show that while an overwhelming majority (over $87\%$) of respondents agree that science improves lives, when asked about computers specifically, over 50% disagreed with the notion that computers add jobs.
+
+```{r, echo = FALSE, warnings = FALSE}
+# Plot for opinion on science
+fig1 <- ggplot(gss, aes(x=science_better)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 1: Science Improves Our Lives", x = "Response",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Strongly disagree", "Somewhat disagree",
+                              "No opinion", "Somewhat agree",
+                              "Strongly agree")) +
+    theme(axis.text.x = element_text(angle=315), 
+          plot.title = element_text(size=10),
+          axis.title=element_text(size=8))
+
+# Plot for opinion on computers
+fig2 <- ggplot(gss, aes(x=computers_add_jobs)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 2: Computers Add Jobs", x = "Response",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Strongly disagree", "Somewhat disagree",
+                              "No opinion", "Somewhat agree",
+                              "Strongly agree")) +
+    theme(axis.text.x = element_text(angle=315), 
+          plot.title = element_text(size=10),
+          axis.title=element_text(size=8))
+
+# Format output
+grid.arrange(fig1, fig2, ncol=2)
+```
+
+### Model Data
+Figures 3-6 show the distribution of responses to the variables used as predictors in the model discussed in the upcoming section. These figures show that over $88\%$ of respondents have at least a high school education, but that less than $40\%$ of respondents have taken a computer class and less than $40\%$ have a computer at work. This seems to agree with Figure 6 which shows that over $75\%$ of respondents use a computer for less than 5 hours a week.
+
+```{r, echo = FALSE}
+# Plot for completed high school degree
+fig3 <- ggplot(gss, aes(x=hs_complete)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE, width = 0.5) +
+  theme_minimal() +
+  labs(title = "Figure 3: Respondent Completed High School", x = "Response",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Yes", "No")) +
+    theme(plot.title = element_text(size=8),
+          axis.title=element_text(size=7))
+
+# Plot for completed computer class
+fig4 <- ggplot(gss, aes(x=taken_comp_classes)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE, width = 0.5) +
+  theme_minimal() +
+  labs(title = "Figure 4: Respondent Completed Computer Classes",
+       x = "Response",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Yes", "No")) +
+    theme(plot.title = element_text(size=8),
+          axis.title=element_text(size=7))
+
+# Plot for computer at work
+fig5 <- ggplot(gss, aes(x=work_computer)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE, width = 0.5) +
+  theme_minimal() +
+  labs(title = "Figure 5: Respondent Has a Computer at Work", x = "Response",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Yes", "No")) +
+    theme(plot.title = element_text(size=8),
+          axis.title=element_text(size=7))
+
+# Plot for computer hours at work
+fig6 <- ggplot(gss, aes(x=computer_hours)) + 
+  geom_histogram(fill = "lightblue", color = "black", na.rm=TRUE, bins = 5) +
+  theme_minimal() +
+  labs(title = "Figure 6: Number of Hours Spent at Computer", 
+       subtitle = "(per Week)",
+       x = "Number of Hours",
+       y = "Number of Respondents") +
+    theme(plot.title = element_text(size=8),
+          axis.title=element_text(size=7), 
+          plot.subtitle = element_text(size=6))
+
+# Format output
+grid.arrange(fig3, fig4, fig5, fig6, nrow=2, ncol=2)
+```
+
+As for the variables being predicted, their distributions are shown in Figures 7 and 8. Figure 7 displays the income of respondents, while Figure 8 shows that over $85\%$ of respondents were satisfied with their job. It is important to note that while respondents were asked to rate their satisfaction on a scale, in order to model their responses using a logistic regression, their answers were interpreted as either satisfied, or dissatisfied.
+
+```{r, echo = FALSE}
+# Plot for annual income
+fig7 <- ggplot(gss, aes(x=income)) + 
+  geom_histogram(fill = "lightblue", color = "black", na.rm=TRUE, bins = 10) +
+  theme_minimal() +
+  labs(title = "Figure 7: Total Annual Income", 
+       x = "Income (in CAD)",
+       y = "Number of Respondents") +
+    theme(plot.title = element_text(size=10),
+          axis.title=element_text(size=8))
+          
+# Plot for job satiscation
+fig8 <- ggplot(gss, aes(x=job_satisfaction)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 8: Job Satisfaction", x = "Response",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Strongly dissatisfied", "Somewhat dissatisfied",
+                              "No opinion", "Somewhat satisfied",
+                              "Strongly satisfied")) +
+    theme(axis.text.x = element_text(angle=315), 
+          plot.title = element_text(size=10),
+          axis.title=element_text(size=8))
+
+# Format output
+grid.arrange(fig7, fig8, ncol=2)
+```
+
+
+## Model
+
+As we are attempting to establish a relationship between income and computer-related factors, and income is a numerical variable, we propose a simple linear regression to model income based on education level, computer experience, and computer access and tasks at work by the following model:
+$$\hat{y}_{income} = \beta_0 + \beta_{hs}x_{hs} + \beta_{cs}x_{cs} + \beta_{cw}x_{cw} + \beta_{hw}x_{hw}$$
+where $\hat{y}_{income}$ is the predicted income, $\beta_0$ is an intercept, $x_{hs}$ is a dummy variable indicating the completion of high school, $x_{cs}$ is a dummy variable indicating the completion of a computer course, $x_{cw}$ is a dummy variable indicating access to a computer at work, and $x_{hw}$ indicates the number of hours for which a computer is used each week. While $x_{hs}$ is not implicitly a computer-related predictor, it was included in the model since education is generally a strong predictor for income (Muller, 2002).
+
+```{r, include = FALSE}
+# Income model
+income_model <- lm(income ~ hs_complete + taken_comp_classes + work_computer + computer_hours,
+                   data = gss)
+```
+
+As we are also interested in establishing a relationship between job satisfaction and computer-related factors, we propose a logistic regression, since a logistic model is capable of binomial predictions such as satisfaction/dissatisfaction:
+$$\hat{y}_{satisfaction} = \mbox{logit}(\beta_0 + \beta_{cs}x_{cs} + \beta_{cw}x_{cw} + \beta_{hw}x_{hw})$$
+where $\hat{y}_{satisfaction}$ is a binomial variable (where 1 denotes satisfaction, and 0 denotes dissatisfaction), and the remainder of variables are the same as defined above. Note, we exclude $x_{hs}$ from this model as it is not computer-related and we do not believe education level is an inherently strong predictor for job satisfaction.
+```{r, include = FALSE}
+# Satisfaction model
+satisfaction_model <- glm(satisfaction_binom ~ taken_comp_classes + work_computer + computer_hours, 
+            data = gss, family = "binomial")
+```
+
+## Results
+
+Table 1 displays the results for the income model. It is important to note that all of the predictors are significant when $\alpha = 0.05$, which means that all of the predictors have a significant relationship with income. We can interpret these coefficients then as follows: $^{(1)}$respondents who have completed high school are expected to make $\$1670.53$ more than those who have not completed high school, $^{(2)}$respondents who have taken a computer class are expected to make $\$2386.70$ more than those who have not taken a computer class, $^{(3)}$respondents who have a computer at work are expected to make $\$13941.57$ more than those who do not have a computer at work, and $^{(4)}$for each hour worked at a computer, the respondents' salary is expected to decrease by $\$204.81$. It is also important to note that the p-value of the F-statistics is also significant $(p < 0.0001)$. However, a low R-squared $(R^2 < 0.3)$ also means there is high variability in this data set which is not explained well by this model. 
+```{r, echo = FALSE}
+# Table for income model
+table1 <- income_model %>%
+  broom::tidy() %>%
+  mutate(
+    p.value = scales::pvalue(p.value),
+    term = c("Intercept", "Completed High School", "Completed Computer Class",
+             "Computer at Work", "Number of Computer Hours")
+  ) %>%
+  kableExtra::kable(
+    caption = "Model Fitted to Estimate Income on Computer-Related Factors",
+    col.names = c("Predictor", "Coefficient", "SE", "t", "p"),
+    digits = c(0, 2, 3, 2, 3)
+  )
+
+# Format output
+kable_styling(table1, latex_options = "hold_position")
+```
+
+
+Table 2 displays the results for the satisfaction model. Unlike the income model, the results for the satisfaction model are not significant. While these results theoretically show increased odds of satisfaction with completed computer courses and computer access, and decreased odds with increased computer hours, we cannot establish that this relationship is significant. Briefly, this means we do not have evidence to suggest that there is a significant relationship between computer-related factors such as a completed computer class and overall satisfaction with employment.
+```{r, echo = FALSE}
+# Table for satisfaction model
+table2 <- satisfaction_model %>%
+  broom::tidy() %>%
+  mutate(
+    p.value = scales::pvalue(p.value),
+    term = c("Intercept", "Completed Computer Class",
+             "Computer at Work", "Number of Computer Hours")
+  ) %>%
+  kableExtra::kable(
+    caption = "Model Fitted to Predict Satisfaction on Computer-Related Factors",
+    col.names = c("Predictor", "Coefficient", "SE", "t", "p"),
+    digits = c(0, 2, 3, 2, 3)
+  )
+
+# Format output
+kable_styling(table2, latex_options = "hold_position")
+```
+
+## Discussion
+The bar graphs plotted of the raw GSS data, specifically Figure 2, seem to mirror the hesitancy towards computers described in research of perception of computers in 1980s (Rosen, 1987). Along with Figures 4 and 5, which show limited exposure to computers in class and at work, the graphs describe a hesitancy towards computers, even though they have become more prevalent in the worplace (Rosen, 1987). Despite less that $10\%$ of those with jobs losses in the past year reporting any relation to computer skill, given consistent findings documenting the unease of the general public towards computer effect on job security (Rosen, 1993), it is not unreasonable to interpret these findings as additional evidence of these emotions in the Canadian public in 1989.
+
+However, despite findings of unrest, the models fitted to this data show little evidence that loss in income or satisfaction can be attributed to computing. While the income model shows that those with higher education, including computer classes, as well as access to a computer at work, are expected to have a higher income, the model also shows that annual income is expected to decrease for additional hours worked with computers. While increased income at a company with a computer may be explained away by unknown variables, such as the likelihood that companies that own computers have greater wealth, the model shows an explicit negative relationship between hours worked at a computer and income. Although this may simply suggest that most occupations requiring computers at the time were menial tasks such as data entry or secretarial work, it also suggests the existence and creation of jobs such as design or solution architects that pay better than jobs requiring constant computer work.
+
+Further contradiction to general unrest can be provided by the lack of evidence demonstrated by the logistic regression on satisfaction. While we cannot unequivocally denounce a connection between computing and job satisfaction, the insignificant results mean we lack evidence to establish this relationship as well. In either case, the results of the satisfaction model cannot be interpreted as evidence towards current perceptions of computers in the workplace: that increased computing decreases job satisfaction.
+
+These findings, as well as anecdotal evidence from past interactions between technological advancements and the workforce, suggest not only that the fear of new technology in the workplace was unfounded in the 1980s, but that this pattern may be continuing today. As farmers of the early 20th century who lost work to automated harvesting machinery could not have predicted their grandchildren would be software engineers, so may our generation struggle to see what new positions technology may create, as we focus exlucsively on the negative effects it may bring. While this analysis does not concretely show an absence of negative effects as a result of increased technology use, by using the adoption of computers in the workplace in the 1980s as a case study, it aims to show that the reasoning used in support of 'technophobia' is often inconsistent, as well as historically and statistically unreliable.
+
+## Weaknesses
+While this analysis casts doubt on abstract evidence underlying the fear of the effects of novel technology, the precision and significance of the analyses could have been improved. Most of the responses provided in the survey were incomplete, and the model would have benefited from a greater number of precise responses. For example, while the survey asked respondents to provide their highest level of education, and this metric may has greater specificity than the information on high school completion used in its place, over half of the respondents did not provide an answer to the question of highest education.
+
+In extensions of this work, it would also be fruitful to examine similar metrics at other points in time, when rapid improvement in technology caused similar distress in job security.
+
+## Appendix
+Note, the data used in this analysis is not public, and therefore has been left out of the code repository. Cleaned and raw data can be produced upon evidence of proper lisencing.
+
+## References
+
+Baptiste Auguie. gridExtra: Miscellaneous Functions for "Grid" Graphics. R package version 2.3. (2017): https://CRAN.R-project.org/package=gridExtra
+
+Hao Zhu. kableExtra: Construct Complex Table with 'kable' and Pipe Syntax. R package version 1.2.1. (2020): https://CRAN.R-project.org/package=kableExtra
+  
+Muller, Andreas. "Education, income inequality, and mortality: a multiple regression analysis." BMJ (2002): 23.
+
+R Core Team (2019). R: A language and environment for statistical computing. R Foundation for Statistical
+  Computing, Vienna, Austria. URL https://www.R-project.org/.
+
+Rosen, Larry D., Sears, Deborah C., Weil, Michelle M. "Computerphobia" Behavior Research Methods, Instruments, & Computers. (1987): 19.
+
+Rosen, Larry D., Sears, Deborah C., Weil, Michelle M. "Treating technophobia: A longitudinal evaluation of the computerphobia reduction program" Computers in Human Behavior. (1993): 9.
+
+Smith, Aaron, and Janna Anderson. "AI, Robotics, and the Future of Jobs." Pew Research Center 6 (2014): 51.
+
+StatisticsCanada. General social survey on education and work (cycle 4). (1989).
+
+Wickham et al. Welcome to the tidyverse. Journal of Open Source Software. (2019): 4(43), 1686, https://doi.org/10.21105/joss.01686

@@ -12,7 +12,7 @@ nocite: |
 ---
 
 # Introduction
-From the errors of Literary Digest in 1936 to the mispredicted outcome of the 2016 US presidential election, surevyors and forecasters have often struggled to accurately poll, extrapolate, and predict election winners. Often, as was the case in 1936, this is a result of non-representative samples, a common blight on statisticians' attempts for unbiased surveying and prediction, in and outside of politics. However, post-stratification, a method where responses in smaller surveys are weighed based on population statistics, is a promising method of reducing sampling biases. By weighting responses in accordance to their likely effect among the entire population, analyses that would previously be misleading can be completed on non-representative data sets.
+From the errors of Literary Digest in 1936 to the mispredicted outcome of the 2016 US presidential election, surevyors and forecasters have often struggled to accurately poll, extrapolate, and predict election winners. Often, as was the case in 1936, this is a result of non-representative samples, a common blight on statisticians' attempts for unbiased surveying and prediction, in and out of politics. However, post-stratification, a method where responses in smaller surveys are weighed based on population statistics, is a promising method of reducing sampling biases. By weighting responses in accordance to their likely effect among the entire population, analyses that would previously be misleading can be completed on non-representative data sets.
 
 As elections are a common attracter of non-representative sampling, as well as a common cause for statistical modelling, the upcoming US Presidential election is a promising subject for this technique. In this analysis, we apply a multilevel logistic regression with age, race, and gender as predictors, to the Nationscape Data Set, a survey conducted in order to gauge political opinions across the US [@Voters2020]. However, in order to ensure the reliability of this data, we use the American Community Survey (ACS), an annual large-scale survey, hosted on the IPUMS database, meant to provide regular updates to housing data collected from the US Census every ten years [@IPUMS2020].
 
@@ -131,6 +131,7 @@ victory_model <- glm(vote_2020 ~ gender + race_ethnicity + age,
 A key part of this model and analysis is the post-stratification conducted between our two data sets. Post-stratification is the process of weighing samples based on their proportion relative to the population. This is a key method to use when there is valid concern for non-response or other sampling bias, as this weighting adjusts for over or under sampling of groups. In this specific instance, we assume that the ACS data expresses a more accurate distribution to the true population, and we therefore use this data to adjust weights in the Nationscape data on the basis of gender, race, age, and total income.
 
 ```{r, echo = FALSE, warning = FALSE, message=FALSE}
+# Create data frame for predictors and find post-stratified estimates
 ipums_predictors <- ipums_data[,c(6,7,9)]
 colnames(ipums_predictors) <- c("gender", "age", "race_ethnicity")
 ipums_predictors$estimate <- 
@@ -138,6 +139,7 @@ ipums_predictors$estimate <-
   predict(newdata = ipums_predictors)
 ipums_predictors <- distinct(ipums_predictors)
 
+# Counts for cells 
 ipums_count <- ipums_data %>%
   group_by(age, sex, race) %>% summarise(n())
 colnames(ipums_count)[4] <- "count" 
@@ -172,6 +174,7 @@ kable_styling(table1, latex_options = "hold_position")
 After post-stratification, we can see further detailed results on how different respondents are likely to vote. In the interest of brevity, the full table is shown in the appendix, however, in order to highlight key findings, Table 2 displays examples of differences observed among respondets of different race.
 
 ```{r, echo = FALSE}
+# Table for estimates by race
 ipums_race <- ipums_predictors[c(1,2,21,24,3,7,29,9),1:4]
 rownames(ipums_race) <- NULL
 table2 <- ipums_race %>%
@@ -184,6 +187,7 @@ kable_styling(table2, latex_options = "hold_position")
 Similarly, Table 3 displays examples of estimates when holding all variables other than 'Age' constant.
 
 ```{r, echo = FALSE}
+# Table for estimates by age
 ipums_age <- ipums_predictors[c(1,13,5,10,15,11,7,17),1:4]
 rownames(ipums_age) <- NULL
 table3 <- ipums_age %>%
@@ -196,6 +200,7 @@ kable_styling(table3, latex_options = "hold_position")
 Finally, Table 4 shows exampels of estimates when holding all variables other than 'Gender' constant.
 
 ```{r, echo = FALSE}
+# Table for estimates by gender
 ipums_gender <- ipums_predictors[c(28,32,24,18,2,15,13,6),1:4]
 rownames(ipums_gender) <- NULL
 table4 <- ipums_gender %>%
@@ -211,6 +216,7 @@ After predicting the results using the post-stratified data, we see that Biden i
 
 Before getting into the results and output of the regression model, it may be worthwhile, if for no other reason than to check the sampling bias of the Nationscape data, to compare the proportion of responses from the Nationscape data to the ACS data. Tables 5-7 show how demographic factors compare across data sets.
 ```{r, echo = FALSE, message=FALSE, warning = FALSE}
+# Table to compare race among data sets
 df_prop <- df_data %>% group_by(race_ethnicity) %>% summarise(n())
 df_prop[,2] <- df_prop[,2] / nrow(df_data)
 ipums_prop <- ipums_data %>% group_by(race) %>% summarise(n())
@@ -228,6 +234,7 @@ kable_styling(table5, latex_options = "hold_position")
 ```
 
 ```{r, echo = FALSE, message=FALSE, warning = FALSE}
+# Table to compare gender among data sets
 df_prop <- df_data %>% group_by(gender) %>% summarise(n())
 df_prop[,2] <- df_prop[,2] / nrow(df_data)
 ipums_prop <- ipums_data %>% group_by(sex) %>% summarise(n())
@@ -245,6 +252,7 @@ kable_styling(table6, latex_options = "hold_position")
 ```
 
 ```{r, echo = FALSE, message=FALSE, warning = FALSE}
+# Table to compare age among data sets
 df_prop <- df_data %>% group_by(age) %>% summarise(n())
 df_prop[,2] <- df_prop[,2] / nrow(df_data)
 ipums_prop <- ipums_data %>% group_by(age) %>% summarise(n())
@@ -274,6 +282,7 @@ Additionally, while this model estimates the winner of the popular vote, this is
 
 #Appendix
 ```{r, echo=FALSE}
+# Full table of estimates
 rownames(ipums_predictors) <- NULL
 tableA1 <- ipums_predictors[,1:4] %>%
   kable(caption = "Full Table of Estimates by Demographic Groups",

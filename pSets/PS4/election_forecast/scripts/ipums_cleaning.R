@@ -74,4 +74,5 @@ ipums_data <- ipums_data %>% mutate(inctot = case_when(inctot < 50000 ~ 'Less th
                                                        inctot >= 100000  & inctot < 250000 ~ '$100,000 to $249,999',
                                                        inctot >= 250000 ~ "More than $250,000"))
          
+# Export Data
 write.csv(ipums_data, "data/ipums_data_clean.csv")

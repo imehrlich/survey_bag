@@ -108,4 +108,5 @@ df_data <- df_data %>% mutate(household_income = case_when(household_income == "
 
 df_data <- df_data[!is.na(df_data$race_ethnicity),]
 
+# Export data
 write.csv(df_data, "data/df_data_clean.csv")

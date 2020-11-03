@@ -1,0 +1,7629 @@
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                      CODEBOOK
+
+
+                       General social survey, cycle 4 - 1989
+                                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      General social survey, cycle 4 - 1989                             Page i
+
+
+                                      CONTENTS
+
+
+      item                                                                page
+
+      CASEID             Case Identification Variable                        1
+      dvindb             Status of section b                                 1
+      dvindc             Status of section c                                 1
+      dvindd             Status of section d                                 2
+      dvinhkl            Status of sections h,k,l                            2
+      a3                 Years of high school/elementary completed           3
+      a4                 Graduated from high school?                         3
+      a5aa7a             High school: mathematics course?                    4
+      a5ba7b             High school: chemistry course?                      4
+      a5ca7c             High school: geography course?                      4
+      a5da7d             High school: physics course?                        5
+      a6a8               Any schooling beyond elementary/high school?        5
+      a9                 Presently working on elem/high school graduation    5
+      a10                Ever taken a university/college course in scienc    6
+      a11                Highest level of education                          6
+      a12                Working on degree/dipl/cert?                        7
+      a13                Still working on degree/dipl/cert?                  7
+      a14                Highest degree/dipl/cert completed                  8
+      a16                Reason for choosing field of study                  8
+      a17                Now working on different degree/dipl/cert?          9
+      b2                 Degree/dipl/cert being worked on                    9
+      b4                 Reason for current field of study                  10
+      b5                 Took any courses in current program in last year   10
+      b6                 Student status in courses in last year             11
+      dvb7               Expected year to complete degree/dipl/cert         11
+      b8                 Expected activity after graduation                 11
+      dveducm            Highest completed level of education               12
+      dveda15            Field of study for completed degree/dipl/cert      12
+      dvedb3             Field of study for current degree/dipl/cert        13
+      dvede5             Field of study for planned degree/dipl/cert        14
+      dvc1               Year studies completed/stopped                     14
+      c2                 Main activity after studies completed              15
+      c3                 Ever employed after studies completed?             15
+      c4                 Ever employed since studies completed?             16
+      dvc5               Year first employed after completing program       16
+      c11                Status of employment since studies completed       16
+      c12                Relationship of employment to education            17
+      dvsicc9            Industry of work after leaving school              17
+      dvsicd11           Industry of work before studies                    18
+      dvsicg15           Industry of work in 1988                           19
+      dvsick4            Retired: industry of work at retirement            20
+      dvsic84            Industry of work in 1984                           21
+      dvsic89            Industry of work in last week                      22
+      dvc10soc           Occupation of work after leaving school            23
+      dvd12soc           Occupation of work before studies                  24
+      dvg16soc           Occupation of work in 1988                         25
+      dvk5soc            Retired: occupation of work at retirement          26
+      dvl14soc           Usual occupation                                   26
+      dv84soc            Occupation of work in 1984                         27
+      dv89soc            Occupation of work in last week                    28
+      class              Glc class of occupation in last week               29
+      nusco              Collapsed glc score                                29
+      dvd2               Year studies started                               30
+      d3                 Aged < 15 before starting studies?                 30
+      d4                 Main activity before starting studies              30
+      d5                 Ever employed ft for 6+ months before studies?     31
+      d6                 Duration of ft work before starting studies        31
+      d7                 Year employed ft for 6+ months before studies      31
+      e1                 Plan to start new program within 5 years?          32
+      e2                 Reason for planning new program                    32
+      e3                 New degree/dipl/cert desired                       33
+      e7                 Ever completed an apprenticeship program?          33
+      e8                 Ever taken computer courses?                       33
+      e9                 Can do anything on a computer?                     34
+      e10a               Played computer games in last year?                34
+      e10b               Did computer word processing in last year?         34
+      e10c               Did computer data entry in last year?              35
+      e10d               Did computer record keeping in last year?          35
+      e10e               Did computer data analysis in last year?           35
+      e10f               Written computer programs in last year?            36
+      e10g               Did anything else on computer in last year?        36
+      e11                Personal computer at home?                         36
+      e12                Personally use personal computer at home?          37
+      dve13              Hours per week used                                37
+      f1a                Interest in current affairs                        37
+      f1b                Interest in economic conditions/business issues    38
+      f1c                Interest in new inventions/technologies            38
+      f1d                Interest in recent scientific discoveries          39
+      f2a                Informed about current affairs                     39
+      f2b                Informed about economic conditions/business issu   40
+      f2c                Informed about new inventions/technologies         40
+      f2d                Informed about recent scientific discoveries       41
+      f3a                Attention paid to science/tech tv programs         41
+      f3b                Attention paid to science/tech radio programs      41
+      f4a                Read science/tech newspaper articles               42
+      f4b                Read science/tech magazine articles                42
+      dvf5a              Opinion: science/tech making our lives better      43
+      dvf5b              Opinion: science/tech making work more interesti   43
+      dvf5c              Opinion: computers/automation a net job creator    44
+      dvf5d              Opinion: science changes life too fast             44
+      f6a                Opinion on govt expenses: health care              45
+      f6b                Opinion on govt expenses: helping elderly          45
+      f6c                Opinion on govt expenses: education                46
+      f6d                Opinion on govt expenses: helping unemployed       46
+      f6e                Opinion on govt expenses: scientific research      47
+      f6f                Opinion on govt expenses: helping poor             47
+      f6g                Opinion on govt expenses: reducing pollution       48
+      g2                 Main activity in 1988                              48
+      g3                 Ever employed in 1988?                             49
+      g4g26              Any employment last week?                          49
+      g5g28              Look for work in last 4 weeks?                     49
+      g6g30              Main activity last week                            50
+      g8                 Ever employed?                                     50
+      g9                 Weeks worked in 1988                               50
+      g10                Worked mostly ft or pt in 1988                     51
+      g11                Employment status in 1988                          51
+      dvg11h5            Work status in last week                           51
+      g12                Any paid employees in 1988?                        52
+      dvg12h6            Any paid employees last week?                      52
+      dvg13              Number of paid employees in 1988                   52
+      dvg13h7            Number of paid employees last week                 53
+      g17                Same employer last week?                           53
+      g18                Same kind of work last week?                       53
+      g21                Main job last week?                                54
+      g22ah2a            Usual hours/week at main job                       54
+      g22bh2b            Usual hours/week at other jobs                     54
+      g24h4a             Reason work <30 hrs/wk: illness/disability?        55
+      g24h4b             Reason work <30 hrs/wk: family responsibility?     55
+      g24h4c             Reason work <30 hrs/wk: go to school?              55
+      g24h4d             Reason work <30 hrs/wk: only pt work available?    56
+      g24h4e             Reason work <30 hrs/wk: not want ft work?          56
+      g24h4f             Reason work <30 hrs/wk: nature of job?             56
+      g24h4g             Reason work <30 hrs/wk: other?                     57
+      g27                Have job at which expected to return last week?    57
+      g29                Did not look last week as no j0bs available?       57
+      g32                Reason did not work at job last week               58
+      dvg34              Weeks since last worked                            58
+      dvg35              Weeks to expected return to job                    59
+      j84d88             Ever employed in 1984-88?                          59
+      dvdifjb            Number of jobs in 1984-88                          59
+      dvh11              Satisfaction with main job                         60
+      dvh12              Year started working for business/company          60
+      h13                Usual months/year at main job                      60
+      h14                Main job permanent?                                61
+      h15h21             Directly supervise people?                         61
+      h17h23             % of time supervising                              61
+      h18h24             No. Of persons in business/company                 62
+      h20                Permanent job preferred?                           62
+      dvh29a             Opinion: work surroundings are pleasant            63
+      dvh29b             Opinion: a lot freedom at work                     63
+      dvh29c             Opinion: work is repetitive                        64
+      dvh29d             Opinion: job requires high level of skill          64
+      dvh29e             Opinion: pay is good                               65
+      dvh29f             Opinion: chances for promotion are good            65
+      dvh16h22           Number of persons directly supervised last week    66
+      h25                Type of work                                       66
+      h26                Management class                                   66
+      h27                Participation in planning business activities      67
+      h28                Time spent planning business activities            67
+      dvsupdr            Type of employment/supervision responsibilities    68
+      h30a               Employer provides pension plan?                    68
+      h30b               Employer provides medical insurance?               69
+      h30c               Employer provides dental plan?                     69
+      h31                Employer provides paid maternity leave?            69
+      dvh32              Number of promotions in last 5 years               70
+      dvh34              Hours/week computers normally used at job          70
+      dvmain7            Main activity last week                            71
+      dvjob7             Number of jobs in last week                        71
+      h33                Computer used in job?                              72
+      h35                Impact of computers on job in last 5 years         72
+      h36                Impact of computers on skills reqd in last 5 yea   73
+      h37                Impact of computers on job security in last 5 yr   73
+      h38                Impact of computers on job interest in last 5 yr   74
+      h39                Relationship of job to education                   74
+      h40                Education level normally required for job          75
+      h41                Feel overqualified for job?                        75
+      h42                Likely to lose job/be laid off in next year?       76
+      h43                Lose job/be laid off in next yr due to computers   76
+      dvk1               Satisfaction with retirement                       77
+      dvk2ret            Year of retirement                                 77
+      k6                 Retired: relationship of old job to education      78
+      k7                 Retired: due to mandatory retirement age?          78
+      k8a                Retired: due to early retirement incentive?        78
+      k8b                Retired: due to new technology?                    79
+      k8c                Retired : due to health?                           79
+      k8d                Retired: due to other reason?                      79
+      k9                 Retired: pension/benefits from former employers?   80
+      k10                Retired: pension/benefits adjusted for cola?       80
+      k11                Retired: life enjoyment vs. Before                 80
+      k12                Retired: reason enjoy life more                    81
+      k14                Retired: reason enjoy life less                    81
+      k18                Retired: days worked in 1988                       81
+      agertre            Age plan to retire                                 82
+      manrtre            Mandatory retirement a good idea?                  82
+      dvmage             Desired age for mandatory retirement               82
+      l1                 Looking for ft or pt job                           83
+      l2                 Chances of finding j0b in 6 months                 83
+      dvl4               Satisfaction with keeping house as main activity   84
+      l5                 Like to have a paying job now?                     84
+      l6a                No job: because unavailable/hard to find?          85
+      l6b                No job: because lack skills/qualifications?        85
+      l6c                No job: because of illness/disability              85
+      l6d                No job: because no suitable day care?              86
+      l6e                No job: because prefer to stay with children?      86
+      l6f                No job: because spouse wants respondent at home?   87
+      l6g                No job: because of personal responsibilities?      87
+      l6h                No job: because of other reasons?                  87
+      l20                Feel overqualified for most of jobs held?          88
+      l27                Intend to work in future?                          88
+      k33l25             Look for work when unemployed in 1984-88?          88
+      lookjd             Ever look for work in 1984-88?                     89
+      monlook            Months looked for work 1984-88                     89
+      m1a                Involved in charity/service/vol org. In last yea   89
+      m1b                Involved in nbhood/comm/schl assoc. In last year   90
+      m1c                Involved in religious/church group in last year?   90
+      m1d                Involved in social/ethnic group in last year?      90
+      m1e                Involved in sports assoc. In last year?            91
+      m1f                Involved in public interest group in last year?    91
+      m1g                Involved in work-related org. In last year?        91
+      m1h                Involved in political org. In last year?           92
+      m3                 Average hours/month involved in organizations?     92
+      m4                 Member of a labour union?                          92
+      dvm5               Average hours/month on union activities            93
+      n2                 Personal happiness                                 93
+      dvn3a              Satisfaction with health                           94
+      dvn3b              Satisfaction with education                        94
+      dvn3c              Satisfaction with job or main activity             95
+      dvn3d              Satisfaction with other time spent                 95
+      dvn3e              Satisfaction with finances                         96
+      dvn3f              Satisfaction with housing                          96
+      dvn3g              Satisfaction with spouse/single status             97
+      dvn3h              Satisfaction with friends/family members           97
+      dvn3i              Satisfaction with self                             98
+      dvn4               Satisfaction with life                             98
+      p2                 Dwelling                                           99
+      p4                 Tenure of dwelling                                 99
+      p10                Limited from long-term condition/health problem?  100
+      p12                Can not work due to health condition/problem?     100
+      p16eng             Mother tongue: english?                           100
+      p16fre             Mother tongue: french?                            101
+      p16steng           Still understand mother tongue: english?          101
+      p16stfre           Still understand mother tongue: french?           101
+      dvp16ot            Mother tongue: other?                             102
+      dvp16sot           Still understand mother tongue: other?            102
+      p17eng             Home language: english?                           102
+      p17fre             Home language: french?                            103
+      dvp17ot            Home language: other?                             103
+      dvp18              Religion                                          104
+      p19                Attendance at religious services in last year     104
+      p20fre             Ethnic/cultural group: french?                    105
+      p20eng             Ethnic/cultural group: english?                   105
+      p20iri             Ethnic/cultural group: irish?                     105
+      p20sco             Ethnic/cultural group: scottish?                  106
+      p20ger             Ethnic/cultural group: german?                    106
+      p20ita             Ethnic/cultural group: italian?                   106
+      p20ukr             Ethnic/cultural group: ukrainian?                 107
+      dvp20oth           Ethnic/cultural group: other?                     107
+      p22                Spouse: highest level of education                108
+      p23                Spouse: main activity in 1988                     108
+      p24                Spouse: ever employed in 1988?                    109
+      p25                Spouse: weeks worked in 1988                      109
+      p26a               Wages/salary//self-employment income in 1988?     109
+      p26b               Government transfers in 1988?                     110
+      p26c               Investment/pension income in 1988?                110
+      p26d               Other income in 1988?                             110
+      p27a               Any income in 1988?                               111
+      p28a               Household income in 1988 - 1                      111
+      p28b               Household income in 1988 - 2                      112
+      p28c               Household income in 1988 - 3                      112
+      dvsalp27           Total income in 1988                              113
+      weigt              Weight                                            113
+      act1984            Main activity in 1984                             113
+      job1984            Ever employed in 1984?                            114
+      relat84            Relationship of employment to education in 1984   114
+      jobloss            Lose a job in 1984-88?                            114
+      jblosa             Reason job lost 1984-88: employer out of busines  115
+      jblosb             Reason job lost 1984-88: plant closing/moving?    115
+      jblosc             Reason job lost 1984-88: new technology?          115
+      jblosd             Reason job lost 1984-88: staff reduction?         116
+      jblose             Reason job lost 1984-88: seasonal job?            116
+      jblosf             Reason job lost 1984-88: work shortage?           116
+      jblosg             Reason job lost 1984-88: other?                   117
+      timewrk            Months worked 1984-88                             117
+      lookwrk            Months looked for work 1984-88                    117
+      prov               Province                                          118
+      dvms               Marital status                                    118
+      dvsex              Sex                                               118
+      dvagegr            Age group                                         119
+      dvimmig            Year of immigration                               119
+      dvbornr            Birthplace information                            120
+      dvlvgar1           Living arrangements                               120
+      dvhhldsz           Household size                                    121
+      dvagrsp            Spouse: age group                                 121
+      dvchild            Number of children at home                        122
+      dvchdag            Age group of children at home                     122
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 1
+
+
+      CASEID             Case Identification Variable
+
+           Data type: numeric
+           Record/columns: 1/1-4
+
+      ________________________________________________________________________
+
+      dvindb             Status of section b
+
+           DERIVED VARIABLE - USED TO INDICATE IF A RESPONDENT HAS
+           COMPLETED SECTION B OF THE QUESTIONNAIRE.
+
+           VALUE  LABEL
+               0  Not completed
+               1  Completed
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/6
+
+      ________________________________________________________________________
+
+      dvindc             Status of section c
+
+           DERIVED VARIABLE - USED TO INDICATE IF A RESPONDENT HAS
+           COMPLETED SECTION C OF THE QUESTIONNAIRE.
+
+           VALUE  LABEL
+               0  Not completed
+               1  Completed
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 2
+
+
+      dvindd             Status of section d
+
+           DERIVED VARIABLE FROM QUESTIONS A3 AND D3 - USED TO INDICATE IF
+           A RESPONDENT HAS COMPLETED SECTION D.
+
+           VALUE  LABEL
+               0  Not completed/no schooling
+               1  Completed/<15 yrs old
+               2  Completed/15+ yrs old
+               8  Completed/age unknown
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/10
+
+      ________________________________________________________________________
+
+      dvinhkl            Status of sections h,k,l
+
+           DERIVED VARIABLE - DETERMINES WHICH SECTION OF H, K OR L THE
+           RESPONDENT COMPLETED ON THE 4-2 QUESTIONNAIRE
+
+           VALUE  LABEL
+               1  Completed section h
+               2  Completed section k
+               3  Completed section l
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 3
+
+
+      a3                 Years of high school/elementary completed
+
+           HOW MANY YEARS OF ELEMENTARY AND HIGH SCHOOL EDUCATION HAVE YOU
+           COMPLETED?
+
+           VALUE  LABEL
+               1  No schooling
+               2  1-5 years
+               3  6 years
+               4  7 years
+               5  8 years
+               6  9 years
+               7  10 years
+               8  11 years
+               9  12 years
+              10  13 years
+              21  1-8 years (imputed)
+              23  11-13 years (imputed)
+              99  Not stated
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/14-15
+
+      ________________________________________________________________________
+
+      a4                 Graduated from high school?
+
+           HAVE YOU GRADUATED FROM HIGH SCHOOL?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/17
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 4
+
+
+      a5aa7a             High school: mathematics course?
+
+           IN HIGH SCHOOL, DID YOU TAKE A COURSE IN MATHEMATICS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/19
+
+      ________________________________________________________________________
+
+      a5ba7b             High school: chemistry course?
+
+           IN HIGH SCHOOL, DID YOU TAKE A COURSE IN CHEMISTRY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/21
+
+      ________________________________________________________________________
+
+      a5ca7c             High school: geography course?
+
+           IN HIGH SCHOOL, DID YOU TAKE A COURSE IN GEOGRAPHY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/23
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 5
+
+
+      a5da7d             High school: physics course?
+
+           IN HIGH SCHOOL, DID YOU TAKE A COURSE IN PHYSICS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/25
+
+      ________________________________________________________________________
+
+      a6a8               Any schooling beyond elementary/high school?
+
+           HAVE YOU HAD ANY FURTHER SCHOOLING BEYOND ELEMENTARY/ HIGH
+           SCHOOL?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/27
+
+      ________________________________________________________________________
+
+      a9                 Presently working on elem/high school graduation?
+
+           ARE YOU PRESENTLY WORKING TOWARDS ELEMENTARY OR HIGH SCHOOL
+           GRADUATION?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/29
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 6
+
+
+      a10                Ever taken a university/college course in science?
+
+           HAVE YOU EVER TAKEN ANY UNIVERSITY, COLLEGE OR CEGEP LEVEL
+           COURSE IN BIOLOGY, CHEMISTRY OR PHYSICS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/31
+
+      ________________________________________________________________________
+
+      a11                Highest level of education
+
+           WHAT IS THE HIGHEST LEVEL OF EDUCATION THAT YOU HAVE ATTAINED?
+
+           VALUE  LABEL
+               1  Masters/earned doctorate
+               2  Undergraduate degree
+               3  College/nursing dipl/cert
+               4  Trade/tech/vocat dipl/cert
+               5  Some university
+               6  Some college/nursing
+               7  Some trade/tech/vocat
+               8  Other
+              21  Not stated/1-4
+              22  Not stated/5-8
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97-99
+           Record/columns: 1/33-34
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 7
+
+
+      a12                Working on degree/dipl/cert?
+
+           WHEN YOU TOOK COURSES AT UNIVERSITY/COLLEGE/TRADE SCHOOL, WERE
+           YOU WORKING TOWARDS A DEGREE, DIPLOMA OR CERTIFICATE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/36
+
+      ________________________________________________________________________
+
+      a13                Still working on degree/dipl/cert?
+
+           ARE YOU STILL WORKING TOWARDS YOUR DEGREE, DIPLOMA OR
+           CERTIFICATE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/38
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 8
+
+
+      a14                Highest degree/dipl/cert completed
+
+           WHAT IS THE HIGHEST DEGREE, DIPLOMA OR CERTIFICATE THAT YOU HAVE
+           COMPLETED?
+
+           VALUE  LABEL
+               0  Not applicable
+               2  Undergraduate degree
+               3  College/nursing dipl/cert
+               4  Trade/tech/vocat dipl/cert
+               5  High school diploma
+               6  Less than high school
+               7  Other
+               8  Not stated/2-4 (imputed)
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/40
+
+      ________________________________________________________________________
+
+      a16                Reason for choosing field of study
+
+           WHAT WAS YOUR MAIN REASON FOR CHOOSING THIS FIELD OF STUDY? WAS
+           IT TO PREPARE FOR FIRST CAREER, TO CHANGE OR IMPROVE CAREER, TO
+           IMPROVE EARNINGS, BECAUSE OF INTEREST IN SUBJECT OR FOR SOME
+           OTHER REASON?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Prepare for first career
+               2  Change careers
+               3  Improve career
+               4  Improve earnings
+               5  Interest in subject
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/42
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                             Page 9
+
+
+      a17                Now working on different degree/dipl/cert?
+
+           ARE YOU NOW WORKING TOWARDS A DIFFERENT DEGREE, DIPLOMA OR
+           CERTIFICATE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/44
+
+      ________________________________________________________________________
+
+      b2                 Degree/dipl/cert being worked on
+
+           WHAT DEGREE, DIPLOMA OR CERTIFICATE ARE YOU WORKING TOWARDS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Masters/earned doctorate
+               2  Undergraduate degree
+               3  College/nursing dipl/cert
+               4  Trade/tech/vocat dipl/cert
+               5  Elementary/high school diploma
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/46
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 10
+
+
+      b4                 Reason for current field of study
+
+           WHAT WAS YOUR MAIN REASON FOR CHOOSING THIS FIELD OF STUDY? WAS
+           IT TO PREPARE FOR FIRST CAREER, TO CHANGE OR IMPROVE CAREER, TO
+           IMPROVE EARNINGS, BECAUSE OF INTEREST IN SUBJECT, OR FOR SOME
+           OTHER REASON?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Prepare for first career
+               2  Change careers
+               3  Improve career
+               4  Improve earnings
+               5  Interest in subject
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/48
+
+      ________________________________________________________________________
+
+      b5                 Took any courses in current program in last year?
+
+           IN THE LAST 12 MONTHS DID YOU TAKE ANY COURSES FOR THIS PROGRAM?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/50
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 11
+
+
+      b6                 Student status in courses in last year
+
+           WERE YOU MAINLY A FULL-TIME OR A PART-TIME STUDENT?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Full-time
+               2  Part-time
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/52
+
+      ________________________________________________________________________
+
+      dvb7               Expected year to complete degree/dipl/cert
+
+           DERIVED VARIABLE FROM QUESTION B7 - IN WHAT YEAR DO YOU EXPECT
+           TO COMPLETE THE PROGRAM LEADING TO YOUR
+           DEGREE/DIPLOMA/CERTIFICATE?
+
+           VALUE  LABEL
+               0  Not applicable
+            9999  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9999
+           Record/columns: 1/54-57
+
+      ________________________________________________________________________
+
+      b8                 Expected activity after graduation
+
+           WHAT DO YOU EXPECT TO DO WHEN YOU GRADUATE FROM YOUR CURRENT
+           PROGRAM?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Work at a new or first job
+               2  Go on to further education
+               3  Work at the same job
+               4  Do not know
+               5  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,4,9
+           Record/column: 1/59
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 12
+
+
+      dveducm            Highest completed level of education
+
+           DERIVED VARIABLE - THE RESPONDENT'S HIGHEST COMPLETED LEVEL OF
+           EDUCATION.
+
+           VALUE  LABEL
+              10  Masters/earned doctorate
+              20  Undergraduate degree
+              30  College/nursing dipl/cert
+              40  Trade/tech/vocat dipl/cert
+              50  High school diploma
+              60  Less than high school
+              70  Other schooling
+              80  No schooling
+              99  Not stated
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/61-62
+
+      ________________________________________________________________________
+
+      dveda15            Field of study for completed degree/dipl/cert
+
+           DERIVED VARIABLE FROM QUESTION A15 - RESPONDENT'S MAJOR FIELD OF
+           STUDY OR SPECIALIZATION FOR THEIR DEGREE, DIPLOMA OR CERTIFICATE
+           WHICH THEY HAVE COMPLETED
+
+           VALUE  LABEL
+               1  Educ/rec/counselling services
+               2  Fine applied arts
+               3  Humanities
+               4  Social sciences
+               5  Commerce & business admin
+               6  Agricultural sciences
+               7  Engineering
+               8  Engineering tech/trades
+               9  Health sciences
+              10  Math/physical sciences
+              11  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/64-65
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 13
+
+
+      dvedb3             Field of study for current degree/dipl/cert
+
+           DERIVED VARIABLE FROM QUESTION B3 - RESPONDENT'S MAJOR FIELD OF
+           STUDY OR SPECIALIZATION FOR THEIR DEGREE, DIPLOMA OR CERTIFICATE
+           WHICH THEY ARE CURRENTLY STUDYING ?
+
+           VALUE  LABEL
+               1  Educ/rec/counselling services
+               2  Fine applied arts
+               3  Humanities
+               4  Social sciences
+               5  Commerce & business admin
+               6  Agricultural sciences
+               7  Engineering
+               8  Engineering tech/trades
+               9  Health sciences
+              10  Math/physical sciences
+              11  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/67-68
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 14
+
+
+      dvede5             Field of study for planned degree/dipl/cert
+
+           DERIVED VARIABLE - RESPONDENT'S FROM QUESTION E5 MAJOR FIELD OF
+           STUDY OR SPECIALIZATION FOR THEIR DEGREE, DIPLOMA OR CERTIFICATE
+           WHICH THEY EVENTUALLY WANT TO OBTAIN
+
+           VALUE  LABEL
+               1  Educ/rec/counselling services
+               2  Fine applied arts
+               3  Humanities
+               4  Social sciences
+               5  Commerce & business admin
+               6  Agricultural sciences
+               7  Engineering
+               8  Engineering tech/trades
+               9  Health sciences
+              10  Math/physical sciences
+              11  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/70-71
+
+      ________________________________________________________________________
+
+      dvc1               Year studies completed/stopped
+
+           DERIVED VARIABLE FROM QUESTION C1 - IN WHAT YEAR DID YOU
+           COMPLETE YOUR STUDIES OR STOP TAKING COURSES?
+
+           VALUE  LABEL
+               0  Not applicable
+            9999  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9999
+           Record/columns: 1/73-76
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 15
+
+
+      c2                 Main activity after studies completed
+
+           DURING THE 12 MONTHS AFTER YOU COMPLETED THESE STUDIES, WHAT
+           BEST DESCRIBES YOUR MAIN ACTIVITY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Working
+               2  Looking for work
+               3  A student
+               4  Keeping house
+               5  Retired
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/78
+
+      ________________________________________________________________________
+
+      c3                 Ever employed after studies completed?
+
+           DID YOU HAVE A JOB OR WERE YOU SELF-EMPLOYED AT ANY TIME DURING
+           THOSE 12 MONTHS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 16
+
+
+      c4                 Ever employed since studies completed?
+
+           HAVE YOU EVER HAD A JOB SINCE COMPLETING THAT PROGRAM?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/82
+
+      ________________________________________________________________________
+
+      dvc5               Year first employed after completing program
+
+           DERIVED VARIABLE FROM QUESTION C5 - IN WHAT YEAR DID YOU GET THE
+           FIRST JOB SINCE COMPLETING THE PROGRAM?
+
+           VALUE  LABEL
+               0  Not applicable
+            9999  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9999
+           Record/columns: 1/84-87
+
+      ________________________________________________________________________
+
+      c11                Status of employment since studies completed
+
+           WAS THIS WORK MOSTLY FULL-TIME OR PART-TIME?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Full-time
+               2  Part-time
+               3  Both equally
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/89
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 17
+
+
+      c12                Relationship of employment to education
+
+           HOW CLOSELY WAS THAT JOB RELATED TO YOUR EDUCATION?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Closely related
+               2  Somewhat related
+               3  Not at all related
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/91
+
+      ________________________________________________________________________
+
+      dvsicc9            Industry of work after leaving school
+
+           DERIVED VARIABLE FROM QUESTION C9 - TYPE OF INDUSTRY THE
+           RESPONDENT WORKED IN AFTER LEAVING SCHOOL.
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Agriculture
+               2  Other primary
+               3  Manufacturing: non-durable gds
+               4  Manufacturing: durable gds
+               5  Construction
+               6  Transportation
+               7  Wholesale trade
+               8  Retail trade
+               9  Finance
+              10  Community services
+              11  Personal services
+              12  Business services
+              13  Public administration
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,99
+           Record/columns: 1/93-94
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 18
+
+
+      dvsicd11           Industry of work before studies
+
+           DERIVED VARIABLE FROM QUESTION D11 - TYPE OF INDUSTRY THE
+           RESPONDENT WORKED IN BEFORE THEY STARTED THEIR STUDIES
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Agriculture
+               2  Other primary
+               3  Manufacturing: non-durable gds
+               4  Manufacturing: durable gds
+               5  Construction
+               6  Transportation
+               7  Wholesale trade
+               8  Retail trade
+               9  Finance
+              10  Community services
+              11  Personal services
+              12  Business services
+              13  Public administration
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,99
+           Record/columns: 1/96-97
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 19
+
+
+      dvsicg15           Industry of work in 1988
+
+           DERIVED VARIABLE FROM QUESTION G15 - TYPE OF INDUSTRY THE
+           RESPONDENT WORKED IN FOR THE LONGEST TIME DURING 1988
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Agriculture
+               2  Other primary
+               3  Manufacturing: non-durable gds
+               4  Manufacturing: durable gds
+               5  Construction
+               6  Transportation
+               7  Wholesale trade
+               8  Retail trade
+               9  Finance
+              10  Community services
+              11  Personal services
+              12  Business services
+              13  Public administration
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,99
+           Record/columns: 1/99-100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 20
+
+
+      dvsick4            Retired: industry of work at retirement
+
+           DERIVED VARIABLE FROM QUESTION K4 - TYPE OF INDUSTRY THE
+           RESPONDENT WORKED IN AT THE TIME OF THE RETIREMENT
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Agriculture
+               2  Other primary
+               3  Manufacturing: non-durable gds
+               4  Manufacturing: durable gds
+               5  Construction
+               6  Transportation
+               7  Wholesale trade
+               8  Retail trade
+               9  Finance
+              10  Community services
+              11  Personal services
+              12  Business services
+              13  Public administration
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,99
+           Record/columns: 1/102-103
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 21
+
+
+      dvsic84            Industry of work in 1984
+
+           DERIVED VARIABLE - TYPE OF INDUSTRY THE RESPONDENT WORKED IN FOR
+           THE LONGEST TIME IN 1984
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Agriculture
+               2  Other primary
+               3  Manufacturing: non-durable gds
+               4  Manufacturing: durable gds
+               5  Construction
+               6  Transportation
+               7  Wholesale trade
+               8  Retail trade
+               9  Finance
+              10  Community services
+              11  Personal services
+              12  Business services
+              13  Public administration
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,99
+           Record/columns: 1/105-106
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 22
+
+
+      dvsic89            Industry of work in last week
+
+           DERIVED VARIABLE - TYPE OF INDUSTRY THE RESPONDENT WORKED IN
+           DURING THE REFERENCE WEEK IN 1989
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Agriculture
+               2  Other primary
+               3  Manufacturing: non-durable gds
+               4  Manufacturing: durable gds
+               5  Construction
+               6  Transportation
+               7  Wholesale trade
+               8  Retail trade
+               9  Finance
+              10  Community services
+              11  Personal services
+              12  Business services
+              13  Public administration
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,99
+           Record/columns: 1/108-109
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 23
+
+
+      dvc10soc           Occupation of work after leaving school
+
+           DERIVED VARIABLE FROM QUESTION C10 - TYPE OF OCCUPATION THE
+           RESPONDENT HELD AFTER LEAVING SCHOOL.
+
+           VALUE  LABEL
+               1  Managers/administrators
+               2  Management/admin rel.
+               3  Life sciences/math & rel.
+               4  Arch/engineers & rel.
+               5  Soc.Sci/religion & rel.
+               6  Teaching & rel.
+               7  Health & rel.
+               8  Art/lit/rec & rel.
+               9  Stenographic/typing
+              10  Bookkeeping & rel.
+              11  Edp operators
+              12  Reception etc.
+              13  Library & rel.
+              14  Commodities sales
+              15  Services sales
+              16  Protective services
+              17  Food/lodging
+              18  Personal/furnishing service
+              19  Other service
+              20  Farm
+              21  Primary
+              22  Food processing & rel.
+              23  Other processing
+              24  Machining & rel.
+              25  Electrical & rel.
+              26  Textiles/furs/leather
+              27  Wood/rubber/plastics
+              28  Mechanics/repairmen
+              29  Excavating/wire comm
+              30  Other construction
+              31  Transport equipment
+              32  Material handling
+              33  Other crafts/equipment
+              34  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/111-112
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 24
+
+
+      dvd12soc           Occupation of work before studies
+
+           DERIVED VARIABLE FROM QUESTION D12 - TYPE OF OCCUPATION THE
+           RESPONDENT HELD BEFORE THEY STARTED THEIR STUDIES
+
+           VALUE  LABEL
+               1  Managers/administrators
+               2  Management/admin rel.
+               3  Life sciences/math & rel.
+               4  Arch/engineers & rel.
+               5  Soc.Sci/religion & rel.
+               6  Teaching & rel.
+               7  Health & rel.
+               8  Art/lit/rec & rel.
+               9  Stenographic/typing
+              10  Bookkeeping & rel.
+              11  Edp operators
+              12  Reception etc.
+              13  Library & rel.
+              14  Commodities sales
+              15  Services sales
+              16  Protective services
+              17  Food/lodging
+              18  Personal/furnishing service
+              19  Other service
+              20  Farm
+              21  Primary
+              22  Food processing & rel.
+              23  Other processing
+              24  Machining & rel.
+              25  Electrical & rel.
+              26  Textiles/furs/leather
+              27  Wood/rubber/plastics
+              28  Mechanics/repairmen
+              29  Excavating/wire comm.
+              30  Other construction
+              31  Transport equipment
+              32  Material handling
+              33  Other crafts/equipment
+              34  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/114-115
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 25
+
+
+      dvg16soc           Occupation of work in 1988
+
+           DERIVED VARIABLE FROM QUESTION G16 - TYPE OF OCCUPATION THE
+           RESPONDENT HELD FOR THE LONGEST TIME IN 1988
+
+           VALUE  LABEL
+               1  Managers/administrators
+               2  Management/admin rel.
+               3  Life sciences/math & rel.
+               4  Arch/engineers & rel.
+               5  Soc.Sci/religion & rel.
+               6  Teaching & rel.
+               7  Health & related
+               8  Art/lit/rec & rel.
+               9  Stenographic/typing
+              10  Bookkeeping & rel.
+              11  Edp operators
+              12  Reception etc.
+              13  Library & rel.
+              14  Commodities sales
+              15  Services sales
+              16  Protective services
+              17  Food/lodging
+              18  Personal/furnishing service
+              19  Other service
+              20  Farm
+              21  Primary
+              22  Food processing & rel.
+              23  Other processing
+              24  Machining & rel.
+              25  Electrical & rel.
+              26  Textiles/furs/leather
+              27  Wood/rubber/plastics
+              28  Mechanics/repairmen
+              29  Excavating/wire comm.
+              30  Other construction
+              31  Transport equipment
+              32  Material handling
+              33  Other crafts/equipment
+              34  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/117-118
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 26
+
+
+      dvk5soc            Retired: occupation of work at retirement
+
+           DERIVED VARIABLE FROM QUESTION K5 - TYPE OF OCCUPATION THE
+           RESPONDENT HELD AT THE TIME OF THEIR RETIREMENT
+
+           VALUE  LABEL
+               1  Managememt/admin rel.
+               2  Clerical & rel.
+               3  Service
+               4  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/120-121
+
+      ________________________________________________________________________
+
+      dvl14soc           Usual occupation
+
+           DERIVED VARIABLE FROM QUESTION L14 - TYPE OF OCCUPATION THE
+           RESPONDENT USUALLY DOES
+
+           VALUE  LABEL
+               1  Service
+               2  Non-service
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/123-124
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 27
+
+
+      dv84soc            Occupation of work in 1984
+
+           DERIVED VARIABLE H49, K27 AND L18 - TYPE OF OCCUPATION THE
+           RESPONDENT HELD FOR THE LONGEST TIME IN 1984
+
+           VALUE  LABEL
+               1  Managers/administrators
+               2  Management/admin rel.
+               3  Life sciences/math & rel.
+               4  Arch/engineers & rel.
+               5  Soc.Sci/religion & rel.
+               6  Teaching & rel.
+               7  Health & rel.
+               8  Art/lit/rec & rel.
+               9  Stenographic/typing
+              10  Bookkeeping & rel.
+              11  Edp operators
+              12  Reception etc.
+              13  Library & rel.
+              14  Commodities sales
+              15  Services sales
+              16  Protective services
+              17  Food/lodging
+              18  Personal/furnishing service
+              19  Other service
+              20  Farm
+              21  Primary
+              22  Food processing & rel.
+              23  Other processing
+              24  Machining & rel.
+              25  Electrical & rel.
+              26  Textiles/furs/leather
+              27  Wood/rubber/plastics
+              28  Mechanics/repairmen
+              29  Excavating/wire comm.
+              30  Other construction
+              31  Transport equipment
+              32  Material handling
+              33  Other crafts/equipment
+              34  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/126-127
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 28
+
+
+      dv89soc            Occupation of work in last week
+
+           DERIVED VARIABLE FROM H10, G19 AND G16 - TYPE OF OCCUPATION THE
+           RESPONDENT WORKED IN DURING THE REFERENCE WEEK IN 1989
+
+           VALUE  LABEL
+               1  Managers/administrators
+               2  Management/admin rel.
+               3  Life sciences/math & rel.
+               4  Arch/engineers & rel.
+               5  Soc.Sci/religion & rel.
+               6  Teaching & rel.
+               7  Health & rel.
+               8  Art/lit/rec & rel.
+               9  Stenographic/typing
+              10  Bookkeeping & rel.
+              11  Edp operators
+              12  Reception etc.
+              13  Library & rel.
+              14  Commodities sales
+              15  Services sales
+              16  Protective services
+              17  Food/lodging
+              18  Personal/furnishing service
+              19  Other service
+              20  Farm
+              21  Primary
+              22  Food processing & rel.
+              23  Other processing & rel.
+              24  Machining & rel.
+              25  Electrical & rel.
+              26  Textile/furs/leather
+              27  Wood/rubber/plastics
+              28  Mechanics/repairmen
+              29  Excavating/wire comm.
+              30  Other construction
+              31  Transport equipment
+              32  Material handling
+              33  Other crafts/equipment
+              34  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/129-130
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 29
+
+
+      class              Glc class of occupation in last week
+
+           DERIVED VARIABLE - THE GLC CLASS WAS COMPUTED FROM REVISED 1989
+           SOC 4-DIGIT CODES, THIS IS THE RESPONDENT'S GLC CLASS CODE
+           ASSIGNED BY GUY COTE
+
+           VALUE  LABEL
+               1  Higher self-employed profs.
+               2  Higher employed profs.
+               3  Lower profs.
+               4  Teachers etc.
+               5  White collar supers
+               6  Higher white collars
+               7  Medium employers
+               8  Small proprietors
+               9  Small farm proprietors etc.
+              10  Blue collar foremen
+              11  Higher blue collars
+              12  Lower blue collars
+              13  Farm foremen etc.
+              14  Lower white collars
+              15  Lower occas. Workers
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/132-133
+
+      ________________________________________________________________________
+
+      nusco              Collapsed glc score
+
+           DERIVED VARIABLE - THIS IS THE RESPONDENT'S COLLAPSED GLC SCORE
+           FOR THE OCCUPATION IN 1989.
+
+           VALUE  LABEL
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/135-136
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 30
+
+
+      dvd2               Year studies started
+
+           DERIVED VARIABLE FROM QUESTION D2 - IN WHAT YEAR DID YOU START
+           YOUR STUDIES FOR THIS
+
+           VALUE  LABEL
+               0  Not applicable
+            9999  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9999
+           Record/columns: 1/138-141
+
+      ________________________________________________________________________
+
+      d3                 Aged < 15 before starting studies?
+
+           AT THAT TIME WERE YOU LESS THAN 15 YEARS OLD?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/143
+
+      ________________________________________________________________________
+
+      d4                 Main activity before starting studies
+
+           DURING THE 12 MONTHS BEFORE YOU STARTED THESE STUDIES, WHAT BEST
+           DESCRIBES YOU MAIN ACTIVITY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Working
+               2  Looking for work
+               3  A student
+               4  Keeping house
+               5  Retired
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/145
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 31
+
+
+      d5                 Ever employed ft for 6+ months before studies?
+
+           BEFORE STARTING THE PROGRAM,HAD YOU EVER HELD A FULL-TIME JOB
+           FOR SIX MONTHS OR MORE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/147
+
+      ________________________________________________________________________
+
+      d6                 Duration of ft work before starting studies
+
+           HOW MANY MONTHS OR YEARS OF TOTAL FULL-TIME WORK EXPERIENCE DID
+           YOU HAVE BEFORE YOU STARTED YOUR PROGRAM?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  .5-1 year
+               2  1-3 years
+               3  3-5 years
+               4  5-7 years
+               5  7+ years
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/149
+
+      ________________________________________________________________________
+
+      d7                 Year employed ft for 6+ months before studies
+
+           BEFORE STARTING YOUR PROGRAM, IN WHAT YEAR DID YOU LAST WORK AT
+           A FULL-TIME JOB THAT LASTED SIX MONTHS OR MORE?
+
+           VALUE  LABEL
+               0  Not applicable
+            9996  Still working at it
+            9999  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9996,9999
+           Record/columns: 1/151-154
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 32
+
+
+      e1                 Plan to start new program within 5 years?
+
+           IN THE NEXT FIVE YEARS, DO PLAN TO START AN ADDITIONAL
+           EDUCATIONAL OR TRAINING PROGRAM? (INCLUDE PART-TIME AND
+           FULL-TIME)
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               3  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 3,9
+           Record/column: 1/156
+
+      ________________________________________________________________________
+
+      e2                 Reason for planning new program
+
+           WHAT IS YOUR MAIN REASON FOR PLANNING TO DO THIS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Prepare for first career
+               2  Change careers
+               3  Improve career
+               4  Improve earnings
+               5  Interest in subject
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/158
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 33
+
+
+      e3                 New degree/dipl/cert desired
+
+           WHAT DEGREE, DIPLOMA OR CERTIFICATE DO YOU EVENTUALLY WANT TO
+           OBTAIN?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Masters/earned doctorate
+               2  Undergraduate degree
+               3  College/nursing dipl/cert
+               4  Trade/tech/vocat dipl/cert
+               5  Elementary/high school diploma
+               6  Not for degree/dipl/cert
+               7  Undecided/do not know
+               8  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,7,9
+           Record/column: 1/160
+
+      ________________________________________________________________________
+
+      e7                 Ever completed an apprenticeship program?
+
+           HAVE YOU EVER COMPLETED AN APPRENTICESHIP PROGRAM?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/162
+
+      ________________________________________________________________________
+
+      e8                 Ever taken computer courses?
+
+           HAVE YOU EVER TAKEN COURSES ON HOW TO USE COMPUTERS?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/164
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 34
+
+
+      e9                 Can do anything on a computer?
+
+           CAN YOU DO ANYTHING ON A COMPUTER, FOR EXAMPLE, PLAY GAMES, WORD
+           PROCESSING OR DATA ENTRY?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/166
+
+      ________________________________________________________________________
+
+      e10a               Played computer games in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU PLAYED GAMES ON A COMPUTER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/168
+
+      ________________________________________________________________________
+
+      e10b               Did computer word processing in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU DONE ANY WORD PROCESSING ON A
+           COMPUTER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/170
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 35
+
+
+      e10c               Did computer data entry in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU DONE ANY DATA ENTRY ON A
+           COMPUTER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/172
+
+      ________________________________________________________________________
+
+      e10d               Did computer record keeping in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU DONE RECORD KEEPING ON A
+           COMPUTER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/174
+
+      ________________________________________________________________________
+
+      e10e               Did computer data analysis in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU DONE ANY DATA ANALYSIS ON A
+           COMPUTER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/176
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 36
+
+
+      e10f               Written computer programs in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU WRITTEN ANY COMPUTER PROGRAMS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/178
+
+      ________________________________________________________________________
+
+      e10g               Did anything else on computer in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU DONE ANYTHING ELSE ON A
+           COMPUTER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/180
+
+      ________________________________________________________________________
+
+      e11                Personal computer at home?
+
+           DO YOU HAVE A PERSONAL COMPUTER AT HOME?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/182
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 37
+
+
+      e12                Personally use personal computer at home?
+
+           DO YOU PERSONALLY USE THAT COMPUTER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/184
+
+      ________________________________________________________________________
+
+      dve13              Hours per week used
+
+           DERIVED VARIABLE FROM QUESTION E13 - HOW MANY HOURS PER WEEK DO
+           YOU NORMALLY USE IT?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/186-187
+
+      ________________________________________________________________________
+
+      f1a                Interest in current affairs
+
+           ARE YOU VERY INTERESTED,MODERATELY INTERESTED, OR NOT AT ALL
+           INTERESTED IN CURRENT AFFAIRS, INCLUDING NATIONAL AND LOCAL
+           EVENTS?
+
+           VALUE  LABEL
+               1  Very interested
+               2  Moderately interested
+               3  Not at all interested
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/189
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 38
+
+
+      f1b                Interest in economic conditions/business issues
+
+           ARE YOU VERY INTERESTED,MODERATELY INTERESTED, OR NOT AT ALL
+           INTERESTED IN ECONOMIC CONDITIONS AND BUSINESS ISSUES?
+
+           VALUE  LABEL
+               1  Very interested
+               2  Moderately interested
+               3  Not at all interested
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/191
+
+      ________________________________________________________________________
+
+      f1c                Interest in new inventions/technologies
+
+           ARE YOU VERY INTERESTED, MODERATELY INTERESTED, OR NOT AT ALL
+           INTERESTED IN NEW INVENTIONS AND TECHNOLOGIES?
+
+           VALUE  LABEL
+               1  Very interested
+               2  Moderately interested
+               3  Not at all interested
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/193
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 39
+
+
+      f1d                Interest in recent scientific discoveries
+
+           ARE YOU VERY INTERESTED,MODERATELY INTERESTED, OR NOT AT ALL
+           INTERESTED IN RECENT SCIENTIFIC DISCOVERIES?
+
+           VALUE  LABEL
+               1  Very interested
+               2  Moderately interested
+               3  Not at all interested
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/195
+
+      ________________________________________________________________________
+
+      f2a                Informed about current affairs
+
+           ARE YOU VERY WELL INFORMED, MODERATELY INFORMED, OR POORLY
+           INFORMED ABOUT CURRENT AFFAIRS, INCLUDING NATIONAL AND LOCAL
+           EVENTS?
+
+           VALUE  LABEL
+               1  Very well informed
+               2  Moderately informed
+               3  Poorly informed
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/197
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 40
+
+
+      f2b                Informed about economic conditions/business issues
+
+           ARE YOU VERY WELL INFORMED, MODERATELY INFORMED, OR POORLY
+           INFORMED ABOUT ECONOMIC CONDITIONS AND BUSINESS ISSUES?
+
+           VALUE  LABEL
+               1  Very well informed
+               2  Moderately informed
+               3  Poorly informed
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/199
+
+      ________________________________________________________________________
+
+      f2c                Informed about new inventions/technologies
+
+           ARE YOU VERY WELL INFORMED,MODERATELY INFORMED, OR POORLY
+           INFORMED ABOUT NEW INVENTIONS AND TECHNOLOGIES?
+
+           VALUE  LABEL
+               1  Very well informed
+               2  Moderately informed
+               3  Poorly informed
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/201
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 41
+
+
+      f2d                Informed about recent scientific discoveries
+
+           ARE YOU VERY WELL INFORMED, MODERATELY INFORMED, OR POORLY
+           INFORMED ABOUT RECENT SCIENTIFIC DISCOVERIES?
+
+           VALUE  LABEL
+               1  Very well informed
+               2  Moderately informed
+               3  Poorly informed
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/203
+
+      ________________________________________________________________________
+
+      f3a                Attention paid to science/tech tv programs
+
+           HOW OFTEN DO YOU PAY ATTENTION TO PROGRAMS ABOUT SCIENCE AND
+           TECHNOLOGY ON TELEVISION?
+
+           VALUE  LABEL
+               1  Regularly
+               2  Occasionally
+               3  Never
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/205
+
+      ________________________________________________________________________
+
+      f3b                Attention paid to science/tech radio programs
+
+           HOW OFTEN DO YOU PAY ATTENTION TO PROGRAMS ABOUT SCIENCE AND
+           TECHNOLOGY ON RADIO?
+
+           VALUE  LABEL
+               1  Regularly
+               2  Occasionally
+               3  Never
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/207
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 42
+
+
+      f4a                Read science/tech newspaper articles
+
+           HOW OFTEN DO YOU READ ARTICLES ABOUT SCIENCE AND TECHNOLOGY IN
+           NEWSPAPERS?
+
+           VALUE  LABEL
+               1  Regularly
+               2  Occasionally
+               3  Never
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/209
+
+      ________________________________________________________________________
+
+      f4b                Read science/tech magazine articles
+
+           HOW OFTEN DO YOU READ ARTICLES ABOUT SCIENCE AND TECHNOLOGY IN
+           MAGAZINES?
+
+           VALUE  LABEL
+               1  Regularly
+               2  Occasionally
+               3  Never
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/211
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 43
+
+
+      dvf5a              Opinion: science/tech making our lives better
+
+           DERIVED FROM FIELDS F5A AND F5AB - DO YOU AGREE OR DISAGREE THAT
+           SCIENCE AND TECHNOLOGY ARE MAKING OUR LIVES BETTER?
+
+           VALUE  LABEL
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               5  Agree/degree not stated
+               6  Disagree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/213
+
+      ________________________________________________________________________
+
+      dvf5b              Opinion: science/tech making work more interesting
+
+           DERIVED VARIABLE FIELDS F5B AND F5BB - DO YOU AGREE OR DISAGREE
+           THAT SCIENCE AND TECHNOLOGY WILL MAKE WORK MORE INTERESTING?
+
+           VALUE  LABEL
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               5  Agree/degree not stated
+               6  Disagree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/215
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 44
+
+
+      dvf5c              Opinion: computers/automation a net job creator
+
+           DERIVED VARIABLE FROM F5C AND F5CB - DO YOU AGREE OR DISAGREE
+           THAT ON BALANCE, COMPUTERS AND AUTOMATION WILL CREATE MORE JOBS
+           THAN THEY WILL ELIMINATE?
+
+           VALUE  LABEL
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               6  Disagree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/217
+
+      ________________________________________________________________________
+
+      dvf5d              Opinion: science changes life too fast
+
+           DERIVED VARIABLE F5D AND F5DB - DO YOU AGREE OR DISAGREE THAT
+           SCIENCE MAKES OUR LIFE CHANGE TOO FAST?
+
+           VALUE  LABEL
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               5  Agree/degree not stated
+               6  Disagree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/219
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 45
+
+
+      f6a                Opinion on govt expenses: health care
+
+           DO YOU THINK THE GOVERNMENT IS SPENDING TOO LITTLE, ABOUT THE
+           RIGHT AMOUNT, OR TOO MUCH ON HEALTH CARE?
+
+           VALUE  LABEL
+               1  Too little
+               2  About the right amount
+               3  Too much
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/221
+
+      ________________________________________________________________________
+
+      f6b                Opinion on govt expenses: helping elderly
+
+           DO YOU THINK THE GOVERNMENT IS SPENDING TOO LITTLE, ABOUT THE
+           RIGHT AMOUNT, OR TOO MUCH ON HELPING OLDER PEOPLE?
+
+           VALUE  LABEL
+               1  Too little
+               2  About the right amount
+               3  Too much
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/223
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 46
+
+
+      f6c                Opinion on govt expenses: education
+
+           DO YOU THINK THE GOVERNMENT IS SPENDING TOO LITTLE, ABOUT THE
+           RIGHT AMOUNT, OR TOO MUCH ON EDUCATION?
+
+           VALUE  LABEL
+               1  Too little
+               2  About the right amount
+               3  Too much
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/225
+
+      ________________________________________________________________________
+
+      f6d                Opinion on govt expenses: helping unemployed
+
+           DO YOU THINK THE GOVERNMENT IS SPENDING TOO LITTLE, ABOUT THE
+           RIGHT AMOUNT, OR TOO MUCH ON HELPING THE UNEMPLOYED?
+
+           VALUE  LABEL
+               1  Too little
+               2  About the right amount
+               3  Too much
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/227
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 47
+
+
+      f6e                Opinion on govt expenses: scientific research
+
+           DO YOU THINK THE GOVERNMENT IS SPENDING TOO LITTLE, ABOUT THE
+           RIGHT AMOUNT, OR TOO MUCH ON SCIENTIFIC RESEARCH?
+
+           VALUE  LABEL
+               1  Too little
+               2  About the right amount
+               3  Too much
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/229
+
+      ________________________________________________________________________
+
+      f6f                Opinion on govt expenses: helping poor
+
+           DO YOU THINK THE GOVERNMENT IS SPENDING TOO LITTLE, ABOUT THE
+           RIGHT AMOUNT, OR TOO MUCH ON HELPING PEOPLE ON LOW INCOMES?
+
+           VALUE  LABEL
+               1  Too little
+               2  About the right amount
+               3  Too much
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/231
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 48
+
+
+      f6g                Opinion on govt expenses: reducing pollution
+
+           DO YOU THINK THE GOVERNMENT IS SPENDING TOO LITTLE, ABOUT THE
+           RIGHT AMOUNT, OR TOO MUCH ON REDUCING POLLUTION?
+
+           VALUE  LABEL
+               1  Too little
+               2  About the right amount
+               3  Too much
+               4  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/233
+
+      ________________________________________________________________________
+
+      g2                 Main activity in 1988
+
+           DURING 1988, WHAT BEST DESCRIBES YOUR MAIN ACTIVITY?
+
+           VALUE  LABEL
+               1  Working
+               2  Looking for work
+               3  A student
+               4  Keeping house
+               5  Retired
+               6  Other
+               7  Not stated/2-6 (imputed)
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/235
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 49
+
+
+      g3                 Ever employed in 1988?
+
+           DID YOU HAVE A JOB OR WERE YOU SELF-EMPLOYED AT ANY TIME DURING
+           1988?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/237
+
+      ________________________________________________________________________
+
+      g4g26              Any employment last week?
+
+           DID YOU DO ANY WORK AT A JOB OR BUSINESS LAST WEEK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/239
+
+      ________________________________________________________________________
+
+      g5g28              Look for work in last 4 weeks?
+
+           DID YOU LOOK FOR A JOB IN THE LAST FOUR WEEKS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/241
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 50
+
+
+      g6g30              Main activity last week
+
+           DURING LAST WEEK, WHAT BEST DESCRIBES YOUR MAIN ACTIVITY? WHERE
+           YOU MAINLY A STUDENT, KEEPING HOUSE, RETIRED, OR OTHER?
+
+           VALUE  LABEL
+               0  Not applicable
+               3  A student
+               4  Keeping house
+               5  Retired
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/243
+
+      ________________________________________________________________________
+
+      g8                 Ever employed?
+
+           HAVE YOU EVER WORKED AT A JOB OR BUSINESS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/245
+
+      ________________________________________________________________________
+
+      g9                 Weeks worked in 1988
+
+           FOR HOW MANY WEEKS DURING 1988 DID YOU DO ANY WORK AT A JOB OR
+           BUSINESS?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/247-248
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 51
+
+
+      g10                Worked mostly ft or pt in 1988
+
+           DURING THOSE WEEKS, WAS THE WORK MOSTLY FULL-TIME OR PART-TIME?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Full-time
+               2  Part-time
+               3  Both equally
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/250
+
+      ________________________________________________________________________
+
+      g11                Employment status in 1988
+
+           DURING THOSE WEEKS WERE YOU MAINLY AN EMPLOYEE WORKING FOR
+           SOMEONE ELSE OR SELF-EMPLOYED ?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Employee
+               2  Self-employed
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/252
+
+      ________________________________________________________________________
+
+      dvg11h5            Work status in last week
+
+           DERIVED VARIABLE FROM FIELDS G11 AND H5 - DURING LAST WEEK
+           (REFERENCE WEEK) WERE YOU MAINLY AN EMPLOYEE WORKING FOR SOMEONE
+           ELSE OR SELF-EMPLOYED
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Working for others
+               2  Self-employed
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/254
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 52
+
+
+      g12                Any paid employees in 1988?
+
+           DURING THOSE WEEKS, DID YOU HAVE ANY PAID EMPLOYEES?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/256
+
+      ________________________________________________________________________
+
+      dvg12h6            Any paid employees last week?
+
+           DERIVED VARIABLE FROM G12 AND H6 - DURING LAST WEEK, DID YOU
+           HAVE ANY PAID EMPLOYEES?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  N0
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/258
+
+      ________________________________________________________________________
+
+      dvg13              Number of paid employees in 1988
+
+           DERIVED VARIABLE FROM QUESTION G13 - ABOUT HOW MANY EMPLOYEES
+           DID YOU HAVE?
+
+           VALUE  LABEL
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/260-261
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 53
+
+
+      dvg13h7            Number of paid employees last week
+
+           DERIVED VARIABLE FROM G13 AND H7 - ABOUT HOW MANY EMPLOYEES DID
+           YOU HAVE LAST WEEK?
+
+           VALUE  LABEL
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/263-264
+
+      ________________________________________________________________________
+
+      g17                Same employer last week?
+
+           DID YOU WORK FOR THE SAME EMPLOYER LAST WEEK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/266
+
+      ________________________________________________________________________
+
+      g18                Same kind of work last week?
+
+           DID YOU DO THE SAME KIND OF WORK LAST WEEK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/268
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 54
+
+
+      g21                Main job last week?
+
+           WAS THIS YOUR MAIN JOB LAST WEEK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/270
+
+      ________________________________________________________________________
+
+      g22ah2a            Usual hours/week at main job
+
+           HOW MANY HOURS PER WEEK DO YOU USUALLY WORK AT YOUR (MAIN)JOB?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/272-273
+
+      ________________________________________________________________________
+
+      g22bh2b            Usual hours/week at other jobs
+
+           HOW MANY HOURS PER WEEK DO YOU USUALLY WORK AT YOUR OTHER JOBS?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/275-276
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 55
+
+
+      g24h4a             Reason work <30 hrs/wk: illness/disability?
+
+           WHY DO YOU WORK LESS THAN 30 HOURS PER WEEK? BECAUSE OF YOUR OWN
+           ILLNESS OR DISABILITY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/278
+
+      ________________________________________________________________________
+
+      g24h4b             Reason work <30 hrs/wk: family responsibility?
+
+           WHY DO YOU WORK LESS THAN 30 HOURS PER WEEK? BECAUSE OF PERSONAL
+           OR FAMILY RESPONSIBILITIES?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/280
+
+      ________________________________________________________________________
+
+      g24h4c             Reason work <30 hrs/wk: go to school?
+
+           WHY DO YOU WORK LESS THAN 30 HOURS PER WEEK? BECAUSE YOU GO TO
+           SCHOOL?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/282
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 56
+
+
+      g24h4d             Reason work <30 hrs/wk: only pt work available?
+
+           WHY DO YOU WORK LESS THAN 30 HOURS PER WEEK? BECAUSE YOU COULD
+           ONLY FIND PART-TIME WORK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/284
+
+      ________________________________________________________________________
+
+      g24h4e             Reason work <30 hrs/wk: not want ft work?
+
+           WHY DO YOU WORK LESS THAN 30 HOURS PER WEEK? BECAUSE YOU DID NOT
+           WANT FULL-TIME WORK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/286
+
+      ________________________________________________________________________
+
+      g24h4f             Reason work <30 hrs/wk: nature of job?
+
+           WHY DO YOU WORK LESS THAN 30 HOURS PER WEEK? BECAUSE THE
+           FULL-TIME WORK AT THIS JOB IS UNDER 30 HOURS PER WEEK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/288
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 57
+
+
+      g24h4g             Reason work <30 hrs/wk: other?
+
+           WHY DO YOU WORK LESS THAN 30 HOURS PER WEEK? BECAUSE OF ANOTHER
+           REASON?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/290
+
+      ________________________________________________________________________
+
+      g27                Have job at which expected to return last week?
+
+           LAST WEEK, DID YOU HAVE A JOB TO WHICH YOU EXPECTED TO RETURN?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/292
+
+      ________________________________________________________________________
+
+      g29                Did not look last week as no j0bs available?
+
+           WAS THIS BECAUSE YOU BELIEVED NO JOBS WERE AVAILABLE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/294
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 58
+
+
+      g32                Reason did not work at job last week
+
+           WHY DID YOU NOT WORK AT THIS JOB LAST WEEK?
+
+           VALUE  LABEL
+               1  Own illness/disability
+               2  Vacation
+               3  Maternity leave
+               4  Personal/family responsibility
+               5  Layoff/expects to return
+               6  Labour dispute
+               7  Bad weather
+               8  Seasonal business
+               9  New job to start in future
+              10  Other
+              21  Not stated/1-8 (imputed)
+              22  Not stated/9-10 (imputed)
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 21-99
+           Record/columns: 1/296-297
+
+      ________________________________________________________________________
+
+      dvg34              Weeks since last worked
+
+           DERIVED VARIABLE FROM QUESTION G34 - HOW LONG AGO DID YOU LAST
+           WORK AT THIS JOB?
+
+           VALUE  LABEL
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/299-300
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 59
+
+
+      dvg35              Weeks to expected return to job
+
+           DERIVED VARIABLE FROM QUESTION G35 - IN HOW MANY WEEKS DO YOU
+           EXPECT TO RETURN TO THIS JOB?
+
+           VALUE  LABEL
+              97  Not applicable
+              98  Do not know
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,98,99
+           Record/columns: 1/302-303
+
+      ________________________________________________________________________
+
+      j84d88             Ever employed in 1984-88?
+
+           BETWEEN JANUARY 1984 AND DECEMBER 1988, DID YOU DO ANY WORK AT A
+           JOB OR BUSINESS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/305
+
+      ________________________________________________________________________
+
+      dvdifjb            Number of jobs in 1984-88
+
+           DERIVED VARIABLE H53, K31 AND L23 - BETWEEN JANUARY 1984 AND
+           DECEMBER 1988, HOW MANY DIFFERENT JOBS DID YOU HAVE? BY
+           DIFFERENT JOBS WE MEAN DIFFERENT DUTIES WITH THE SAME EMPLOYER,
+           OR DIFFERENT EMPLOYERS.
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/307-308
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 60
+
+
+      dvh11              Satisfaction with main job
+
+           DERIVED VARIABLE FROM H11A AND H11B - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOUR (MAIN) JOB?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Very dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Very satisfied
+               5  Satisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/310
+
+      ________________________________________________________________________
+
+      dvh12              Year started working for business/company
+
+           DERIVED VARIABLE FROM QUESTION H12 - IN WHAT YEAR DID YOU START
+           WORKING FOR THIS BUSINESS/COMPANY?
+
+           VALUE  LABEL
+               0  Not applicable
+            9999  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9999
+           Record/columns: 1/312-315
+
+      ________________________________________________________________________
+
+      h13                Usual months/year at main job
+
+           HOW MANY MONTHS IN THE YEAR DO YOU NORMALLY WORK AT YOUR (MAIN)
+           JOB?
+
+           VALUE  LABEL
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/317-318
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 61
+
+
+      h14                Main job permanent?
+
+           IS YOUR (MAIN) JOB PERMANENT? THAT IS, A JOB WITHOUT A SPECIFIC
+           END DATE.
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               3  Self-employed
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/320
+
+      ________________________________________________________________________
+
+      h15h21             Directly supervise people?
+
+           DO YOU DIRECTLY SUPERVISE ANY PEOPLE? T
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/322
+
+      ________________________________________________________________________
+
+      h17h23             % of time supervising
+
+           HOW MUCH OF YOUR WORKING TIME DO YOU SPEND SUPERVISING OTHERS?
+           WOULD YOU SAY LESS THAN A QUARTER, BETWEEN A QUARTER AND A HALF
+           OR MORE THAN A HALF?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Less than a quarter
+               2  Between a quarter and a half
+               3  More than a half
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/324
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 62
+
+
+      h18h24             No. Of persons in business/company
+
+           IN TOTAL, ABOUT HOW MANY PEOPLE WORK IN YOUR BUSINESS/COMPANY AT
+           ALL ITS LOCATIONS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Less than 20 persons
+               2  20-99 persons
+               3  100-499 persons
+               4  500+ persons
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/326
+
+      ________________________________________________________________________
+
+      h20                Permanent job preferred?
+
+           WOULD YOU PREFER TO HAVE A PERMANENT JOB?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/328
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 63
+
+
+      dvh29a             Opinion: work surroundings are pleasant
+
+           DERIVED VARIABLE H29A AND H29AB - DO YOU AGREE OR DISAGREE THAT
+           THE PHYSICAL SURROUNDINGS AT YOUR WORK ARE PLEASANT?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               5  Agree/degree not stated
+               6  Disagree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/330
+
+      ________________________________________________________________________
+
+      dvh29b             Opinion: a lot freedom at work
+
+           DERIVED VARIABLE FROM H29B AND H29BB - DO YOU AGREE OR DISAGREE
+           THAT THERE IS A LOT OF FREEDOM TO DECIDE HOW TO DO YOUR WORK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               5  Agree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/332
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 64
+
+
+      dvh29c             Opinion: work is repetitive
+
+           DERIVED VARIABLE FROM H29C AND H29CB - DO YOU AGREE OR DISAGREE
+           THAT YOU DO THE SAME THINGS OVER AND OVER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               5  Agree/degree not stated
+               6  Disagree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/334
+
+      ________________________________________________________________________
+
+      dvh29d             Opinion: job requires high level of skill
+
+           DERIVED VARIABLE FROM H29D AND H29DB - DO YOU AGREE OR DISAGREE
+           THAT YOUR JOB REQUIRES A HIGH LEVEL OF SKILL?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/336
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 65
+
+
+      dvh29e             Opinion: pay is good
+
+           DERIVED VARIABLE FROM H29E AND H29EB - DO YOU AGREE OR DISAGREE
+           THAT YOUR PAY IS GOOD?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               5  Agree/degree not stated
+               6  Disagree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/338
+
+      ________________________________________________________________________
+
+      dvh29f             Opinion: chances for promotion are good
+
+           DERIVED VARIABLE FROM H29F AND H29FB - DO YOU AGREE OR DISAGREE
+           THAT YOUR CHANCES FOR PROMOTION OR CAREER DEVELOPMENT ARE GOOD?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Strongly disagree
+               2  Somewhat disagree
+               3  Somewhat agree
+               4  Strongly agree
+               5  Agree/degree not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/340
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 66
+
+
+      dvh16h22           Number of persons directly supervised last week
+
+           DERIVED VARIABLE FROM H16 AND H22- LAST WEEK, HOW MANY PEOPLE
+           DID YOU DIRECTLY SUPERVISE?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/342-343
+
+      ________________________________________________________________________
+
+      h25                Type of work
+
+           WHICH OF THE FOLLOWING BEST DESCRIBES THE WORK YOU DO? IS IT
+           MANAGERIAL, SUPERVISORY OR NEITHER?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Managerial
+               2  Supervisory
+               3  Neither
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/345
+
+      ________________________________________________________________________
+
+      h26                Management class
+
+           WOULD YOU SAY THAT YOU ARE IN A TOP, UPPER, MIDDLE OR LOWER
+           MANAGEMENT POSITION?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Top
+               2  Upper
+               3  Middle
+               4  Lower
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/347
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 67
+
+
+      h27                Participation in planning business activities
+
+           DO YOU TAKE PART IN PLANNING THE FUTURE BUSINESS ACTIVITIES
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Entire business/company
+               2  Only a part of it
+               3  Not involved
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/349
+
+      ________________________________________________________________________
+
+      h28                Time spent planning business activities
+
+           HOW MUCH OF YOUR WORKING TIME DO YOU SPEND ON PLANNING FUTURE
+           BUSINESS ACTIVITIES OF YOUR COMPANY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Less than a quarter
+               2  Between a quarter and a half
+               3  More than a half
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/351
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 68
+
+
+      dvsupdr            Type of employment/supervision responsibilities
+
+           DERIVED VARIABLE FROM QUESTIONS H14, H15 AND H21 - DETERMINES
+           THE TYPE OF EMPLOYMENT AND SUPERVISION RESPONSABILITIES OF THE
+           RESPONDENT.
+
+           VALUE  LABEL
+              11  Perm.Job + supervision
+              12  Perm.Job no supervision
+              19  Perm.Job super not stated
+              21  Temp.Job + supervision
+              22  Temp.Job no supervision
+              31  Self-emp + supervision
+              32  Self-emp no supervision
+              39  Self-emp super not stated
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/353-354
+
+      ________________________________________________________________________
+
+      h30a               Employer provides pension plan?
+
+           DOES YOUR BUSINESS/COMPANY PROVIDE YOU WITH A PENSION PLAN?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               3  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/356
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 69
+
+
+      h30b               Employer provides medical insurance?
+
+           DOES YOUR BUSINESS/COMPANY PROVIDE YOU WITH MEDICAL INSURANCE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               3  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/358
+
+      ________________________________________________________________________
+
+      h30c               Employer provides dental plan?
+
+           DOES YOUR BUSINESS/COMPANY PROVIDE YOU WITH A DENTAL PLAN?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               3  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/360
+
+      ________________________________________________________________________
+
+      h31                Employer provides paid maternity leave?
+
+           DOES YOUR BUSINESS/COMPANY PROVIDE PAID MATERNITY LEAVE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               3  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/362
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 70
+
+
+      dvh32              Number of promotions in last 5 years
+
+           DERIVED VARIABLE FROM QUESTION H32 - IN THE LAST FIVE YEARS, HOW
+           MANY TIMES HAVE RECEIVED A PROMOTION FROM YOUR CURRENT
+           BUSINESS/COMPANY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  1 promotion
+               2  2 promotions
+               3  3 promotions
+               4  4 promotions
+               5  5+ promotions
+               8  No promotions
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/364
+
+      ________________________________________________________________________
+
+      dvh34              Hours/week computers normally used at job
+
+           DERIVED VARIABLE FROM QUESTION H34 - HOW MANY HOURS PER WEEK DO
+           YOU NORMALLY USE THIS EQUIPMENT?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/366-367
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 71
+
+
+      dvmain7            Main activity last week
+
+           DERIVED VARIABLE FROM QUESTIONS G4,G5,G6,G20,G26,G27,G28 & G30.
+           RESPONDENT'S MAIN ACTIVITY FOR SEVEN DAYS PRIOR TO THE SURVEY
+
+           VALUE  LABEL
+               1  Working
+               2  Looking for work
+               3  A student
+               4  Keeping house
+               5  Retired
+               6  Other
+               7  Other/usually works
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/369
+
+      ________________________________________________________________________
+
+      dvjob7             Number of jobs in last week
+
+           DERIVED VARIABLE FROM G20 AND H1- INDICATE IF A RESPONDENT WHO
+           WAS IN THE LABOUR FORCE HAD ONE OR MORE JOBS DURING THE
+           REFERENCE WEEK.
+
+           VALUE  LABEL
+               0  Not applicable
+               1  1 job
+               2  2+ jobs
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/371
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 72
+
+
+      h33                Computer used in job?
+
+           DO YOU USE COMPUTERS SUCH AS MAINFRAMES, PERSONAL COMPUTER OR
+           WORD PROCESSORS IN YOUR JOB?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/373
+
+      ________________________________________________________________________
+
+      h35                Impact of computers on job in last 5 years
+
+           IN THE LAST FIVE YEARS, HOW MUCH HAS YOUR WORK BEEN AFFECTED BY
+           THE INTRODUCTION OF COMPUTERS OR AUTOMATED TECHNOLOGY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Greatly
+               2  Somewhat
+               3  Hardly
+               4  Not at all
+               7  Greatly/somewhat (imputed)
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/375
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 73
+
+
+      h36                Impact of computers on skills reqd in last 5 years
+
+           IN THE LAST FIVE YEARS, HAS THE LEVEL OF SKILL REQUIRED TO
+           PERFORM YOUR WORK INCREASED, DECREASED, OR STAYED THE SAME AS A
+           RESULT OF THE INTRODUCTION OF COMPUTERS OR AUTOMATED TECHNOLOGY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Increased
+               2  Decreased
+               3  Stayed the same
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/377
+
+      ________________________________________________________________________
+
+      h37                Impact of computers on job security in last 5 yrs
+
+           IN THE LAST FIVE YEARS, HAS THE JOB SECURITY INCREASED,
+           DECREASED, OR STAYED THE SAME AS A RESULT OF THE INTRODUCTION OF
+           COMPUTERS OR AUTOMATED TECHNOLOGY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Increased
+               2  Decreased
+               3  Stayed the same
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/379
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 74
+
+
+      h38                Impact of computers on job interest in last 5 yrs
+
+           OVER THE LAST FIVE YEARS, HAS YOUR WORK BECOME MORE INTERESTING,
+           LESS INTERESTING, OR STAYED THE SAME AS A RESULT OF THE
+           INTRODUCTION OF COMPUTERS OR AUTOMATED TECHNOLOGY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  More interesting
+               2  Less interesting
+               3  Stayed the same
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/381
+
+      ________________________________________________________________________
+
+      h39                Relationship of job to education
+
+           HOW CLOSELY IS YOUR JOB RELATED TO YOUR EDUCATION?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Closely related
+               2  Somewhat related
+               3  Not related at all
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/383
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 75
+
+
+      h40                Education level normally required for job
+
+           WHAT LEVEL OF EDUCATION IS NORMALLY REQUIRED FOR PEOPLE WHO DO
+           YOUR TYPE OF WORK?
+
+           VALUE  LABEL
+               1  Masters/earned doctorate
+               2  Undergraduate degree
+               3  College/nursing dipl/cert
+               4  Trade/tech/vocat dipl/cert
+               5  Some post-secondary
+               6  High school diploma
+               7  Less than high school diploma
+               8  No qualifications specified
+               9  Other
+              97  Not applicable
+              98  Do not know
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,98,99
+           Record/columns: 1/385-386
+
+      ________________________________________________________________________
+
+      h41                Feel overqualified for job?
+
+           CONSIDERING YOUR EXPERIENCE, EDUCATION AND TRAINING, DO YOU FEEL
+           THAT YOU ARE OVERQUALIFIED FOR YOUR JOB?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/388
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 76
+
+
+      h42                Likely to lose job/be laid off in next year?
+
+           DO YOU THINK IT IS LIKELY YOU WILL LOSE YOUR JOB OR BE LAID OFF
+           IN THE NEXT YEAR?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/390
+
+      ________________________________________________________________________
+
+      h43                Lose job/be laid off in next yr due to computers?
+
+           DO YOU THINK THIS WILL BE BECAUSE OF THE INTRODUCTION OF
+           COMPUTERS OR AUTOMATED TECHNOLOGY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               3  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/392
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 77
+
+
+      dvk1               Satisfaction with retirement
+
+           DERIVED VARIABLE K1A AND K1B - ARE YOU SATISFIED OR DISSATISFIED
+           WITH YOUR RETIREMENT?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Very dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Very satisfied
+               5  Satisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/394
+
+      ________________________________________________________________________
+
+      dvk2ret            Year of retirement
+
+           DERIVED VARIABLE FROM QUESTION K2 - IN WHAT YEAR DID YOU RETIRE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  1964 or before
+               2  1965-69
+               3  1970-74
+               4  1975-79
+               5  1980-84
+               6  1985-89
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/396
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 78
+
+
+      k6                 Retired: relationship of old job to education
+
+           HOW CLOSELY WAS THAT JOB RELATED TO YOUR EDUCATION AT THAT TIME?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Closely related
+               2  Somewhat related
+               3  Not related at all
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/398
+
+      ________________________________________________________________________
+
+      k7                 Retired: due to mandatory retirement age?
+
+           DID YOU RETIRE BECAUSE YOU HAD REACHED MANDATORY RETIREMENT AGE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/400
+
+      ________________________________________________________________________
+
+      k8a                Retired: due to early retirement incentive?
+
+           DID YOU RETIRE BECAUSE YOUR EMPLOYER OFFERED AN EARLY RETIREMENT
+           INCENTIVE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/402
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 79
+
+
+      k8b                Retired: due to new technology?
+
+           DID YOU RETIRE BECAUSE NEW TECHNOLOGY WAS INTRODUCED?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/404
+
+      ________________________________________________________________________
+
+      k8c                Retired : due to health?
+
+           DID YOU RETIRE BECAUSE YOUR HEALTH REQUIRED IT?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/406
+
+      ________________________________________________________________________
+
+      k8d                Retired: due to other reason?
+
+           DID YOU RETIRE FOR ANY OTHER REASON?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/408
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 80
+
+
+      k9                 Retired: pension/benefits from former employers?
+
+           DO YOU RECEIVE A PENSION OR RETIREMENT BENEFITS FROM ANY OF YOUR
+           FORMER EMPLOYERS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/410
+
+      ________________________________________________________________________
+
+      k10                Retired: pension/benefits adjusted for cola?
+
+           ARE THESE BENEFITS ADJUSTED FOR CHANGES IN THE COST OF LIVING?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               3  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/412
+
+      ________________________________________________________________________
+
+      k11                Retired: life enjoyment vs. Before
+
+           COMPARED TO THE YEAR BEFORE YOU RETIRED, DO YOU NOW ENJOY LIFE
+           MORE, LESS OR ABOUT THE SAME?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  More
+               2  Less
+               3  About the same
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/414
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 81
+
+
+      k12                Retired: reason enjoy life more
+
+           WHAT IS THE MAIN REASON THAT YOU NOW ENJOY LIFE MORE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  More leisure time
+               2  More travel
+               3  More time with family
+               4  More time for voluntary work
+               5  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/416
+
+      ________________________________________________________________________
+
+      k14                Retired: reason enjoy life less
+
+           WHAT IS THE MAIN REASON THAT YOU NOW ENJOY LIFE LESS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Health
+               2  Decrease in income
+               3  Less contact with people
+               4  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/418
+
+      ________________________________________________________________________
+
+      k18                Retired: days worked in 1988
+
+           IN 1988, HOW MANY DAYS DID YOU DO ANY WORK FOR PAY?
+
+           VALUE  LABEL
+               0  None
+             997  Not applicable
+             999  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,997,999
+           Record/columns: 1/420-422
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 82
+
+
+      agertre            Age plan to retire
+
+           AT WHAT AGE DO YOU PLAN TO RETIRE?
+
+           VALUE  LABEL
+              11  Do not know
+              96  Do not intend to retire
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 11,96-99
+           Record/columns: 1/424-425
+
+      ________________________________________________________________________
+
+      manrtre            Mandatory retirement a good idea?
+
+           DO YOU THINK MANDATORY RETIREMENT IS A GOOD IDEA?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/427
+
+      ________________________________________________________________________
+
+      dvmage             Desired age for mandatory retirement
+
+           DERIVED VARIABLE H58B, K15B, K36B AND L29B - RESPONDENT'S CHOICE
+           OF AGE FOR MANDATORY RETIREMENT
+
+           VALUE  LABEL
+               0  Not applicable
+               1  25-45 years
+               2  46-55 years
+               3  56-59 years
+               4  60 years
+               5  61-64 years
+               6  65 years
+               7  66+ years
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/429
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 83
+
+
+      l1                 Looking for ft or pt job
+
+           WERE YOU MAINLY LOOKING FOR A FULL-TIME OR PART-TIME JOB?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Full-time
+               2  Part-time
+               3  Either
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/431
+
+      ________________________________________________________________________
+
+      l2                 Chances of finding j0b in 6 months
+
+           WHAT ARE THE CHANCES THAT YOU WILL FIND A JOB IN THE NEXT SIX
+           MONTHS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Very good
+               2  Good
+               3  Not good
+               4  Not very good
+               5  Has already found work
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/433
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 84
+
+
+      dvl4               Satisfaction with keeping house as main activity
+
+           DERIVED VARIABLE FROM L4A AND L4B - ARE YOU SATISFIED OR
+           DISSATISFIED TO BE KEEPING HOUSE AS YOUR MAIN ACTIVITY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Very dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Very satisfied
+               5  Satisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/435
+
+      ________________________________________________________________________
+
+      l5                 Like to have a paying job now?
+
+           WOULD YOU LIKE TO HAVE A PAYING JOB NOW?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/437
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 85
+
+
+      l6a                No job: because unavailable/hard to find?
+
+           DO YOU NOT HAVE A PAYING JOB BECAUSE JOBS ARE UNAVAILABLE OR
+           HARD TO FIND?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/439
+
+      ________________________________________________________________________
+
+      l6b                No job: because lack skills/qualifications?
+
+           DO YOU NOT HAVE A PAYING JOB BECAUSE YOU LACK SKILLS OR
+           QUALIFICATIONS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/441
+
+      ________________________________________________________________________
+
+      l6c                No job: because of illness/disability
+
+           DO YOU NOT HAVE A PAYING JOB BECAUSE OF YOUR OWN ILLNESS OR
+           DISABILITY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/443
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 86
+
+
+      l6d                No job: because no suitable day care?
+
+           DO YOU NOT HAVE A PAYING JOB BECAUSE YOU CAN'T FIND SUITABLE
+           CHILD CARE?
+
+           VALUE  LABEL
+               0  Section l not completed
+               1  Yes
+               2  No
+               3  Not applicable
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/445
+
+      ________________________________________________________________________
+
+      l6e                No job: because prefer to stay with children?
+
+           DO YOU NOT HAVE A PAYING JOB BECAUSE YOU PREFER TO STAY HOME
+           WITH CHILDREN?
+
+           VALUE  LABEL
+               0  Section l not completed
+               1  Yes
+               2  No
+               3  Not applicable
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/447
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 87
+
+
+      l6f                No job: because spouse wants respondent at home?
+
+           DO YOU NOT HAVE A PAYING JOB BECAUSE YOUR SPOUSE WANTS YOU TO
+           STAY HOME?
+
+           VALUE  LABEL
+               0  Section l not completed
+               1  Yes
+               2  No
+               3  Not applicable
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/449
+
+      ________________________________________________________________________
+
+      l6g                No job: because of personal responsibilities?
+
+           DO YOU NOT HAVE A PAYING JOB BECAUSE OF PERSONAL OR FAMILY
+           RESPONSIBILITIES?
+
+           VALUE  LABEL
+               0  Section l not completed
+               1  Yes
+               2  No
+               3  Not applicable
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/451
+
+      ________________________________________________________________________
+
+      l6h                No job: because of other reasons?
+
+           DO YOU NOT HAVE A PAYING JOB FOR ANY OTHER REASONS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/453
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 88
+
+
+      l20                Feel overqualified for most of jobs held?
+
+           CONSIDERING YOUR EXPERIENCE, EDUCATION AND TRAINING, DO YOU FEEL
+           THAT YOU HAVE BEEN OVERQUALIFIED FOR MOST OF YOUR JOBS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/455
+
+      ________________________________________________________________________
+
+      l27                Intend to work in future?
+
+           DO YOU INTEND TO WORK AT A JOB IN THE FUTURE?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/457
+
+      ________________________________________________________________________
+
+      k33l25             Look for work when unemployed in 1984-88?
+
+           DID YOU LOOK FOR WORK IN ANY OF THE REMAINING MONTHS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/459
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 89
+
+
+      lookjd             Ever look for work in 1984-88?
+
+           DID YOU LOOK FOR WORK IN ANY MONTH BETWEEN JANUARY 1984 AND
+           DECEMBER 1988?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/461
+
+      ________________________________________________________________________
+
+      monlook            Months looked for work 1984-88
+
+           THERE WERE 60 MONTHS BETWEEN JANUARY 1984 AND DECEMBER 1988. IN
+           HOW MANY OF THOSE MONTHS DID YOU LOOK FOR WORK?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/463-464
+
+      ________________________________________________________________________
+
+      m1a                Involved in charity/service/vol org. In last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU BEEN INVOLVED IN ANY CHARITABLE,
+           SERVICE OR VOLUNTEER ORGANIZATION?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/466
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 90
+
+
+      m1b                Involved in nbhood/comm/schl assoc. In last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU BEEN INVOLVED IN ANY
+           NEIGHBOURHOOD, COMMUNITY OR SCHOOL-RELATED ASSOCIATION?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/468
+
+      ________________________________________________________________________
+
+      m1c                Involved in religious/church group in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU BEEN INVOLVED IN ANY RELIGIOUS
+           OR CHURCH-RELATED GROUP, NOT COUNTING TIME AT CHURCH SERVICES?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/470
+
+      ________________________________________________________________________
+
+      m1d                Involved in social/ethnic group in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU BEEN INVOLVED IN ANY
+           SOCIAL,CULTURAL OR ETHNIC GROUP?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/472
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 91
+
+
+      m1e                Involved in sports assoc. In last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU BEEN INVOLVED IN ANY SPORTS OR
+           ATHLETIC ASSOCIATION?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/474
+
+      ________________________________________________________________________
+
+      m1f                Involved in public interest group in last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU BEEN INVOLVED IN ANY PUBLIC
+           INTEREST GROUP, CONCERNED WITH ISSUES SUCH AS THE ENVIRONMENT OR
+           WORLD PEACE?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/476
+
+      ________________________________________________________________________
+
+      m1g                Involved in work-related org. In last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU BEEN INVOLVED IN ANY BUSINESS,
+           PROFESSIONAL OR OTHER WORK-RELATED ORGANIZATION?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/478
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 92
+
+
+      m1h                Involved in political org. In last year?
+
+           IN THE LAST 12 MONTHS, HAVE YOU BEEN INVOLVED IN ANY POLITICAL
+           ORGANIZATION?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/480
+
+      ________________________________________________________________________
+
+      m3                 Average hours/month involved in organizations?
+
+           ON AVERAGE, WHAT IS THE TOTAL NUMBER OF HOURS YOU SPEND EACH
+           MONTH PARTICIPATING IN ALL SUCH ORGANIZATIONS?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/482-483
+
+      ________________________________________________________________________
+
+      m4                 Member of a labour union?
+
+           ARE YOU A MEMBER OF A LABOUR UNION?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/485
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 93
+
+
+      dvm5               Average hours/month on union activities
+
+           DERIVED VARIABLE FROM QUESTION M5 - ON AVERAGE,ABOUT HOW MANY
+           HOURS DO YOU SPEND EACH MONTH ON UNION ACTIVITIES?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/487-488
+
+      ________________________________________________________________________
+
+      n2                 Personal happiness
+
+           WOULD YOU DESCRIBE YOURSELF AS VERY HAPPY, SOMEWHAT HAPPY,
+           SOMEWHAT UNHAPPY, VERY UNHAPPY.
+
+           VALUE  LABEL
+               1  Very happy
+               2  Somewhat happy
+               3  Somewhat unhappy
+               4  Very unhappy
+               5  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/490
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 94
+
+
+      dvn3a              Satisfaction with health
+
+           DERIVED N3A AND N3AB VARIABLE - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOUR HEALTH?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               6  Dissatisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/492
+
+      ________________________________________________________________________
+
+      dvn3b              Satisfaction with education
+
+           DERIVED VARIABLE FROM N3B AND N3BB - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOUR EDUCATION?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/494
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 95
+
+
+      dvn3c              Satisfaction with job or main activity
+
+           DERIVED VARIABLE FROM N3C AND N3CB - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOUR JOB OR MAIN ACTIVITY?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/496
+
+      ________________________________________________________________________
+
+      dvn3d              Satisfaction with other time spent
+
+           DERIVED VARIABLE N3D AND N3DB - ARE YOU SATISFIED OR
+           DISSATISFIED WITH THE WAY YOU SPEND YOUR OTHER TIME?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               6  Dissatisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/498
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 96
+
+
+      dvn3e              Satisfaction with finances
+
+           DERIVED VARIABLE N3E AND N3EB - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOUR FINANCES?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               6  Dissatisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/500
+
+      ________________________________________________________________________
+
+      dvn3f              Satisfaction with housing
+
+           DERIVED VARIABLE N3F AND N3FB - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOUR HOUSING?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/502
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 97
+
+
+      dvn3g              Satisfaction with spouse/single status
+
+           DERIVED VARIABLE N3G AND N3GB - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOUR SPOUSE, LIVING PARTNER OR SINGLE STATUS?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               6  Dissatisfied/not stated
+               7  No opiniom
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/504
+
+      ________________________________________________________________________
+
+      dvn3h              Satisfaction with friends/family members
+
+           DERIVED VARIABLE N3H AND N3HB - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOUR RELATIONSHIP WITH FRIENDS AND FAMILY
+           MEMBERS?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/506
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 98
+
+
+      dvn3i              Satisfaction with self
+
+           DERIVED VARIABLE N3I AND N3IB - ARE YOU SATISFIED OR
+           DISSATISFIED WITH YOURSELF (SELF-ESTEEM)?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               6  Dissatisfied/not stated
+               7  No opiniom
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/508
+
+      ________________________________________________________________________
+
+      dvn4               Satisfaction with life
+
+           DERIVED VARIABLE FROM N4A AND N4B - HOW DO YOU FEEL ABOUT YOUR
+           LIFE AS A WHOLE RIGHT NOW? ARE YOU SATISFIED OR DISSATISFIED?
+
+           VALUE  LABEL
+               1  Strongly dissatisfied
+               2  Somewhat dissatisfied
+               3  Somewhat satisfied
+               4  Strongly satisfied
+               5  Satisfied/not stated
+               7  No opinion
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/510
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                            Page 99
+
+
+      p2                 Dwelling
+
+           IN WHAT TYPE OF DWELLING ARE YOU NOW LIVING?
+
+           VALUE  LABEL
+               1  Single detached house
+               2  Semi-detached/double
+               3  Garden/town/row house
+               4  Duplex
+               5  Low-rise apartment <5 stories
+               6  High-rise apartment 5+ stories
+               7  Mobile home
+               8  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/512
+
+      ________________________________________________________________________
+
+      p4                 Tenure of dwelling
+
+           IS THIS DWELLING OWNED BY A MEMBER OF THIS HOUSEHOLD OR IS IT
+           RENTED?
+
+           VALUE  LABEL
+               1  Owned
+               2  Rented
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/514
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 100
+
+
+      p10                Limited from long-term condition/health problem?
+
+           ARE YOU LIMITED IN THE KIND OR AMOUNT OF ACTIVITY YOU CAN DO AT
+           HOME, AT WORK, OR AT SCHOOL BECAUSE OF A LONG TERM CONDITION OR
+           HEALTH PROBLEM?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/516
+
+      ________________________________________________________________________
+
+      p12                Can not work due to health condition/problem?
+
+           ARE YOU COMPLETELY UNABLE TO WORK AT A JOB OR BUSINESS BECAUSE
+           OF THIS CONDITION OR HEALTH PROBLEM?
+
+           VALUE  LABEL
+               0  Question not asked
+               1  Yes
+               2  No
+               3  Not applicable
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,3,9
+           Record/column: 1/518
+
+      ________________________________________________________________________
+
+      p16eng             Mother tongue: english?
+
+           WHAT LANGUAGE DID YOU FIRST SPEAK IN CHILDHOOD?...ENGLISH
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/520
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 101
+
+
+      p16fre             Mother tongue: french?
+
+           WHAT LANGUAGE DID YOU FIRST SPEAK IN CHILDHOOD?...FRENCH
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/522
+
+      ________________________________________________________________________
+
+      p16steng           Still understand mother tongue: english?
+
+           DO YOU STILL UNDERSTAND THAT/THOSE LANGUAGE(S)?...ENGLISH
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/524
+
+      ________________________________________________________________________
+
+      p16stfre           Still understand mother tongue: french?
+
+           DO YOU STILL UNDERSTAND THAT/THOSE LANGUAGE(S)?...FRENCH
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/526
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 102
+
+
+      dvp16ot            Mother tongue: other?
+
+           DERIVED VARIABLE FROM P16ITA, P16GER, P16UKR AND - WHAT LANGUAGE
+           DID YOU FIRST SPEAK IN CHILDHOOD?...OTHER
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/528
+
+      ________________________________________________________________________
+
+      dvp16sot           Still understand mother tongue: other?
+
+           DERIVED VARIABLE FROM P16STITA, P16STG P16STUKR - DO YOU STILL
+           UNDERSTAND THAT/THOSE LANGUAGE(S)? ...OTHER
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/530
+
+      ________________________________________________________________________
+
+      p17eng             Home language: english?
+
+           WHAT LANGUAGE DO YOU SPEAK MOST OFTEN AT HOME?...ENGLISH
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/532
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 103
+
+
+      p17fre             Home language: french?
+
+           WHAT LANGUAGE DO YOU SPEAK MOST OFTEN AT HOME?...FRENCH
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/534
+
+      ________________________________________________________________________
+
+      dvp17ot            Home language: other?
+
+           DERIVED VARIABLE FROM P17 FOR ITALIAN, GERMAN, - WHAT LANGUAGE
+           DO YOU SPEAK MOST OFTEN AT HOME?...OTHER
+
+           VALUE  LABEL
+               1  Yes
+               2  No/not applicable
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/536
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 104
+
+
+      dvp18              Religion
+
+           WHAT, IF ANY, IS YOUR RELIGION?
+
+           VALUE  LABEL
+               1  No religion
+               2  Roman catholic
+               3  United church
+               4  Anglican
+               5  Presbyterian
+               6  Lutheran
+               7  Baptist
+               8  Eastern orthodox
+               9  Jewish
+              10  Other non-protestant
+              11  Other protestant
+              98  Not stated/2-11
+              99  Not stated
+
+           Data type: numeric
+           Missing-data code: 99
+           Record/columns: 1/538-539
+
+      ________________________________________________________________________
+
+      p19                Attendance at religious services in last year
+
+           OTHER, THAN ON SPECIAL OCCASIONS, SUCH AS WEDDINGS,FUNERALS OR
+           BAPTISMS, HOW OFTEN DID YOU ATTEND SERVICES OR MEETINGS
+           CONNECTED WITH YOUR RELIGION IN THE LAST 12 MONTH?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  At least once a week
+               2  At least once a month
+               3  A few times a year
+               4  At least once a year
+               5  Less than once a year
+               6  Never
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/541
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 105
+
+
+      p20fre             Ethnic/cultural group: french?
+
+           TO WHICH ETHNIC OR CULTURAL GROUP DO YOU OR DID YOUR ANCESTORS
+           BELONG? WOULD IT BE FRENCH?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               8  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/543
+
+      ________________________________________________________________________
+
+      p20eng             Ethnic/cultural group: english?
+
+           TO WHICH ETHNIC OR CULTURAL GROUP DO YOU OR DID YOUR ANCESTORS
+           BELONG? WOULD IT BE ENGLISH ?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               8  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/545
+
+      ________________________________________________________________________
+
+      p20iri             Ethnic/cultural group: irish?
+
+           TO WHICH ETHNIC OR CULTURAL GROUP DO YOU OR DID YOUR ANCESTORS
+           BELONG? WOULD IT BE IRISH?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               8  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/547
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 106
+
+
+      p20sco             Ethnic/cultural group: scottish?
+
+           TO WHICH ETHNIC OR CULTURAL GROUP DO YOU OR DID YOUR ANCESTORS
+           BELONG? WOULD IT BE SCOTTISH?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               8  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/549
+
+      ________________________________________________________________________
+
+      p20ger             Ethnic/cultural group: german?
+
+           TO WHICH ETHNIC OR CULTURAL GROUP DO YOU OR DID YOUR ANCESTORS
+           BELONG? WOULD IT BE GERMAN?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               8  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/551
+
+      ________________________________________________________________________
+
+      p20ita             Ethnic/cultural group: italian?
+
+           TO WHICH ETHNIC OR CULTURAL GROUP DO YOU OR DID YOUR ANCESTORS
+           BELONG? WOULD IT BE ITALIAN?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               8  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/553
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 107
+
+
+      p20ukr             Ethnic/cultural group: ukrainian?
+
+           TO WHICH ETHNIC OR CULTURAL GROUP DO YOU OR DID YOUR ANCESTORS
+           BELONG? WOULD IT BE UKRANIAN?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               8  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/555
+
+      ________________________________________________________________________
+
+      dvp20oth           Ethnic/cultural group: other?
+
+           DERIVED VARIABLE FROM RESPONSES GIVEN FOR 'OTHER' AND
+           'CANADIAN'. - TO WHICH ETHNIC OR CULTURAL GROUP DO YOU OR DID
+           YOUR ANCESTORS BELONG? WOULD IT BE ANOTHER ETHNIC OR CULTURAL
+           GROUP?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               8  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 8,9
+           Record/column: 1/557
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 108
+
+
+      p22                Spouse: highest level of education
+
+           WHAT IS THE HIGHEST LEVEL OF EDUCATION YOUR SPOUSE ATTAINED?
+
+           VALUE  LABEL
+               1  Masters/earned doctorate
+               2  Undergraduate degree
+               3  College/nursing dipl/cert
+               4  Trade/tech/vocat dipl/cert
+               5  Some university
+               6  Some college/nursing
+               7  Some trade/tech/vocat
+               8  High school graduation
+               9  High school
+              10  Elementary school
+              11  Other
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/559-560
+
+      ________________________________________________________________________
+
+      p23                Spouse: main activity in 1988
+
+           DURING 1988, WHAT BEST DESCRIBES YOUR SPOUSE'S MAIN ACTIVITY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Working
+               2  Looking for work
+               3  A student
+               4  Keeping house
+               5  Retired
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/562
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 109
+
+
+      p24                Spouse: ever employed in 1988?
+
+           DID YOUR SPOUSE HAVE A JOB OR WAS HE/SHE SELF-EMPLOYED AT ANY
+           TIME DURING 1988?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/564
+
+      ________________________________________________________________________
+
+      p25                Spouse: weeks worked in 1988
+
+           FOR HOW MANY WEEKS DURING 1988 DID YOUR SPOUSE DO ANY WORK AT A
+           JOB OR BUSINESS?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/566-567
+
+      ________________________________________________________________________
+
+      p26a               Wages/salary//self-employment income in 1988?
+
+           DURING 1988, DID YOU PERSONALLY RECEIVE INCOME FROM WAGES,
+           SALARY OR SELF-EMPLOYMENT?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/569
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 110
+
+
+      p26b               Government transfers in 1988?
+
+           DURING 1988, DID YOU PERSONALLY RECEIVE INCOME FROM
+           GOVERNMENT,SUCH AS FAMILY ALLOWANCE, UNEMPLOYMENT INSURANCE,
+           SOCIAL ASSISTANCE, CANADA OR QUEBEC PENSION PLAN OR OLD AGE
+           SECURITY?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/571
+
+      ________________________________________________________________________
+
+      p26c               Investment/pension income in 1988?
+
+           DURING 1988, DID YOU PERSONALLY RECEIVE INCOME FROM INTEREST,
+           DIVIDENDS, INVESTMENTS OR PRIVATE PENSIONS?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/573
+
+      ________________________________________________________________________
+
+      p26d               Other income in 1988?
+
+           DURING 1988, DID YOU PERSONALLY RECEIVE INCOME FROM ANY OTHER
+           SOURCES, SUCH AS ALIMONY, SCHOLARSHIPS, ETC.?
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/575
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 111
+
+
+      p27a               Any income in 1988?
+
+           FOR 1988, WITH YOUR BEST ESTIMATE OF YOUR TOTAL PERSONAL INCOME
+           FROM ALL SOURCES, INCLUDING THOSE MENTIONED IN P26
+
+           VALUE  LABEL
+               1  Yes
+               2  No
+               3  Do not know
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 3,9
+           Record/column: 1/577
+
+      ________________________________________________________________________
+
+      p28a               Household income in 1988 - 1
+
+           WHAT IS YOUR BEST ESTIMATE OF THE TOTAL INCOME OF ALL HOUSEHOLD
+           MEMBERS FROM ALL SOURCES IN 1988?
+
+           VALUE  LABEL
+               2  Under $20,000
+               3  $20,000+
+               4  No income
+               5  Do not know
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 5,99
+           Record/columns: 1/579-580
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 112
+
+
+      p28b               Household income in 1988 - 2
+
+           WHAT IS YOUR BEST ESTIMATE OF THE TOTAL INCOME OF ALL HOUSEHOLD
+           MEMBERS FROM ALL SOURCES IN 1988?
+
+           VALUE  LABEL
+               6  Under $10,000
+               7  $10,000-19,999
+               8  $20,000-39,999
+               9  $40,000+
+              97  No income
+              98  Do not know
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,98,99
+           Record/columns: 1/582-583
+
+      ________________________________________________________________________
+
+      p28c               Household income in 1988 - 3
+
+           WHAT IS YOUR BEST ESTIMATE OF THE TOTAL INCOME OF ALL HOUSEHOLD
+           MEMBERS FROM ALL SOURCES IN 1988?
+
+           VALUE  LABEL
+              10  Under $5,000
+              11  $5,000-9,999
+              12  $10,000-14,999
+              13  $15,000-19,999
+              14  $20,000-29,999
+              15  $30,000-39,999
+              16  $40,000-59,999
+              17  $60,000-79,999
+              18  $80,000+
+              97  Not applicable
+              98  Do not know
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,98,99
+           Record/columns: 1/585-586
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 113
+
+
+      dvsalp27           Total income in 1988
+
+           DERIVED VARIABLE FROM QUESTION P27. - RESPONDENT'S PERSONAL
+           INCOME
+
+           VALUE  LABEL
+               0  No income
+           99998  Do not know
+           99999  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,99998,99999
+           Record/columns: 1/588-592
+
+      ________________________________________________________________________
+
+      weigt              Weight
+
+           WEIGHT
+
+           Data type: numeric
+           Decimals: 4
+           Record/columns: 1/594-603
+
+      ________________________________________________________________________
+
+      act1984            Main activity in 1984
+
+           DURING 1984, WHAT DESCRIBES YOUR MAIN ACTIVITY? WERE YOU MAINLY
+           WORKING AT A JOB OR BUSINESS, LOOKING FOR WORK, A STUDENT,
+           KEEPING HOUSE, RETIRED, OR OTHER?
+
+           VALUE  LABEL
+               1  Working
+               2  Looking for work
+               3  A student
+               4  Keeping house
+               5  Retired
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/605
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 114
+
+
+      job1984            Ever employed in 1984?
+
+           DID YOU HAVE A JOB OR WERE YOU SELF-EMPLOYED AT ANY TIME DURING
+           1984?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/607
+
+      ________________________________________________________________________
+
+      relat84            Relationship of employment to education in 1984
+
+           HOW CLOSELY WAS THAT JOB RELATED TO YOUR EDUCATION AT THAT TIME?
+           WAS IT CLOSELY RELATED, SOMEWHAT RELATED, OR NOT RELATED AT ALL?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Closely related
+               2  Somewhat related
+               3  Not at all related
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/609
+
+      ________________________________________________________________________
+
+      jobloss            Lose a job in 1984-88?
+
+           DID YOU LOSE A JOB BETWEEN JANUARY 1984 AND DECEMBER 1988 FOR
+           ANY REASON?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/611
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 115
+
+
+      jblosa             Reason job lost 1984-88: employer out of business?
+
+           DID YOU LOSE A JOB BETWEEN JANUARY 1984 AND DECEMBER 1988
+           BECAUSE OF AN EMPLOYER GOING OUT OF BUSINESS?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/613
+
+      ________________________________________________________________________
+
+      jblosb             Reason job lost 1984-88: plant closing/moving?
+
+           DID YOU LOSE A JOB BETWEEN JANUARY 1984 AND DECEMBER 1988
+           BECAUSE OF A PLANT CLOSING OR MOVING?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/615
+
+      ________________________________________________________________________
+
+      jblosc             Reason job lost 1984-88: new technology?
+
+           DID YOU LOSE A JOB BETWEEN JANUARY 1984 AND DECEMBER 1988
+           BECAUSE OF THE INTRODUCTION OF NEW TECHNOLOGY?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/617
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 116
+
+
+      jblosd             Reason job lost 1984-88: staff reduction?
+
+           DID YOU LOSE A JOB BETWEEN JANUARY 1984 AND DECEMBER 1988
+           BECAUSE OF A REDUCTION OF STAFF?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/619
+
+      ________________________________________________________________________
+
+      jblose             Reason job lost 1984-88: seasonal job?
+
+           DID YOU LOSE A JOB BETWEEN JANUARY 1984 AND DECEMBER 1988
+           BECAUSE IT WAS A SEASONAL JOB?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/621
+
+      ________________________________________________________________________
+
+      jblosf             Reason job lost 1984-88: work shortage?
+
+           DID YOU LOSE A JOB BETWEEN JANUARY 1984 AND DECEMBER 1988
+           BECAUSE OF A SHORTAGE OF WORK?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/623
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 117
+
+
+      jblosg             Reason job lost 1984-88: other?
+
+           DID YOU LOSE A JOB BETWEEN JANUARY 1984 AND DECEMBER 1988
+           BECAUSE OF ANOTHER REASON?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Yes
+               2  No
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/625
+
+      ________________________________________________________________________
+
+      timewrk            Months worked 1984-88
+
+           THERE WERE 60 MONTHS BETWEEN JANUARY 1984 AND DECEMBER 1988. IN
+           HOW MANY OF THOSE MONTHS WERE YOU WORKING AT A JOB OR BUSINESS?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/627-628
+
+      ________________________________________________________________________
+
+      lookwrk            Months looked for work 1984-88
+
+           IN HOW MANY OF THE REMAINING MONTHS DID YOU LOOK FOR WORK?
+
+           VALUE  LABEL
+               0  None
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,97,99
+           Record/columns: 1/630-631
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 118
+
+
+      prov               Province
+
+           DERIVED VARIABLE - PROVINCE OF RESIDENCE
+
+           VALUE  LABEL
+               0  Newfoundland
+               1  Prince edward island
+               2  Nova scotia
+               3  New brunswick
+               4  Quebec
+               5  Ontario
+               6  Manitoba
+               7  Saskatchewan
+               8  Alberta
+               9  British columbia
+
+           Data type: numeric
+           Record/column: 1/633
+
+      ________________________________________________________________________
+
+      dvms               Marital status
+
+           DERIVED VARIABLE - MARITAL STATUS OF SELECTED PERSON
+
+           VALUE  LABEL
+               1  Married
+               2  Single
+               3  Widowed
+               4  Separated/divorced
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/635
+
+      ________________________________________________________________________
+
+      dvsex              Sex
+
+           DERIVED VARIABLE - SEX OF THE RESPONDENT
+
+           VALUE  LABEL
+               1  Male
+               2  Female
+
+           Data type: numeric
+           Record/column: 1/637
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 119
+
+
+      dvagegr            Age group
+
+           DERIVED VARIABLE - RESPONDENT'S AGE GROUP
+
+           VALUE  LABEL
+               1  15-19 years
+               2  20-24 years
+               3  25-29 years
+               4  30-34 years
+               5  35-39 years
+               6  40-44 years
+               7  45-49 years
+               8  50-54 years
+               9  55-59 years
+              10  60-64 years
+              11  65-69 years
+              12  70-74 years
+              13  75-79 years
+              14  80+ years
+
+           Data type: numeric
+           Record/columns: 1/639-640
+
+      ________________________________________________________________________
+
+      dvimmig            Year of immigration
+
+           DERIVED VARIABLE FROM QUESTION P14 - IN WHAT YEAR DID YOU FIRST
+           IMMIGRATE TO CANADA?
+
+           VALUE  LABEL
+               0  Not applicable
+               1  Before 1946
+               2  1946-66
+               3  1967-71
+               4  1972-76
+               5  1977-81
+               6  1982-86
+               7  1987-89
+               8  Citizen by birth
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,8,9
+           Record/column: 1/642
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 120
+
+
+      dvbornr            Birthplace information
+
+           FROM QUESTION P13 DERIVED VARIABLE - PLACE OF RESIDENCE AT BIRTH
+
+           VALUE  LABEL
+               1  Same province
+               2  Different province
+               3  Outside canada
+               9  Not stated
+
+           Data type: numeric
+           Missing-data code: 9
+           Record/column: 1/644
+
+      ________________________________________________________________________
+
+      dvlvgar1           Living arrangements
+
+           DERIVED VARIABLE FROM THE SELECTION CONTROL FORM 4-1 THE LIVING
+           ARRANGEMENT OF THE RESPONDENT'S HOUSEHOLD.
+
+           VALUE  LABEL
+               0  Other
+               1  Couple + ch<25
+               2  Couple + no ch<25
+               3  Lone parent + ch<25
+               4  Lone parent + ch>24
+               5  Couple + 1 ch<25
+               6  Lone parent + 1 ch<25
+               7  Couple + 1 ch>24
+               8  Lone person + sibling
+               9  Living with non-relative
+              10  Living alone
+
+           Data type: numeric
+           Record/columns: 1/646-647
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 121
+
+
+      dvhhldsz           Household size
+
+           DERVIED VARIABLE - HOUSEHOLD SIZE OF RESPONDENT
+
+           VALUE  LABEL
+               1  1 person
+               2  2 persons
+               3  3 persons
+               4  4 persons
+               5  5 persons
+               6  6 persons
+               7  7 persons
+               8  8+ persons
+
+           Data type: numeric
+           Record/column: 1/649
+
+      ________________________________________________________________________
+
+      dvagrsp            Spouse: age group
+
+           DERIVED VARIABLE FROM SELECTION CONTROL FORM 4-1 - THE
+           RESPONDENT'S SPOUSE'S AGE IN 5 YEAR AGE GROUPS.
+
+           VALUE  LABEL
+               2  15-24 years
+               3  25-29 years
+               4  30-34 years
+               5  35-39 years
+               6  40-44 years
+               7  45-49 years
+               8  50-54 years
+               9  55-59 years
+              10  60-64 years
+              11  65-69 years
+              12  70-74 years
+              13  75-79 years
+              14  80+ years
+              97  Not applicable
+              99  Not stated
+
+           Data type: numeric
+           Missing-data codes: 97,99
+           Record/columns: 1/651-652
+
+
+
+
+
+
+
+
+                                  October 19, 2020
+
+
+
+      General social survey, cycle 4 - 1989                           Page 122
+
+
+      dvchild            Number of children at home
+
+           DERIVED VARIABLE FROM THE SELECTION CONTROL FORM 4-1 - NUMBER OF
+           RESPONDENT'S CHILDREN, LIVING AT HOME
+
+           VALUE  LABEL
+               0  No children
+               1  1 child
+               2  2 children
+               3  3 children
+               4  4 children
+               5  5+ children
+
+           Data type: numeric
+           Record/column: 1/654
+
+      ________________________________________________________________________
+
+      dvchdag            Age group of children at home
+
+           DERIVED VARIABLE FROM THE SELECTION CONTROL FORM 4-1 AGE GROUP
+           OF THE RESPONDENT'S CHILDREN IN THE HOUSEHOLD
+
+           VALUE  LABEL
+               0  Not applicable
+               1  None<19
+               2  All<5
+               3  4<all<13
+               4  12<all<19
+               5  Some<5
+               6  Other
+               9  Not stated
+
+           Data type: numeric
+           Missing-data codes: 0,9
+           Record/column: 1/656
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                  October 19, 2020

@@ -1,0 +1,286 @@
+---
+title: "Biden to Win Popular Vote in Landslide"
+subtitle: "A Forecast of the 2020 US Election"
+author: "Isaac Ehrlich"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+abstract: "On the heels of a widely mispredicted 2016 US presidential election, politicians, statisticians, and voters alike are looking for more accurate forecasts as we approach what is perhaps the most consequential election in recent US history. In an attempt to avoid errors of unrepresentative samples seen in past research, we analyze the Nationscape Data Set, a survey on political opinions, and use the American Community Survey, a key source of information on the American populus, to post-stratify this data, achieving a representative analysis of current political opinion and behavior. After applying a multilevel regression to our data, we predict that Biden will win the popular vote of the upcoming election in a landslide, capturing 83% of the vote. \\par \\textbf{Keywords:} Forecasting, US 2020 Election, Trump, Biden, Multilevel Regression with Post-Stratification"
+output: pdf_document
+toc: FALSE
+bibliography: references.bib
+nocite: | 
+  @R2020, @Wickham2019, @kable2020, @grid2017
+---
+
+# Introduction
+From the errors of Literary Digest in 1936 to the mispredicted outcome of the 2016 US presidential election, surevyors and forecasters have often struggled to accurately poll, extrapolate, and predict election winners. Often, as was the case in 1936, this is a result of non-representative samples, a common blight on statisticians' attempts for unbiased surveying and prediction, in and outside of politics. However, post-stratification, a method where responses in smaller surveys are weighed based on population statistics, is a promising method of reducing sampling biases. By weighting responses in accordance to their likely effect among the entire population, analyses that would previously be misleading can be completed on non-representative data sets.
+
+As elections are a common attracter of non-representative sampling, as well as a common cause for statistical modelling, the upcoming US Presidential election is a promising subject for this technique. In this analysis, we apply a multilevel logistic regression with age, race, and gender as predictors, to the Nationscape Data Set, a survey conducted in order to gauge political opinions across the US [@Voters2020]. However, in order to ensure the reliability of this data, we use the American Community Survey (ACS), an annual large-scale survey, hosted on the IPUMS database, meant to provide regular updates to housing data collected from the US Census every ten years [@IPUMS2020].
+
+In this paper, we discuss in detail, the data used in our analyses, as well as the multilevel logistic regression model applied to the data set, our results, which indicate that Biden will win 83% of the popular vote, and finally a discussion on the efficacy of this method and success of our model. Furthermore, detailed code and analysis of this model can be found at [https://github.com/imehrlich/STA304](https://github.com/imehrlich/STA304)
+
+# Data
+```{r, include = FALSE, warning = FALSE}
+# load library and data", uncomment if package install is required
+#install.packages("tidyverse")
+#install.packages("gridExtra")
+#install.packages("kableExtra")
+
+library(tidyverse)
+library(gridExtra)
+library(kableExtra)
+
+df_data <- read.csv("data/df_data_clean.csv")
+ipums_data <- read.csv("data/ipums_data_clean.csv")
+```
+There are two data sets used in this forecast of the 2020 US Presidential Election: survey data collected by the Democracy Fund and UCLA Nationscape on the topic of voting habits and political inclinations, and a data set on the general population of the United States, adapted from the American Community Surveys (ACS) conducted by IPUMS. The following sections describe these data sets and how they were used.
+
+### Nationscape Data by the Democracy Fund and UCLA Nationscape
+The Nationscape Data Set is a product of the collaboration between the Democracy Fund and Political Scientists at UCLA, created with the goal of surveying political opinion from a wide range of locations and demographics across the United States [@Voters2020]. As it is concerned with potential voters, the population of this dataset is all eligible US voters, and the survey obtains its samples from Lucid, a survey research platform [@Methods2020]. Targetting over 500,000 responses, which together are a representative sample of the United Stated population eligible to vote in 2020, the survey interviews roughly 6,250 participants each week[@Methods2020]. While participants are allowed to omit answers to certain questions, such as household income, the data is treated before release, and participants who were deemed to 'speed through' the survey were excluded prior to data release, minimizing the data cleaning required in this analysis [@Methods2020]. In this analysis, we use responses from the most recent release of this survey, occuring on June 25, 2020. This release contained just under 6,500 responses.
+
+Although the data is treated prior to release, for the purposes of our analysis, we used the statistical programming language R [@R2020], to create several new variables, either to break continuous variables into classes for easier grouping, or in order to match this data set to the data recorded in the ACS. There were three main variables in this data set to which adjustments were made. First, in order to match the ACS, specific qualifiers were removed from the race variable (e.g. Asian (Chinese) was modified to Asian), leaving us with four factors for race: 'White,' 'Black,' 'Asian,' and 'Other.' The distribution of the remaining factors is shown in Figure 1.
+
+```{r, echo = FALSE, fig.height = 3}
+# Plot race groups
+fig1 <- ggplot(df_data, aes(x=race_ethnicity)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 1: Race of Respondents", x = "Race", subtitle = "Nationscape",
+       y = "Number of Respondents")
+fig1
+```
+
+Second, income classes were combined to form larger ranges in order to cater towards a higher number of samples in each grouping. While the original data contained 25 different categories for household income, we reduced this to four classes: 'Less than $\$50,000'$,'$\$50,000 \mbox{ to } \$100,000$', '$\$100,000 \mbox{ to } \$250,000,$' and 'More than $\$250,000$' The distribution of these modified income classes is shown in Figure 2.
+
+```{r, echo = FALSE, fig.height = 3}
+# Plot income groups
+fig2 <- ggplot(df_data, aes(x=household_income)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 2: Total Household Income of Respondents", x = "Range of Income",
+        subtitle = "Nationscape",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Less than $50,000", "$50,000 to $99,999",
+                              "$100,000 to $249,999", "More than $250,000"))
+
+fig2
+```
+ Finally, the age of participants was also modified to be represented by generation. The exact splits in the ages were based off of generational guidelines released by Gallup, which have also been used in previous research on voting models, such as @Auerbach2020. These age groups are '$18 \mbox { to } 34$', '$35 \mbox { to } 52$', '$52 \mbox { to } 68$', and 'over $68$'. The counts of these resultant groupings can be seen in Figures 1-3.
+```{r, echo = FALSE, fig.height = 3}
+# Plot age groups
+fig3 <- ggplot(df_data, aes(x=age)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 3: Age of Respondents", x = "Age", subtitle = "Nationscape",
+       y = "Number of Respondents")+
+  scale_x_discrete(limits = c("18-34", "35-51",
+                              "52-67", "68+"))
+
+fig3
+```
+
+### American Community Surveys by IPUMS
+The American Community Survey is a data set on American demographics, population, and household variables compilled and published annually on IPUMS, a database for American censuses [@IPUMS2020]. Meant to provide annual updates on the decennial census, the ACS considers all housing units (and the people living inside them) as their population, and use the Master Address File (MAF), the Census Bureau's housing databse, as their frame for contacting respondents [@Census2020]. Their annual sample size contains 3,000,000 participants, with over 2,000,000 final interviews conducted each year [@Census2020]. Despite the high non-response, the size, frequency, and range of information recored in the ACS make it a useful contribution to US Census data. As we attempt to link this data set to a political survey in our analysis, we focus on information useful for predicting voting habits, such as gender, race, and state of residence.
+
+As with the Nationscape data, key variables in the data set were modified in order to create easily separable groupings. The same variables and classes were constructed in the ACS data as with the Nationscape data. The resultant distributions are seen in Figures 4-6.
+
+```{r, echo = FALSE, fig.height=3}
+# Plot ACS race groups
+fig4 <- ggplot(ipums_data, aes(x=race)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 4: Race of Respondents", subtitle = "ACS", x = "Race",
+       y = "Number of Respondents") +
+  scale_x_discrete(labels = c("Asian",
+                              "Black", "White", "Other"))
+fig4
+```
+
+```{r, echo = FALSE, fig.height = 3}
+# Plot income groups
+fig5 <- ggplot(ipums_data, aes(x=inctot)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 5: Total Household Income of Respondents", x = "Range of Income",
+        subtitle = "ACS",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Less than $50,000", "$50,000 to $99,999",
+                              "$100,000 to $249,999", "More than $250,000"))
+
+fig5
+```
+
+```{r, echo = FALSE, fig.height = 3}
+# Plot age groups
+fig6 <- ggplot(ipums_data, aes(x=age)) + 
+  geom_bar(fill = "lightblue", color = "black", na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 6: Age of Respondents", x = "Age", subtitle = "ACS",
+       y = "Number of Respondents")+
+  scale_x_discrete(limits = c("18-34", "35-51",
+                              "52-67", "68+"))
+
+fig6
+```
+
+# Model
+In US elections, there are only two candidates that realistically vie for the presidency in each election cycle. Therefore, we apply a logistic regression model, since logistic regression models are capable of using multiple predictors to determine a binomial distribution; in this case a Donald Trump or a Joe Biden victory. Therefore, we propose the following logistic regression model:
+$$\hat{y}_{victory} = \mbox{logit}(\beta_0 + \beta_{gender}x_{gender} + \beta_{race}x_{race} + \beta_{age}x_{age})$$
+where $\hat{y}_{victory}$ is a binomial variable where 1 denotes a Joe Biden victory and 0 denotes a Donald Trump victory, $x_{gender}$ represents the gender of respondent, $x_{race}$ represents the race of the respondent, and $x_{age}$ represents the age group of the respondent. In other words, we are using respondents' gender, race, and age to predict the outcome of the election. It is important here to note that many other additional predictors, such as state, income, party affiliation, and past voting record may be useful and effective predictors as well. However, as we are post-stratifying this data, in an effort to minimize risk of creating over-specified groups with minimal counts, we have attempted to keep our model as simple as possible while maintaining accurate prediction results.
+
+```{r, include = FALSE}
+# logistic model
+victory_model <- glm(vote_2020 ~ gender + race_ethnicity + age, 
+            data = df_data, family = "binomial")
+```
+
+###Post-Stratification
+A key part of this model and analysis is the post-stratification conducted between our two data sets. Post-stratification is the process of weighing samples based on their proportion relative to the population. This is a key method to use when there is valid concern for non-response or other sampling bias, as this weighting adjusts for over or under sampling of groups. In this specific instance, we assume that the ACS data expresses a more accurate distribution to the true population, and we therefore use this data to adjust weights in the Nationscape data on the basis of gender, race, age, and total income.
+
+```{r, echo = FALSE, warning = FALSE, message=FALSE}
+ipums_predictors <- ipums_data[,c(6,7,9)]
+colnames(ipums_predictors) <- c("gender", "age", "race_ethnicity")
+ipums_predictors$estimate <- 
+  victory_model %>% 
+  predict(newdata = ipums_predictors)
+ipums_predictors <- distinct(ipums_predictors)
+
+ipums_count <- ipums_data %>%
+  group_by(age, sex, race) %>% summarise(n())
+colnames(ipums_count)[4] <- "count" 
+ipums_count$count <- ipums_count$count/nrow(ipums_data)
+ipums_predictors$cell_prop <- ipums_count$count
+
+```
+
+# Results
+$\\$
+Table 1 displayes the results of the logistic regression model prior to post-stratification.
+```{r, echo = FALSE}
+# Table for logistic regression model
+table1 <- victory_model %>%
+  broom::tidy() %>%
+  mutate(
+    p.value = scales::pvalue(p.value),
+    term = c("Intercept", "Gender: Male",
+             "Race: Black", "Race: Other", "Race: White", "Age: 35-51",
+             "Age: 52-68", "Age: 68+")
+  ) %>%
+  kableExtra::kable(
+    caption = "Logistic Regression Model of Nationscape Survey",
+    col.names = c("Predictor", "Coefficient", "SE", "t", "p"),
+    digits = c(0, 2, 3, 2, 2)
+  )
+
+# Format output
+kable_styling(table1, latex_options = "hold_position")
+```
+
+After post-stratification, we can see further detailed results on how different respondents are likely to vote. In the interest of brevity, the full table is shown in the appendix, however, in order to highlight key findings, Table 2 displays examples of differences observed among respondets of different race.
+
+```{r, echo = FALSE}
+ipums_race <- ipums_predictors[c(1,2,21,24,3,7,29,9),1:4]
+rownames(ipums_race) <- NULL
+table2 <- ipums_race %>%
+  kable(caption = "Comparing Logistic Regression Estimates by Race",
+        col.names = c("Gender", "Age", "Race", "Estimate"))
+
+kable_styling(table2, latex_options = "hold_position")
+```
+
+Similarly, Table 3 displays examples of estimates when holding all variables other than 'Age' constant.
+
+```{r, echo = FALSE}
+ipums_age <- ipums_predictors[c(1,13,5,10,15,11,7,17),1:4]
+rownames(ipums_age) <- NULL
+table3 <- ipums_age %>%
+  kable(caption = "Comparing Logistic Regression Estimates by Age",
+        col.names = c("Gender", "Age", "Race", "Estimate"))
+
+kable_styling(table3, latex_options = "hold_position")
+```
+
+Finally, Table 4 shows exampels of estimates when holding all variables other than 'Gender' constant.
+
+```{r, echo = FALSE}
+ipums_gender <- ipums_predictors[c(28,32,24,18,2,15,13,6),1:4]
+rownames(ipums_gender) <- NULL
+table4 <- ipums_gender %>%
+  kable(caption = "Comparing Logistic Regression Estimates by Gender",
+        col.names = c("Gender", "Age", "Race", "Estimate"))
+
+kable_styling(table4, latex_options = "hold_position")
+```
+\newpage
+After predicting the results using the post-stratified data, we see that Biden is expected to win 83% of the popular vote.
+
+# Discussion
+
+Before getting into the results and output of the regression model, it may be worthwhile, if for no other reason than to check the sampling bias of the Nationscape data, to compare the proportion of responses from the Nationscape data to the ACS data. Tables 5-7 show how demographic factors compare across data sets.
+```{r, echo = FALSE, message=FALSE, warning = FALSE}
+df_prop <- df_data %>% group_by(race_ethnicity) %>% summarise(n())
+df_prop[,2] <- df_prop[,2] / nrow(df_data)
+ipums_prop <- ipums_data %>% group_by(race) %>% summarise(n())
+ipums_prop[,2] <- ipums_prop[,2] / nrow(ipums_data)
+
+race_prop <- cbind(df_prop, ipums_prop[,2])
+rownames(race_prop) <- NULL
+
+table5 <- race_prop %>%
+  kable(caption = "Respondent's Race Across Data Sets",
+        col.names = c("Race", "Nationscape", "ACS"),
+    digits = c(0, 3, 3))
+
+kable_styling(table5, latex_options = "hold_position")
+```
+
+```{r, echo = FALSE, message=FALSE, warning = FALSE}
+df_prop <- df_data %>% group_by(gender) %>% summarise(n())
+df_prop[,2] <- df_prop[,2] / nrow(df_data)
+ipums_prop <- ipums_data %>% group_by(sex) %>% summarise(n())
+ipums_prop[,2] <- ipums_prop[,2] / nrow(ipums_data)
+
+gender_prop <- cbind(df_prop, ipums_prop[,2])
+rownames(gender_prop) <- NULL
+
+table6 <- gender_prop %>%
+  kable(caption = "Respondent's Race Across Data Sets",
+        col.names = c("Gender", "Nationscape", "ACS"),
+    digits = c(0, 3, 3))
+
+kable_styling(table6, latex_options = "hold_position")
+```
+
+```{r, echo = FALSE, message=FALSE, warning = FALSE}
+df_prop <- df_data %>% group_by(age) %>% summarise(n())
+df_prop[,2] <- df_prop[,2] / nrow(df_data)
+ipums_prop <- ipums_data %>% group_by(age) %>% summarise(n())
+ipums_prop[,2] <- ipums_prop[,2] / nrow(ipums_data)
+
+age_prop <- cbind(df_prop, ipums_prop[,2])
+rownames(age_prop) <- NULL
+
+table7 <- age_prop %>%
+  kable(caption = "Respondent's Race Across Data Sets",
+        col.names = c("Age Group", "Nationscape", "ACS"),
+    digits = c(0, 3, 3))
+
+kable_styling(table7, latex_options = "hold_position")
+```
+
+Tables 5-7 confirm the need for post-stratification when conducting such analyses. While the proportions of distribution of race is similar across both data sets, we see a disparity between the samples of the two data sets increase for the other two factors. Broadly, this affirms the position that post-stratification is a useful tool in improving accuracy and efficacy of non-representative samples.
+
+As for the model, estimates seem to confirm research on voter behaviour according to demographic (e.g Black voters are less likely to vote for Trump). Tables 2-4 provide clear evidence that $^{(1)}$minority voters are more likely to vote for Biden than white voters, $^{(2)}$young voters, across gender and race are more likely to vote for Biden than older voters, and $^{(3)}$female voters, across age and race are more likely to vote for Biden than male voters. These results support the general trend in voter behaviour seen within the US as well as across the world.
+
+One of the troubles, perhaps, with the model is the margin of victory with which Biden is predicted to win. While the optomists among us may not want to quarrel with this outcome, recent polling numbers, as well as precedent set in the last two centuries of elections, suggests that this outcome is unlikely. A contribution to a possible explanation for this can be made by reffering to Tables 2-4 once more. Across these tables, it can be observed that while the magnitude of negative estimates, estimates that favor Trump are relatively low, the positive estimates for many groups of voters are quite high. This indicates that the model is not confident that the entire group that it has denoted as favourable to Trump will indeed vote this way, as opposed to the strong prediction in favor of Biden.
+
+###Weaknesses
+The margin of victory this model has predicted for Joe Biden is certainly a result of several shortcomings in this model. First, while post-stratification is a useful tool to avoid sampling bias and decrease variance, we were afraid to overcomplicate groupings of the sample, and thus may have oversimplified the model. Furthermore, the absence of numerical variables may have made it difficult for the model to express nuances in voter behaviour.
+
+Additionally, while this model estimates the winner of the popular vote, this is not necessarily a good estimate for the winner of the overall election. The US presidential election is performed through an electoral college, where points are attributed to candidates based on their performance in each state. As recently as the 2016 election, the winner of the popular vote was not the winner of the presidential election, and therefore a stronger forecast of the election would focus on races in individual states as opposed to the nation as a whole.
+
+#Appendix
+```{r, echo=FALSE}
+rownames(ipums_predictors) <- NULL
+tableA1 <- ipums_predictors[,1:4] %>%
+  kable(caption = "Full Table of Estimates by Demographic Groups",
+        col.names = c("Gender", "Age", "Race", "Estimate"))
+
+kable_styling(tableA1, latex_options = "hold_position")
+```
+
+\newpage
+# References

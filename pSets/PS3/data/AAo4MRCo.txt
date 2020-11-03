@@ -1,0 +1,1322 @@
+*******************************************************************
+*  Stata "do-file" file with labels and missing data specifications
+*  Created by ddltox on Oct 19, 2020  (Mon 11:57 AM EDT)
+*  DDL source file: "/web/sda.artsci.utoronto.ca/htdocs/sdaweb/tmpdir/AA6QqWSU.txt".
+*
+*  Note that the data dictionary is given at the end of this file.
+*  Put the dictionary into a separate file (by editing this file).
+*  Then specify below the name of the dictionary file.
+*
+*  DDL file gives the following dataset description:
+*    Records per case: 1
+*    Record length:    656
+*******************************************************************
+
+
+label data "General social survey, cycle 4 - 1989"
+
+#delimit ;
+label define dvindb    0 "Not completed" 1 "Completed" 9 "Not stated" ;
+label define dvindc    0 "Not completed" 1 "Completed" 9 "Not stated" ;
+label define dvindd    0 "Not completed/no schooling" 
+                       1 "Completed/<15 yrs old" 2 "Completed/15+ yrs old" 
+                       8 "Completed/age unknown" 9 "Not stated" ;
+label define dvinhkl   1 "Completed section h" 2 "Completed section k" 
+                       3 "Completed section l" 9 "Not stated" ;
+label define a3        1 "No schooling" 2 "1-5 years" 3 "6 years" 4 "7 years" 
+                       5 "8 years" 6 "9 years" 7 "10 years" 8 "11 years" 
+                       9 "12 years" 10 "13 years" 21 "1-8 years (imputed)" 
+                       23 "11-13 years (imputed)" 99 "Not stated" ;
+label define a4        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a5aa7a    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a5ba7b    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a5ca7c    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a5da7d    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a6a8      0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a9        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a10       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a11       1 "Masters/earned doctorate" 2 "Undergraduate degree" 
+                       3 "College/nursing dipl/cert" 
+                       4 "Trade/tech/vocat dipl/cert" 5 "Some university" 
+                       6 "Some college/nursing" 7 "Some trade/tech/vocat" 
+                       8 "Other" 21 "Not stated/1-4" 22 "Not stated/5-8" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define a12       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a13       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define a14       0 "Not applicable" 2 "Undergraduate degree" 
+                       3 "College/nursing dipl/cert" 
+                       4 "Trade/tech/vocat dipl/cert" 5 "High school diploma" 
+                       6 "Less than high school" 7 "Other" 
+                       8 "Not stated/2-4 (imputed)" 9 "Not stated" ;
+label define a16       0 "Not applicable" 1 "Prepare for first career" 
+                       2 "Change careers" 3 "Improve career" 
+                       4 "Improve earnings" 5 "Interest in subject" 6 "Other" 
+                       9 "Not stated" ;
+label define a17       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define b2        0 "Not applicable" 1 "Masters/earned doctorate" 
+                       2 "Undergraduate degree" 3 "College/nursing dipl/cert" 
+                       4 "Trade/tech/vocat dipl/cert" 
+                       5 "Elementary/high school diploma" 6 "Other" 
+                       9 "Not stated" ;
+label define b4        0 "Not applicable" 1 "Prepare for first career" 
+                       2 "Change careers" 3 "Improve career" 
+                       4 "Improve earnings" 5 "Interest in subject" 6 "Other" 
+                       9 "Not stated" ;
+label define b5        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define b6        0 "Not applicable" 1 "Full-time" 2 "Part-time" 
+                       9 "Not stated" ;
+label define dvb7      0 "Not applicable" 9999 "Not stated" ;
+label define b8        0 "Not applicable" 1 "Work at a new or first job" 
+                       2 "Go on to further education" 
+                       3 "Work at the same job" 4 "Do not know" 5 "Other" 
+                       9 "Not stated" ;
+label define dveducm   10 "Masters/earned doctorate" 
+                       20 "Undergraduate degree" 
+                       30 "College/nursing dipl/cert" 
+                       40 "Trade/tech/vocat dipl/cert" 
+                       50 "High school diploma" 60 "Less than high school" 
+                       70 "Other schooling" 80 "No schooling" 99 "Not stated" ;
+label define dveda15   1 "Educ/rec/counselling services" 
+                       2 "Fine applied arts" 3 "Humanities" 
+                       4 "Social sciences" 5 "Commerce & business admin" 
+                       6 "Agricultural sciences" 7 "Engineering" 
+                       8 "Engineering tech/trades" 9 "Health sciences" 
+                       10 "Math/physical sciences" 11 "Other" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define dvedb3    1 "Educ/rec/counselling services" 
+                       2 "Fine applied arts" 3 "Humanities" 
+                       4 "Social sciences" 5 "Commerce & business admin" 
+                       6 "Agricultural sciences" 7 "Engineering" 
+                       8 "Engineering tech/trades" 9 "Health sciences" 
+                       10 "Math/physical sciences" 11 "Other" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define dvede5    1 "Educ/rec/counselling services" 
+                       2 "Fine applied arts" 3 "Humanities" 
+                       4 "Social sciences" 5 "Commerce & business admin" 
+                       6 "Agricultural sciences" 7 "Engineering" 
+                       8 "Engineering tech/trades" 9 "Health sciences" 
+                       10 "Math/physical sciences" 11 "Other" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define dvc1      0 "Not applicable" 9999 "Not stated" ;
+label define c2        0 "Not applicable" 1 "Working" 2 "Looking for work" 
+                       3 "A student" 4 "Keeping house" 5 "Retired" 6 "Other" 
+                       9 "Not stated" ;
+label define c3        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define c4        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvc5      0 "Not applicable" 9999 "Not stated" ;
+label define c11       0 "Not applicable" 1 "Full-time" 2 "Part-time" 
+                       3 "Both equally" 9 "Not stated" ;
+label define c12       0 "Not applicable" 1 "Closely related" 
+                       2 "Somewhat related" 3 "Not at all related" 
+                       9 "Not stated" ;
+label define dvsicc9   0 "Not applicable" 1 "Agriculture" 2 "Other primary" 
+                       3 "Manufacturing: non-durable gds" 
+                       4 "Manufacturing: durable gds" 5 "Construction" 
+                       6 "Transportation" 7 "Wholesale trade" 
+                       8 "Retail trade" 9 "Finance" 10 "Community services" 
+                       11 "Personal services" 12 "Business services" 
+                       13 "Public administration" 99 "Not stated" ;
+label define dvsicd11  0 "Not applicable" 1 "Agriculture" 2 "Other primary" 
+                       3 "Manufacturing: non-durable gds" 
+                       4 "Manufacturing: durable gds" 5 "Construction" 
+                       6 "Transportation" 7 "Wholesale trade" 
+                       8 "Retail trade" 9 "Finance" 10 "Community services" 
+                       11 "Personal services" 12 "Business services" 
+                       13 "Public administration" 99 "Not stated" ;
+label define dvsicg15  0 "Not applicable" 1 "Agriculture" 2 "Other primary" 
+                       3 "Manufacturing: non-durable gds" 
+                       4 "Manufacturing: durable gds" 5 "Construction" 
+                       6 "Transportation" 7 "Wholesale trade" 
+                       8 "Retail trade" 9 "Finance" 10 "Community services" 
+                       11 "Personal services" 12 "Business services" 
+                       13 "Public administration" 99 "Not stated" ;
+label define dvsick4   0 "Not applicable" 1 "Agriculture" 2 "Other primary" 
+                       3 "Manufacturing: non-durable gds" 
+                       4 "Manufacturing: durable gds" 5 "Construction" 
+                       6 "Transportation" 7 "Wholesale trade" 
+                       8 "Retail trade" 9 "Finance" 10 "Community services" 
+                       11 "Personal services" 12 "Business services" 
+                       13 "Public administration" 99 "Not stated" ;
+label define dvsic84   0 "Not applicable" 1 "Agriculture" 2 "Other primary" 
+                       3 "Manufacturing: non-durable gds" 
+                       4 "Manufacturing: durable gds" 5 "Construction" 
+                       6 "Transportation" 7 "Wholesale trade" 
+                       8 "Retail trade" 9 "Finance" 10 "Community services" 
+                       11 "Personal services" 12 "Business services" 
+                       13 "Public administration" 99 "Not stated" ;
+label define dvsic89   0 "Not applicable" 1 "Agriculture" 2 "Other primary" 
+                       3 "Manufacturing: non-durable gds" 
+                       4 "Manufacturing: durable gds" 5 "Construction" 
+                       6 "Transportation" 7 "Wholesale trade" 
+                       8 "Retail trade" 9 "Finance" 10 "Community services" 
+                       11 "Personal services" 12 "Business services" 
+                       13 "Public administration" 99 "Not stated" ;
+label define dvc10soc  1 "Managers/administrators" 2 "Management/admin rel." 
+                       3 "Life sciences/math & rel." 
+                       4 "Arch/engineers & rel." 5 "Soc.Sci/religion & rel." 
+                       6 "Teaching & rel." 7 "Health & rel." 
+                       8 "Art/lit/rec & rel." 9 "Stenographic/typing" 
+                       10 "Bookkeeping & rel." 11 "Edp operators" 
+                       12 "Reception etc." 13 "Library & rel." 
+                       14 "Commodities sales" 15 "Services sales" 
+                       16 "Protective services" 17 "Food/lodging" 
+                       18 "Personal/furnishing service" 19 "Other service" 
+                       20 "Farm" 21 "Primary" 22 "Food processing & rel." 
+                       23 "Other processing" 24 "Machining & rel." 
+                       25 "Electrical & rel." 26 "Textiles/furs/leather" 
+                       27 "Wood/rubber/plastics" 28 "Mechanics/repairmen" 
+                       29 "Excavating/wire comm" 30 "Other construction" 
+                       31 "Transport equipment" 32 "Material handling" 
+                       33 "Other crafts/equipment" 34 "Other" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define dvd12soc  1 "Managers/administrators" 2 "Management/admin rel." 
+                       3 "Life sciences/math & rel." 
+                       4 "Arch/engineers & rel." 5 "Soc.Sci/religion & rel." 
+                       6 "Teaching & rel." 7 "Health & rel." 
+                       8 "Art/lit/rec & rel." 9 "Stenographic/typing" 
+                       10 "Bookkeeping & rel." 11 "Edp operators" 
+                       12 "Reception etc." 13 "Library & rel." 
+                       14 "Commodities sales" 15 "Services sales" 
+                       16 "Protective services" 17 "Food/lodging" 
+                       18 "Personal/furnishing service" 19 "Other service" 
+                       20 "Farm" 21 "Primary" 22 "Food processing & rel." 
+                       23 "Other processing" 24 "Machining & rel." 
+                       25 "Electrical & rel." 26 "Textiles/furs/leather" 
+                       27 "Wood/rubber/plastics" 28 "Mechanics/repairmen" 
+                       29 "Excavating/wire comm." 30 "Other construction" 
+                       31 "Transport equipment" 32 "Material handling" 
+                       33 "Other crafts/equipment" 34 "Other" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define dvg16soc  1 "Managers/administrators" 2 "Management/admin rel." 
+                       3 "Life sciences/math & rel." 
+                       4 "Arch/engineers & rel." 5 "Soc.Sci/religion & rel." 
+                       6 "Teaching & rel." 7 "Health & related" 
+                       8 "Art/lit/rec & rel." 9 "Stenographic/typing" 
+                       10 "Bookkeeping & rel." 11 "Edp operators" 
+                       12 "Reception etc." 13 "Library & rel." 
+                       14 "Commodities sales" 15 "Services sales" 
+                       16 "Protective services" 17 "Food/lodging" 
+                       18 "Personal/furnishing service" 19 "Other service" 
+                       20 "Farm" 21 "Primary" 22 "Food processing & rel." 
+                       23 "Other processing" 24 "Machining & rel." 
+                       25 "Electrical & rel." 26 "Textiles/furs/leather" 
+                       27 "Wood/rubber/plastics" 28 "Mechanics/repairmen" 
+                       29 "Excavating/wire comm." 30 "Other construction" 
+                       31 "Transport equipment" 32 "Material handling" 
+                       33 "Other crafts/equipment" 34 "Other" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define dvk5soc   1 "Managememt/admin rel." 2 "Clerical & rel." 
+                       3 "Service" 4 "Other" 97 "Not applicable" 
+                       99 "Not stated" ;
+label define dvl14soc  1 "Service" 2 "Non-service" 97 "Not applicable" 
+                       99 "Not stated" ;
+label define dv84soc   1 "Managers/administrators" 2 "Management/admin rel." 
+                       3 "Life sciences/math & rel." 
+                       4 "Arch/engineers & rel." 5 "Soc.Sci/religion & rel." 
+                       6 "Teaching & rel." 7 "Health & rel." 
+                       8 "Art/lit/rec & rel." 9 "Stenographic/typing" 
+                       10 "Bookkeeping & rel." 11 "Edp operators" 
+                       12 "Reception etc." 13 "Library & rel." 
+                       14 "Commodities sales" 15 "Services sales" 
+                       16 "Protective services" 17 "Food/lodging" 
+                       18 "Personal/furnishing service" 19 "Other service" 
+                       20 "Farm" 21 "Primary" 22 "Food processing & rel." 
+                       23 "Other processing" 24 "Machining & rel." 
+                       25 "Electrical & rel." 26 "Textiles/furs/leather" 
+                       27 "Wood/rubber/plastics" 28 "Mechanics/repairmen" 
+                       29 "Excavating/wire comm." 30 "Other construction" 
+                       31 "Transport equipment" 32 "Material handling" 
+                       33 "Other crafts/equipment" 34 "Other" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define dv89soc   1 "Managers/administrators" 2 "Management/admin rel." 
+                       3 "Life sciences/math & rel." 
+                       4 "Arch/engineers & rel." 5 "Soc.Sci/religion & rel." 
+                       6 "Teaching & rel." 7 "Health & rel." 
+                       8 "Art/lit/rec & rel." 9 "Stenographic/typing" 
+                       10 "Bookkeeping & rel." 11 "Edp operators" 
+                       12 "Reception etc." 13 "Library & rel." 
+                       14 "Commodities sales" 15 "Services sales" 
+                       16 "Protective services" 17 "Food/lodging" 
+                       18 "Personal/furnishing service" 19 "Other service" 
+                       20 "Farm" 21 "Primary" 22 "Food processing & rel." 
+                       23 "Other processing & rel." 24 "Machining & rel." 
+                       25 "Electrical & rel." 26 "Textile/furs/leather" 
+                       27 "Wood/rubber/plastics" 28 "Mechanics/repairmen" 
+                       29 "Excavating/wire comm." 30 "Other construction" 
+                       31 "Transport equipment" 32 "Material handling" 
+                       33 "Other crafts/equipment" 34 "Other" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define class     1 "Higher self-employed profs." 
+                       2 "Higher employed profs." 3 "Lower profs." 
+                       4 "Teachers etc." 5 "White collar supers" 
+                       6 "Higher white collars" 7 "Medium employers" 
+                       8 "Small proprietors" 9 "Small farm proprietors etc." 
+                       10 "Blue collar foremen" 11 "Higher blue collars" 
+                       12 "Lower blue collars" 13 "Farm foremen etc." 
+                       14 "Lower white collars" 15 "Lower occas. Workers" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define nusco     97 "Not applicable" 99 "Not stated" ;
+label define dvd2      0 "Not applicable" 9999 "Not stated" ;
+label define d3        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define d4        0 "Not applicable" 1 "Working" 2 "Looking for work" 
+                       3 "A student" 4 "Keeping house" 5 "Retired" 6 "Other" 
+                       9 "Not stated" ;
+label define d5        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define d6        0 "Not applicable" 1 ".5-1 year" 2 "1-3 years" 
+                       3 "3-5 years" 4 "5-7 years" 5 "7+ years" 
+                       9 "Not stated" ;
+label define d7        0 "Not applicable" 9996 "Still working at it" 
+                       9999 "Not stated" ;
+label define e1        1 "Yes" 2 "No" 3 "Do not know" 9 "Not stated" ;
+label define e2        0 "Not applicable" 1 "Prepare for first career" 
+                       2 "Change careers" 3 "Improve career" 
+                       4 "Improve earnings" 5 "Interest in subject" 6 "Other" 
+                       9 "Not stated" ;
+label define e3        0 "Not applicable" 1 "Masters/earned doctorate" 
+                       2 "Undergraduate degree" 3 "College/nursing dipl/cert" 
+                       4 "Trade/tech/vocat dipl/cert" 
+                       5 "Elementary/high school diploma" 
+                       6 "Not for degree/dipl/cert" 7 "Undecided/do not know" 
+                       8 "Other" 9 "Not stated" ;
+label define e7        1 "Yes" 2 "No" 9 "Not stated" ;
+label define e8        1 "Yes" 2 "No" 9 "Not stated" ;
+label define e9        1 "Yes" 2 "No" 9 "Not stated" ;
+label define e10a      0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define e10b      0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define e10c      0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define e10d      0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define e10e      0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define e10f      0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define e10g      0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define e11       1 "Yes" 2 "No" 9 "Not stated" ;
+label define e12       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define dve13     0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define f1a       1 "Very interested" 2 "Moderately interested" 
+                       3 "Not at all interested" 4 "No opinion" 
+                       9 "Not stated" ;
+label define f1b       1 "Very interested" 2 "Moderately interested" 
+                       3 "Not at all interested" 4 "No opinion" 
+                       9 "Not stated" ;
+label define f1c       1 "Very interested" 2 "Moderately interested" 
+                       3 "Not at all interested" 4 "No opinion" 
+                       9 "Not stated" ;
+label define f1d       1 "Very interested" 2 "Moderately interested" 
+                       3 "Not at all interested" 4 "No opinion" 
+                       9 "Not stated" ;
+label define f2a       1 "Very well informed" 2 "Moderately informed" 
+                       3 "Poorly informed" 4 "No opinion" 9 "Not stated" ;
+label define f2b       1 "Very well informed" 2 "Moderately informed" 
+                       3 "Poorly informed" 4 "No opinion" 9 "Not stated" ;
+label define f2c       1 "Very well informed" 2 "Moderately informed" 
+                       3 "Poorly informed" 4 "No opinion" 9 "Not stated" ;
+label define f2d       1 "Very well informed" 2 "Moderately informed" 
+                       3 "Poorly informed" 4 "No opinion" 9 "Not stated" ;
+label define f3a       1 "Regularly" 2 "Occasionally" 3 "Never" 
+                       9 "Not stated" ;
+label define f3b       1 "Regularly" 2 "Occasionally" 3 "Never" 
+                       9 "Not stated" ;
+label define f4a       1 "Regularly" 2 "Occasionally" 3 "Never" 
+                       9 "Not stated" ;
+label define f4b       1 "Regularly" 2 "Occasionally" 3 "Never" 
+                       9 "Not stated" ;
+label define dvf5a     1 "Strongly disagree" 2 "Somewhat disagree" 
+                       3 "Somewhat agree" 4 "Strongly agree" 
+                       5 "Agree/degree not stated" 
+                       6 "Disagree/degree not stated" 7 "No opinion" 
+                       9 "Not stated" ;
+label define dvf5b     1 "Strongly disagree" 2 "Somewhat disagree" 
+                       3 "Somewhat agree" 4 "Strongly agree" 
+                       5 "Agree/degree not stated" 
+                       6 "Disagree/degree not stated" 7 "No opinion" 
+                       9 "Not stated" ;
+label define dvf5c     1 "Strongly disagree" 2 "Somewhat disagree" 
+                       3 "Somewhat agree" 4 "Strongly agree" 
+                       6 "Disagree/degree not stated" 7 "No opinion" 
+                       9 "Not stated" ;
+label define dvf5d     1 "Strongly disagree" 2 "Somewhat disagree" 
+                       3 "Somewhat agree" 4 "Strongly agree" 
+                       5 "Agree/degree not stated" 
+                       6 "Disagree/degree not stated" 7 "No opinion" 
+                       9 "Not stated" ;
+label define f6a       1 "Too little" 2 "About the right amount" 3 "Too much" 
+                       4 "No opinion" 9 "Not stated" ;
+label define f6b       1 "Too little" 2 "About the right amount" 3 "Too much" 
+                       4 "No opinion" 9 "Not stated" ;
+label define f6c       1 "Too little" 2 "About the right amount" 3 "Too much" 
+                       4 "No opinion" 9 "Not stated" ;
+label define f6d       1 "Too little" 2 "About the right amount" 3 "Too much" 
+                       4 "No opinion" 9 "Not stated" ;
+label define f6e       1 "Too little" 2 "About the right amount" 3 "Too much" 
+                       4 "No opinion" 9 "Not stated" ;
+label define f6f       1 "Too little" 2 "About the right amount" 3 "Too much" 
+                       4 "No opinion" 9 "Not stated" ;
+label define f6g       1 "Too little" 2 "About the right amount" 3 "Too much" 
+                       4 "No opinion" 9 "Not stated" ;
+label define g2        1 "Working" 2 "Looking for work" 3 "A student" 
+                       4 "Keeping house" 5 "Retired" 6 "Other" 
+                       7 "Not stated/2-6 (imputed)" 9 "Not stated" ;
+label define g3        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g4g26     0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g5g28     0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g6g30     0 "Not applicable" 3 "A student" 4 "Keeping house" 
+                       5 "Retired" 6 "Other" 9 "Not stated" ;
+label define g8        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g9        0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define g10       0 "Not applicable" 1 "Full-time" 2 "Part-time" 
+                       3 "Both equally" 9 "Not stated" ;
+label define g11       0 "Not applicable" 1 "Employee" 2 "Self-employed" 
+                       9 "Not stated" ;
+label define dvg11h5   0 "Not applicable" 1 "Working for others" 
+                       2 "Self-employed" 9 "Not stated" ;
+label define g12       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvg12h6   0 "Not applicable" 1 "Yes" 2 "N0" 9 "Not stated" ;
+label define dvg13     97 "Not applicable" 99 "Not stated" ;
+label define dvg13h7   97 "Not applicable" 99 "Not stated" ;
+label define g17       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g18       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g21       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g22ah2a   0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define g22bh2b   0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define g24h4a    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g24h4b    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g24h4c    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g24h4d    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g24h4e    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g24h4f    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g24h4g    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g27       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g29       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define g32       1 "Own illness/disability" 2 "Vacation" 
+                       3 "Maternity leave" 4 "Personal/family responsibility" 
+                       5 "Layoff/expects to return" 6 "Labour dispute" 
+                       7 "Bad weather" 8 "Seasonal business" 
+                       9 "New job to start in future" 10 "Other" 
+                       21 "Not stated/1-8 (imputed)" 
+                       22 "Not stated/9-10 (imputed)" 97 "Not applicable" 
+                       99 "Not stated" ;
+label define dvg34     97 "Not applicable" 99 "Not stated" ;
+label define dvg35     97 "Not applicable" 98 "Do not know" 99 "Not stated" ;
+label define j84d88    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvdifjb   0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define dvh11     0 "Not applicable" 1 "Very dissatisfied" 
+                       2 "Somewhat dissatisfied" 3 "Somewhat satisfied" 
+                       4 "Very satisfied" 5 "Satisfied/not stated" 
+                       7 "No opinion" 9 "Not stated" ;
+label define dvh12     0 "Not applicable" 9999 "Not stated" ;
+label define h13       97 "Not applicable" 99 "Not stated" ;
+label define h14       0 "Not applicable" 1 "Yes" 2 "No" 3 "Self-employed" 
+                       9 "Not stated" ;
+label define h15h21    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define h17h23    0 "Not applicable" 1 "Less than a quarter" 
+                       2 "Between a quarter and a half" 3 "More than a half" 
+                       9 "Not stated" ;
+label define h18h24    0 "Not applicable" 1 "Less than 20 persons" 
+                       2 "20-99 persons" 3 "100-499 persons" 4 "500+ persons" 
+                       9 "Not stated" ;
+label define h20       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvh29a    0 "Not applicable" 1 "Strongly disagree" 
+                       2 "Somewhat disagree" 3 "Somewhat agree" 
+                       4 "Strongly agree" 5 "Agree/degree not stated" 
+                       6 "Disagree/degree not stated" 7 "No opinion" 
+                       9 "Not stated" ;
+label define dvh29b    0 "Not applicable" 1 "Strongly disagree" 
+                       2 "Somewhat disagree" 3 "Somewhat agree" 
+                       4 "Strongly agree" 5 "Agree/degree not stated" 
+                       7 "No opinion" 9 "Not stated" ;
+label define dvh29c    0 "Not applicable" 1 "Strongly disagree" 
+                       2 "Somewhat disagree" 3 "Somewhat agree" 
+                       4 "Strongly agree" 5 "Agree/degree not stated" 
+                       6 "Disagree/degree not stated" 7 "No opinion" 
+                       9 "Not stated" ;
+label define dvh29d    0 "Not applicable" 1 "Strongly disagree" 
+                       2 "Somewhat disagree" 3 "Somewhat agree" 
+                       4 "Strongly agree" 7 "No opinion" 9 "Not stated" ;
+label define dvh29e    0 "Not applicable" 1 "Strongly disagree" 
+                       2 "Somewhat disagree" 3 "Somewhat agree" 
+                       4 "Strongly agree" 5 "Agree/degree not stated" 
+                       6 "Disagree/degree not stated" 7 "No opinion" 
+                       9 "Not stated" ;
+label define dvh29f    0 "Not applicable" 1 "Strongly disagree" 
+                       2 "Somewhat disagree" 3 "Somewhat agree" 
+                       4 "Strongly agree" 5 "Agree/degree not stated" 
+                       7 "No opinion" 9 "Not stated" ;
+label define dvh16h22  0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define h25       0 "Not applicable" 1 "Managerial" 2 "Supervisory" 
+                       3 "Neither" 9 "Not stated" ;
+label define h26       0 "Not applicable" 1 "Top" 2 "Upper" 3 "Middle" 
+                       4 "Lower" 9 "Not stated" ;
+label define h27       0 "Not applicable" 1 "Entire business/company" 
+                       2 "Only a part of it" 3 "Not involved" 9 "Not stated" ;
+label define h28       0 "Not applicable" 1 "Less than a quarter" 
+                       2 "Between a quarter and a half" 3 "More than a half" 
+                       9 "Not stated" ;
+label define dvsupdr   11 "Perm.Job + supervision" 
+                       12 "Perm.Job no supervision" 
+                       19 "Perm.Job super not stated" 
+                       21 "Temp.Job + supervision" 
+                       22 "Temp.Job no supervision" 
+                       31 "Self-emp + supervision" 
+                       32 "Self-emp no supervision" 
+                       39 "Self-emp super not stated" 97 "Not applicable" 
+                       99 "Not stated" ;
+label define h30a      0 "Not applicable" 1 "Yes" 2 "No" 3 "Do not know" 
+                       9 "Not stated" ;
+label define h30b      0 "Not applicable" 1 "Yes" 2 "No" 3 "Do not know" 
+                       9 "Not stated" ;
+label define h30c      0 "Not applicable" 1 "Yes" 2 "No" 3 "Do not know" 
+                       9 "Not stated" ;
+label define h31       0 "Not applicable" 1 "Yes" 2 "No" 3 "Do not know" 
+                       9 "Not stated" ;
+label define dvh32     0 "Not applicable" 1 "1 promotion" 2 "2 promotions" 
+                       3 "3 promotions" 4 "4 promotions" 5 "5+ promotions" 
+                       8 "No promotions" 9 "Not stated" ;
+label define dvh34     0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define dvmain7   1 "Working" 2 "Looking for work" 3 "A student" 
+                       4 "Keeping house" 5 "Retired" 6 "Other" 
+                       7 "Other/usually works" 9 "Not stated" ;
+label define dvjob7    0 "Not applicable" 1 "1 job" 2 "2+ jobs" 
+                       9 "Not stated" ;
+label define h33       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define h35       0 "Not applicable" 1 "Greatly" 2 "Somewhat" 3 "Hardly" 
+                       4 "Not at all" 7 "Greatly/somewhat (imputed)" 
+                       9 "Not stated" ;
+label define h36       0 "Not applicable" 1 "Increased" 2 "Decreased" 
+                       3 "Stayed the same" 9 "Not stated" ;
+label define h37       0 "Not applicable" 1 "Increased" 2 "Decreased" 
+                       3 "Stayed the same" 9 "Not stated" ;
+label define h38       0 "Not applicable" 1 "More interesting" 
+                       2 "Less interesting" 3 "Stayed the same" 
+                       9 "Not stated" ;
+label define h39       0 "Not applicable" 1 "Closely related" 
+                       2 "Somewhat related" 3 "Not related at all" 
+                       9 "Not stated" ;
+label define h40       1 "Masters/earned doctorate" 2 "Undergraduate degree" 
+                       3 "College/nursing dipl/cert" 
+                       4 "Trade/tech/vocat dipl/cert" 5 "Some post-secondary" 
+                       6 "High school diploma" 
+                       7 "Less than high school diploma" 
+                       8 "No qualifications specified" 9 "Other" 
+                       97 "Not applicable" 98 "Do not know" 99 "Not stated" ;
+label define h41       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define h42       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define h43       0 "Not applicable" 1 "Yes" 2 "No" 3 "Do not know" 
+                       9 "Not stated" ;
+label define dvk1      0 "Not applicable" 1 "Very dissatisfied" 
+                       2 "Somewhat dissatisfied" 3 "Somewhat satisfied" 
+                       4 "Very satisfied" 5 "Satisfied/not stated" 
+                       7 "No opinion" 9 "Not stated" ;
+label define dvk2ret   0 "Not applicable" 1 "1964 or before" 2 "1965-69" 
+                       3 "1970-74" 4 "1975-79" 5 "1980-84" 6 "1985-89" 
+                       9 "Not stated" ;
+label define k6        0 "Not applicable" 1 "Closely related" 
+                       2 "Somewhat related" 3 "Not related at all" 
+                       9 "Not stated" ;
+label define k7        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define k8a       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define k8b       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define k8c       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define k8d       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define k9        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define k10       0 "Not applicable" 1 "Yes" 2 "No" 3 "Do not know" 
+                       9 "Not stated" ;
+label define k11       0 "Not applicable" 1 "More" 2 "Less" 
+                       3 "About the same" 9 "Not stated" ;
+label define k12       0 "Not applicable" 1 "More leisure time" 
+                       2 "More travel" 3 "More time with family" 
+                       4 "More time for voluntary work" 5 "Other" 
+                       9 "Not stated" ;
+label define k14       0 "Not applicable" 1 "Health" 2 "Decrease in income" 
+                       3 "Less contact with people" 4 "Other" 9 "Not stated" ;
+label define k18       0 "None" 997 "Not applicable" 999 "Not stated" ;
+label define agertre   11 "Do not know" 96 "Do not intend to retire" 
+                       97 "Not applicable" 99 "Not stated" ;
+label define manrtre   1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvmage    0 "Not applicable" 1 "25-45 years" 2 "46-55 years" 
+                       3 "56-59 years" 4 "60 years" 5 "61-64 years" 
+                       6 "65 years" 7 "66+ years" 9 "Not stated" ;
+label define l1        0 "Not applicable" 1 "Full-time" 2 "Part-time" 
+                       3 "Either" 9 "Not stated" ;
+label define l2        0 "Not applicable" 1 "Very good" 2 "Good" 3 "Not good" 
+                       4 "Not very good" 5 "Has already found work" 
+                       9 "Not stated" ;
+label define dvl4      0 "Not applicable" 1 "Very dissatisfied" 
+                       2 "Somewhat dissatisfied" 3 "Somewhat satisfied" 
+                       4 "Very satisfied" 5 "Satisfied/not stated" 
+                       7 "No opinion" 9 "Not stated" ;
+label define l5        0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define l6a       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define l6b       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define l6c       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define l6d       0 "Section l not completed" 1 "Yes" 2 "No" 
+                       3 "Not applicable" 9 "Not stated" ;
+label define l6e       0 "Section l not completed" 1 "Yes" 2 "No" 
+                       3 "Not applicable" 9 "Not stated" ;
+label define l6f       0 "Section l not completed" 1 "Yes" 2 "No" 
+                       3 "Not applicable" 9 "Not stated" ;
+label define l6g       0 "Section l not completed" 1 "Yes" 2 "No" 
+                       3 "Not applicable" 9 "Not stated" ;
+label define l6h       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define l20       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define l27       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define k33l25    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define lookjd    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define monlook   0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define m1a       1 "Yes" 2 "No" 9 "Not stated" ;
+label define m1b       1 "Yes" 2 "No" 9 "Not stated" ;
+label define m1c       1 "Yes" 2 "No" 9 "Not stated" ;
+label define m1d       1 "Yes" 2 "No" 9 "Not stated" ;
+label define m1e       1 "Yes" 2 "No" 9 "Not stated" ;
+label define m1f       1 "Yes" 2 "No" 9 "Not stated" ;
+label define m1g       1 "Yes" 2 "No" 9 "Not stated" ;
+label define m1h       1 "Yes" 2 "No" 9 "Not stated" ;
+label define m3        0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define m4        1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvm5      0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define n2        1 "Very happy" 2 "Somewhat happy" 3 "Somewhat unhappy" 
+                       4 "Very unhappy" 5 "No opinion" 9 "Not stated" ;
+label define dvn3a     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 6 "Dissatisfied/not stated" 
+                       7 "No opinion" 9 "Not stated" ;
+label define dvn3b     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 7 "No opinion" 9 "Not stated" ;
+label define dvn3c     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 7 "No opinion" 9 "Not stated" ;
+label define dvn3d     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 6 "Dissatisfied/not stated" 
+                       7 "No opinion" 9 "Not stated" ;
+label define dvn3e     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 6 "Dissatisfied/not stated" 
+                       7 "No opinion" 9 "Not stated" ;
+label define dvn3f     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 7 "No opinion" 9 "Not stated" ;
+label define dvn3g     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 6 "Dissatisfied/not stated" 
+                       7 "No opiniom" 9 "Not stated" ;
+label define dvn3h     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 7 "No opinion" 9 "Not stated" ;
+label define dvn3i     1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 6 "Dissatisfied/not stated" 
+                       7 "No opiniom" 9 "Not stated" ;
+label define dvn4      1 "Strongly dissatisfied" 2 "Somewhat dissatisfied" 
+                       3 "Somewhat satisfied" 4 "Strongly satisfied" 
+                       5 "Satisfied/not stated" 7 "No opinion" 9 "Not stated" ;
+label define p2        1 "Single detached house" 2 "Semi-detached/double" 
+                       3 "Garden/town/row house" 4 "Duplex" 
+                       5 "Low-rise apartment <5 stories" 
+                       6 "High-rise apartment 5+ stories" 7 "Mobile home" 
+                       8 "Other" 9 "Not stated" ;
+label define p4        1 "Owned" 2 "Rented" 9 "Not stated" ;
+label define p10       1 "Yes" 2 "No" 9 "Not stated" ;
+label define p12       0 "Question not asked" 1 "Yes" 2 "No" 
+                       3 "Not applicable" 9 "Not stated" ;
+label define p16eng    1 "Yes" 2 "No" 9 "Not stated" ;
+label define p16fre    1 "Yes" 2 "No" 9 "Not stated" ;
+label define p16steng  0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define p16stfre  0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvp16ot   1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvp16sot  0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define p17eng    1 "Yes" 2 "No" 9 "Not stated" ;
+label define p17fre    1 "Yes" 2 "No" 9 "Not stated" ;
+label define dvp17ot   1 "Yes" 2 "No/not applicable" 9 "Not stated" ;
+label define dvp18     1 "No religion" 2 "Roman catholic" 3 "United church" 
+                       4 "Anglican" 5 "Presbyterian" 6 "Lutheran" 7 "Baptist" 
+                       8 "Eastern orthodox" 9 "Jewish" 
+                       10 "Other non-protestant" 11 "Other protestant" 
+                       98 "Not stated/2-11" 99 "Not stated" ;
+label define p19       0 "Not applicable" 1 "At least once a week" 
+                       2 "At least once a month" 3 "A few times a year" 
+                       4 "At least once a year" 5 "Less than once a year" 
+                       6 "Never" 9 "Not stated" ;
+label define p20fre    1 "Yes" 2 "No" 8 "Do not know" 9 "Not stated" ;
+label define p20eng    1 "Yes" 2 "No" 8 "Do not know" 9 "Not stated" ;
+label define p20iri    1 "Yes" 2 "No" 8 "Do not know" 9 "Not stated" ;
+label define p20sco    1 "Yes" 2 "No" 8 "Do not know" 9 "Not stated" ;
+label define p20ger    1 "Yes" 2 "No" 8 "Do not know" 9 "Not stated" ;
+label define p20ita    1 "Yes" 2 "No" 8 "Do not know" 9 "Not stated" ;
+label define p20ukr    1 "Yes" 2 "No" 8 "Do not know" 9 "Not stated" ;
+label define dvp20oth  1 "Yes" 2 "No" 8 "Do not know" 9 "Not stated" ;
+label define p22       1 "Masters/earned doctorate" 2 "Undergraduate degree" 
+                       3 "College/nursing dipl/cert" 
+                       4 "Trade/tech/vocat dipl/cert" 5 "Some university" 
+                       6 "Some college/nursing" 7 "Some trade/tech/vocat" 
+                       8 "High school graduation" 9 "High school" 
+                       10 "Elementary school" 11 "Other" 97 "Not applicable" 
+                       99 "Not stated" ;
+label define p23       0 "Not applicable" 1 "Working" 2 "Looking for work" 
+                       3 "A student" 4 "Keeping house" 5 "Retired" 6 "Other" 
+                       9 "Not stated" ;
+label define p24       0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define p25       0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define p26a      1 "Yes" 2 "No" 9 "Not stated" ;
+label define p26b      1 "Yes" 2 "No" 9 "Not stated" ;
+label define p26c      1 "Yes" 2 "No" 9 "Not stated" ;
+label define p26d      1 "Yes" 2 "No" 9 "Not stated" ;
+label define p27a      1 "Yes" 2 "No" 3 "Do not know" 9 "Not stated" ;
+label define p28a      2 "Under $20,000" 3 "$20,000+" 4 "No income" 
+                       5 "Do not know" 99 "Not stated" ;
+label define p28b      6 "Under $10,000" 7 "$10,000-19,999" 
+                       8 "$20,000-39,999" 9 "$40,000+" 97 "No income" 
+                       98 "Do not know" 99 "Not stated" ;
+label define p28c      10 "Under $5,000" 11 "$5,000-9,999" 
+                       12 "$10,000-14,999" 13 "$15,000-19,999" 
+                       14 "$20,000-29,999" 15 "$30,000-39,999" 
+                       16 "$40,000-59,999" 17 "$60,000-79,999" 18 "$80,000+" 
+                       97 "Not applicable" 98 "Do not know" 99 "Not stated" ;
+label define dvsalp27  0 "No income" 99998 "Do not know" 99999 "Not stated" ;
+label define act1984   1 "Working" 2 "Looking for work" 3 "A student" 
+                       4 "Keeping house" 5 "Retired" 6 "Other" 9 "Not stated" ;
+label define job1984   0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define relat84   0 "Not applicable" 1 "Closely related" 
+                       2 "Somewhat related" 3 "Not at all related" 
+                       9 "Not stated" ;
+label define jobloss   0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define jblosa    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define jblosb    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define jblosc    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define jblosd    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define jblose    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define jblosf    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define jblosg    0 "Not applicable" 1 "Yes" 2 "No" 9 "Not stated" ;
+label define timewrk   0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define lookwrk   0 "None" 97 "Not applicable" 99 "Not stated" ;
+label define prov      0 "Newfoundland" 1 "Prince edward island" 
+                       2 "Nova scotia" 3 "New brunswick" 4 "Quebec" 
+                       5 "Ontario" 6 "Manitoba" 7 "Saskatchewan" 8 "Alberta" 
+                       9 "British columbia" ;
+label define dvms      1 "Married" 2 "Single" 3 "Widowed" 
+                       4 "Separated/divorced" 9 "Not stated" ;
+label define dvsex     1 "Male" 2 "Female" ;
+label define dvagegr   1 "15-19 years" 2 "20-24 years" 3 "25-29 years" 
+                       4 "30-34 years" 5 "35-39 years" 6 "40-44 years" 
+                       7 "45-49 years" 8 "50-54 years" 9 "55-59 years" 
+                       10 "60-64 years" 11 "65-69 years" 12 "70-74 years" 
+                       13 "75-79 years" 14 "80+ years" ;
+label define dvimmig   0 "Not applicable" 1 "Before 1946" 2 "1946-66" 
+                       3 "1967-71" 4 "1972-76" 5 "1977-81" 6 "1982-86" 
+                       7 "1987-89" 8 "Citizen by birth" 9 "Not stated" ;
+label define dvbornr   1 "Same province" 2 "Different province" 
+                       3 "Outside canada" 9 "Not stated" ;
+label define dvlvgar1  0 "Other" 1 "Couple + ch<25" 2 "Couple + no ch<25" 
+                       3 "Lone parent + ch<25" 4 "Lone parent + ch>24" 
+                       5 "Couple + 1 ch<25" 6 "Lone parent + 1 ch<25" 
+                       7 "Couple + 1 ch>24" 8 "Lone person + sibling" 
+                       9 "Living with non-relative" 10 "Living alone" ;
+label define dvhhldsz  1 "1 person" 2 "2 persons" 3 "3 persons" 4 "4 persons" 
+                       5 "5 persons" 6 "6 persons" 7 "7 persons" 
+                       8 "8+ persons" ;
+label define dvagrsp   2 "15-24 years" 3 "25-29 years" 4 "30-34 years" 
+                       5 "35-39 years" 6 "40-44 years" 7 "45-49 years" 
+                       8 "50-54 years" 9 "55-59 years" 10 "60-64 years" 
+                       11 "65-69 years" 12 "70-74 years" 13 "75-79 years" 
+                       14 "80+ years" 97 "Not applicable" 99 "Not stated" ;
+label define dvchild   0 "No children" 1 "1 child" 2 "2 children" 
+                       3 "3 children" 4 "4 children" 5 "5+ children" ;
+label define dvchdag   0 "Not applicable" 1 "None<19" 2 "All<5" 3 "4<all<13" 
+                       4 "12<all<19" 5 "Some<5" 6 "Other" 9 "Not stated" ;
+
+
+#delimit cr
+
+*******************************************************************
+infile using X
+* Replace 'X' with the name of the dictionary file. 
+*
+* The contents of the dictionary are given at the end of this file.
+* Put the dictionary into a separate file (by editing this file).
+* Then specify here the name of the dictionary file.
+*******************************************************************
+* The md, min and max specifications were translated 
+* into the following "REPLACE...IF" statements:
+
+replace dvindb = . if (dvindb == 9)
+replace dvindc = . if (dvindc == 9)
+replace dvindd = . if (dvindd == 9)
+replace dvinhkl = . if (dvinhkl == 9)
+replace a3 = . if (a3 == 99)
+replace a4 = . if (a4 == 0 | a4 == 9)
+replace a5aa7a = . if (a5aa7a == 0 | a5aa7a == 9)
+replace a5ba7b = . if (a5ba7b == 0 | a5ba7b == 9)
+replace a5ca7c = . if (a5ca7c == 0 | a5ca7c == 9)
+replace a5da7d = . if (a5da7d == 0 | a5da7d == 9)
+replace a6a8 = . if (a6a8 == 0 | a6a8 == 9)
+replace a9 = . if (a9 == 0 | a9 == 9)
+replace a10 = . if (a10 == 0 | a10 == 9)
+replace a11 = . if (a11 >= 97 & a11 <= 99)
+replace a12 = . if (a12 == 0 | a12 == 9)
+replace a13 = . if (a13 == 0 | a13 == 9)
+replace a14 = . if (a14 == 0 | a14 == 9)
+replace a16 = . if (a16 == 0 | a16 == 9)
+replace a17 = . if (a17 == 0 | a17 == 9)
+replace b2 = . if (b2 == 0 | b2 == 9)
+replace b4 = . if (b4 == 0 | b4 == 9)
+replace b5 = . if (b5 == 0 | b5 == 9)
+replace b6 = . if (b6 == 0 | b6 == 9)
+replace dvb7 = . if (dvb7 == 0 | dvb7 == 9999)
+replace b8 = . if (b8 == 0 | b8 == 4 | b8 == 9)
+replace dveducm = . if (dveducm == 99)
+replace dveda15 = . if (dveda15 == 97 | dveda15 == 99)
+replace dvedb3 = . if (dvedb3 == 97 | dvedb3 == 99)
+replace dvede5 = . if (dvede5 == 97 | dvede5 == 99)
+replace dvc1 = . if (dvc1 == 0 | dvc1 == 9999)
+replace c2 = . if (c2 == 0 | c2 == 9)
+replace c3 = . if (c3 == 0 | c3 == 9)
+replace c4 = . if (c4 == 0 | c4 == 9)
+replace dvc5 = . if (dvc5 == 0 | dvc5 == 9999)
+replace c11 = . if (c11 == 0 | c11 == 9)
+replace c12 = . if (c12 == 0 | c12 == 9)
+replace dvsicc9 = . if (dvsicc9 == 0 | dvsicc9 == 99)
+replace dvsicd11 = . if (dvsicd11 == 0 | dvsicd11 == 99)
+replace dvsicg15 = . if (dvsicg15 == 0 | dvsicg15 == 99)
+replace dvsick4 = . if (dvsick4 == 0 | dvsick4 == 99)
+replace dvsic84 = . if (dvsic84 == 0 | dvsic84 == 99)
+replace dvsic89 = . if (dvsic89 == 0 | dvsic89 == 99)
+replace dvc10soc = . if (dvc10soc == 97 | dvc10soc == 99)
+replace dvd12soc = . if (dvd12soc == 97 | dvd12soc == 99)
+replace dvg16soc = . if (dvg16soc == 97 | dvg16soc == 99)
+replace dvk5soc = . if (dvk5soc == 97 | dvk5soc == 99)
+replace dvl14soc = . if (dvl14soc == 97 | dvl14soc == 99)
+replace dv84soc = . if (dv84soc == 97 | dv84soc == 99)
+replace dv89soc = . if (dv89soc == 97 | dv89soc == 99)
+replace class = . if (class == 97 | class == 99)
+replace nusco = . if (nusco == 97 | nusco == 99)
+replace dvd2 = . if (dvd2 == 0 | dvd2 == 9999)
+replace d3 = . if (d3 == 0 | d3 == 9)
+replace d4 = . if (d4 == 0 | d4 == 9)
+replace d5 = . if (d5 == 0 | d5 == 9)
+replace d6 = . if (d6 == 0 | d6 == 9)
+replace d7 = . if (d7 == 0 | d7 == 9996 | d7 == 9999)
+replace e1 = . if (e1 == 3 | e1 == 9)
+replace e2 = . if (e2 == 0 | e2 == 9)
+replace e3 = . if (e3 == 0 | e3 == 7 | e3 == 9)
+replace e7 = . if (e7 == 9)
+replace e8 = . if (e8 == 9)
+replace e9 = . if (e9 == 9)
+replace e10a = . if (e10a == 0 | e10a == 9)
+replace e10b = . if (e10b == 0 | e10b == 9)
+replace e10c = . if (e10c == 0 | e10c == 9)
+replace e10d = . if (e10d == 0 | e10d == 9)
+replace e10e = . if (e10e == 0 | e10e == 9)
+replace e10f = . if (e10f == 0 | e10f == 9)
+replace e10g = . if (e10g == 0 | e10g == 9)
+replace e11 = . if (e11 == 9)
+replace e12 = . if (e12 == 0 | e12 == 9)
+replace dve13 = . if (dve13 == 0 | dve13 == 97 | dve13 == 99)
+replace f1a = . if (f1a == 9)
+replace f1b = . if (f1b == 9)
+replace f1c = . if (f1c == 9)
+replace f1d = . if (f1d == 9)
+replace f2a = . if (f2a == 9)
+replace f2b = . if (f2b == 9)
+replace f2c = . if (f2c == 9)
+replace f2d = . if (f2d == 9)
+replace f3a = . if (f3a == 9)
+replace f3b = . if (f3b == 9)
+replace f4a = . if (f4a == 9)
+replace f4b = . if (f4b == 9)
+replace dvf5a = . if (dvf5a == 9)
+replace dvf5b = . if (dvf5b == 9)
+replace dvf5c = . if (dvf5c == 9)
+replace dvf5d = . if (dvf5d == 9)
+replace f6a = . if (f6a == 9)
+replace f6b = . if (f6b == 9)
+replace f6c = . if (f6c == 9)
+replace f6d = . if (f6d == 9)
+replace f6e = . if (f6e == 9)
+replace f6f = . if (f6f == 9)
+replace f6g = . if (f6g == 9)
+replace g2 = . if (g2 == 9)
+replace g3 = . if (g3 == 0 | g3 == 9)
+replace g4g26 = . if (g4g26 == 0 | g4g26 == 9)
+replace g5g28 = . if (g5g28 == 0 | g5g28 == 9)
+replace g6g30 = . if (g6g30 == 0 | g6g30 == 9)
+replace g8 = . if (g8 == 0 | g8 == 9)
+replace g9 = . if (g9 == 0 | g9 == 97 | g9 == 99)
+replace g10 = . if (g10 == 0 | g10 == 9)
+replace g11 = . if (g11 == 0 | g11 == 9)
+replace dvg11h5 = . if (dvg11h5 == 0 | dvg11h5 == 9)
+replace g12 = . if (g12 == 0 | g12 == 9)
+replace dvg12h6 = . if (dvg12h6 == 0 | dvg12h6 == 9)
+replace dvg13 = . if (dvg13 == 97 | dvg13 == 99)
+replace dvg13h7 = . if (dvg13h7 == 97 | dvg13h7 == 99)
+replace g17 = . if (g17 == 0 | g17 == 9)
+replace g18 = . if (g18 == 0 | g18 == 9)
+replace g21 = . if (g21 == 0 | g21 == 9)
+replace g22ah2a = . if (g22ah2a == 0 | g22ah2a == 97 | g22ah2a == 99)
+replace g22bh2b = . if (g22bh2b == 0 | g22bh2b == 97 | g22bh2b == 99)
+replace g24h4a = . if (g24h4a == 0 | g24h4a == 9)
+replace g24h4b = . if (g24h4b == 0 | g24h4b == 9)
+replace g24h4c = . if (g24h4c == 0 | g24h4c == 9)
+replace g24h4d = . if (g24h4d == 0 | g24h4d == 9)
+replace g24h4e = . if (g24h4e == 0 | g24h4e == 9)
+replace g24h4f = . if (g24h4f == 0 | g24h4f == 9)
+replace g24h4g = . if (g24h4g == 0 | g24h4g == 9)
+replace g27 = . if (g27 == 0 | g27 == 9)
+replace g29 = . if (g29 == 0 | g29 == 9)
+replace g32 = . if (g32 >= 21 & g32 <= 99)
+replace dvg34 = . if (dvg34 == 97 | dvg34 == 99)
+replace dvg35 = . if (dvg35 == 97 | dvg35 == 98 | dvg35 == 99)
+replace j84d88 = . if (j84d88 == 0 | j84d88 == 9)
+replace dvdifjb = . if (dvdifjb == 0 | dvdifjb == 97 | dvdifjb == 99)
+replace dvh11 = . if (dvh11 == 0 | dvh11 == 9)
+replace dvh12 = . if (dvh12 == 0 | dvh12 == 9999)
+replace h13 = . if (h13 == 97 | h13 == 99)
+replace h14 = . if (h14 == 0 | h14 == 9)
+replace h15h21 = . if (h15h21 == 0 | h15h21 == 9)
+replace h17h23 = . if (h17h23 == 0 | h17h23 == 9)
+replace h18h24 = . if (h18h24 == 0 | h18h24 == 9)
+replace h20 = . if (h20 == 0 | h20 == 9)
+replace dvh29a = . if (dvh29a == 0 | dvh29a == 9)
+replace dvh29b = . if (dvh29b == 0 | dvh29b == 9)
+replace dvh29c = . if (dvh29c == 0 | dvh29c == 9)
+replace dvh29d = . if (dvh29d == 0 | dvh29d == 9)
+replace dvh29e = . if (dvh29e == 0 | dvh29e == 9)
+replace dvh29f = . if (dvh29f == 0 | dvh29f == 9)
+replace dvh16h22 = . if (dvh16h22 == 0 | dvh16h22 == 97 | dvh16h22 == 99)
+replace h25 = . if (h25 == 0 | h25 == 9)
+replace h26 = . if (h26 == 0 | h26 == 9)
+replace h27 = . if (h27 == 0 | h27 == 9)
+replace h28 = . if (h28 == 0 | h28 == 9)
+replace dvsupdr = . if (dvsupdr == 97 | dvsupdr == 99)
+replace h30a = . if (h30a == 0 | h30a == 3 | h30a == 9)
+replace h30b = . if (h30b == 0 | h30b == 3 | h30b == 9)
+replace h30c = . if (h30c == 0 | h30c == 3 | h30c == 9)
+replace h31 = . if (h31 == 0 | h31 == 3 | h31 == 9)
+replace dvh32 = . if (dvh32 == 0 | dvh32 == 9)
+replace dvh34 = . if (dvh34 == 0 | dvh34 == 97 | dvh34 == 99)
+replace dvmain7 = . if (dvmain7 == 9)
+replace dvjob7 = . if (dvjob7 == 0 | dvjob7 == 9)
+replace h33 = . if (h33 == 0 | h33 == 9)
+replace h35 = . if (h35 == 0 | h35 == 9)
+replace h36 = . if (h36 == 0 | h36 == 9)
+replace h37 = . if (h37 == 0 | h37 == 9)
+replace h38 = . if (h38 == 0 | h38 == 9)
+replace h39 = . if (h39 == 0 | h39 == 9)
+replace h40 = . if (h40 == 97 | h40 == 98 | h40 == 99)
+replace h41 = . if (h41 == 0 | h41 == 9)
+replace h42 = . if (h42 == 0 | h42 == 9)
+replace h43 = . if (h43 == 0 | h43 == 3 | h43 == 9)
+replace dvk1 = . if (dvk1 == 0 | dvk1 == 9)
+replace dvk2ret = . if (dvk2ret == 0 | dvk2ret == 9)
+replace k6 = . if (k6 == 0 | k6 == 9)
+replace k7 = . if (k7 == 0 | k7 == 9)
+replace k8a = . if (k8a == 0 | k8a == 9)
+replace k8b = . if (k8b == 0 | k8b == 9)
+replace k8c = . if (k8c == 0 | k8c == 9)
+replace k8d = . if (k8d == 0 | k8d == 9)
+replace k9 = . if (k9 == 0 | k9 == 9)
+replace k10 = . if (k10 == 0 | k10 == 3 | k10 == 9)
+replace k11 = . if (k11 == 0 | k11 == 9)
+replace k12 = . if (k12 == 0 | k12 == 9)
+replace k14 = . if (k14 == 0 | k14 == 9)
+replace k18 = . if (k18 == 0 | k18 == 997 | k18 == 999)
+replace agertre = . if (agertre == 11)
+replace agertre = . if (agertre >= 96 & agertre <= 99)
+replace manrtre = . if (manrtre == 9)
+replace dvmage = . if (dvmage == 0 | dvmage == 9)
+replace l1 = . if (l1 == 0 | l1 == 9)
+replace l2 = . if (l2 == 0 | l2 == 9)
+replace dvl4 = . if (dvl4 == 0 | dvl4 == 9)
+replace l5 = . if (l5 == 0 | l5 == 9)
+replace l6a = . if (l6a == 0 | l6a == 9)
+replace l6b = . if (l6b == 0 | l6b == 9)
+replace l6c = . if (l6c == 0 | l6c == 9)
+replace l6d = . if (l6d == 0 | l6d == 3 | l6d == 9)
+replace l6e = . if (l6e == 0 | l6e == 3 | l6e == 9)
+replace l6f = . if (l6f == 0 | l6f == 3 | l6f == 9)
+replace l6g = . if (l6g == 0 | l6g == 3 | l6g == 9)
+replace l6h = . if (l6h == 0 | l6h == 9)
+replace l20 = . if (l20 == 0 | l20 == 9)
+replace l27 = . if (l27 == 0 | l27 == 9)
+replace k33l25 = . if (k33l25 == 0 | k33l25 == 9)
+replace lookjd = . if (lookjd == 0 | lookjd == 9)
+replace monlook = . if (monlook == 0 | monlook == 97 | monlook == 99)
+replace m1a = . if (m1a == 9)
+replace m1b = . if (m1b == 9)
+replace m1c = . if (m1c == 9)
+replace m1d = . if (m1d == 9)
+replace m1e = . if (m1e == 9)
+replace m1f = . if (m1f == 9)
+replace m1g = . if (m1g == 9)
+replace m1h = . if (m1h == 9)
+replace m3 = . if (m3 == 0 | m3 == 97 | m3 == 99)
+replace m4 = . if (m4 == 9)
+replace dvm5 = . if (dvm5 == 0 | dvm5 == 97 | dvm5 == 99)
+replace n2 = . if (n2 == 9)
+replace dvn3a = . if (dvn3a == 9)
+replace dvn3b = . if (dvn3b == 9)
+replace dvn3c = . if (dvn3c == 9)
+replace dvn3d = . if (dvn3d == 9)
+replace dvn3e = . if (dvn3e == 9)
+replace dvn3f = . if (dvn3f == 9)
+replace dvn3g = . if (dvn3g == 9)
+replace dvn3h = . if (dvn3h == 9)
+replace dvn3i = . if (dvn3i == 9)
+replace dvn4 = . if (dvn4 == 9)
+replace p2 = . if (p2 == 9)
+replace p4 = . if (p4 == 9)
+replace p10 = . if (p10 == 9)
+replace p12 = . if (p12 == 0 | p12 == 3 | p12 == 9)
+replace p16eng = . if (p16eng == 9)
+replace p16fre = . if (p16fre == 9)
+replace p16steng = . if (p16steng == 0 | p16steng == 9)
+replace p16stfre = . if (p16stfre == 0 | p16stfre == 9)
+replace dvp16ot = . if (dvp16ot == 9)
+replace dvp16sot = . if (dvp16sot == 0 | dvp16sot == 9)
+replace p17eng = . if (p17eng == 9)
+replace p17fre = . if (p17fre == 9)
+replace dvp17ot = . if (dvp17ot == 9)
+replace dvp18 = . if (dvp18 == 99)
+replace p19 = . if (p19 == 0 | p19 == 9)
+replace p20fre = . if (p20fre == 8 | p20fre == 9)
+replace p20eng = . if (p20eng == 8 | p20eng == 9)
+replace p20iri = . if (p20iri == 8 | p20iri == 9)
+replace p20sco = . if (p20sco == 8 | p20sco == 9)
+replace p20ger = . if (p20ger == 8 | p20ger == 9)
+replace p20ita = . if (p20ita == 8 | p20ita == 9)
+replace p20ukr = . if (p20ukr == 8 | p20ukr == 9)
+replace dvp20oth = . if (dvp20oth == 8 | dvp20oth == 9)
+replace p22 = . if (p22 == 97 | p22 == 99)
+replace p23 = . if (p23 == 0 | p23 == 9)
+replace p24 = . if (p24 == 0 | p24 == 9)
+replace p25 = . if (p25 == 0 | p25 == 97 | p25 == 99)
+replace p26a = . if (p26a == 9)
+replace p26b = . if (p26b == 9)
+replace p26c = . if (p26c == 9)
+replace p26d = . if (p26d == 9)
+replace p27a = . if (p27a == 3 | p27a == 9)
+replace p28a = . if (p28a == 5 | p28a == 99)
+replace p28b = . if (p28b == 97 | p28b == 98 | p28b == 99)
+replace p28c = . if (p28c == 97 | p28c == 98 | p28c == 99)
+replace dvsalp27 = . if (dvsalp27 == 0 | dvsalp27 == 99998 | dvsalp27 == 99999)
+replace act1984 = . if (act1984 == 9)
+replace job1984 = . if (job1984 == 0 | job1984 == 9)
+replace relat84 = . if (relat84 == 0 | relat84 == 9)
+replace jobloss = . if (jobloss == 0 | jobloss == 9)
+replace jblosa = . if (jblosa == 0 | jblosa == 9)
+replace jblosb = . if (jblosb == 0 | jblosb == 9)
+replace jblosc = . if (jblosc == 0 | jblosc == 9)
+replace jblosd = . if (jblosd == 0 | jblosd == 9)
+replace jblose = . if (jblose == 0 | jblose == 9)
+replace jblosf = . if (jblosf == 0 | jblosf == 9)
+replace jblosg = . if (jblosg == 0 | jblosg == 9)
+replace timewrk = . if (timewrk == 0 | timewrk == 97 | timewrk == 99)
+replace lookwrk = . if (lookwrk == 0 | lookwrk == 97 | lookwrk == 99)
+replace dvms = . if (dvms == 9)
+replace dvimmig = . if (dvimmig == 0 | dvimmig == 8 | dvimmig == 9)
+replace dvbornr = . if (dvbornr == 9)
+replace dvagrsp = . if (dvagrsp == 97 | dvagrsp == 99)
+replace dvchdag = . if (dvchdag == 0 | dvchdag == 9)
+
+
+dictionary using Y {
+*****************************************************************
+*  Replace 'Y' with the name of the data file.
+*  The default suffix is '.raw'.
+*
+*  Put this dictionary into a separate file (with the suffix .dct).
+*  (The first line of the dictionary file must contain the
+*  'dictionary' command.)
+*
+*  Then edit the name of that dictionary file into the 'do-file'
+*  portion of the STATA definitions.
+*******************************************************************
+*  Records per case:
+_lines(1)
+
+_line(1)
+
+_column(1)     int   CASEID             %4f    "Case Identification Variable"
+_column(6)     int   dvindb   :dvindb   %1f    "Status of section b"
+_column(8)     int   dvindc   :dvindc   %1f    "Status of section c"
+_column(10)    int   dvindd   :dvindd   %1f    "Status of section d"
+_column(12)    int   dvinhkl  :dvinhkl  %1f    "Status of sections h,k,l"
+_column(14)    int   a3       :a3       %2f    "Years of high school/elementary completed"
+_column(17)    int   a4       :a4       %1f    "Graduated from high school?"
+_column(19)    int   a5aa7a   :a5aa7a   %1f    "High school: mathematics course?"
+_column(21)    int   a5ba7b   :a5ba7b   %1f    "High school: chemistry course?"
+_column(23)    int   a5ca7c   :a5ca7c   %1f    "High school: geography course?"
+_column(25)    int   a5da7d   :a5da7d   %1f    "High school: physics course?"
+_column(27)    int   a6a8     :a6a8     %1f    "Any schooling beyond elementary/high school?"
+_column(29)    int   a9       :a9       %1f    "Presently working on elem/high school graduation?"
+_column(31)    int   a10      :a10      %1f    "Ever taken a university/college course in science?"
+_column(33)    int   a11      :a11      %2f    "Highest level of education"
+_column(36)    int   a12      :a12      %1f    "Working on degree/dipl/cert?"
+_column(38)    int   a13      :a13      %1f    "Still working on degree/dipl/cert?"
+_column(40)    int   a14      :a14      %1f    "Highest degree/dipl/cert completed"
+_column(42)    int   a16      :a16      %1f    "Reason for choosing field of study"
+_column(44)    int   a17      :a17      %1f    "Now working on different degree/dipl/cert?"
+_column(46)    int   b2       :b2       %1f    "Degree/dipl/cert being worked on"
+_column(48)    int   b4       :b4       %1f    "Reason for current field of study"
+_column(50)    int   b5       :b5       %1f    "Took any courses in current program in last year?"
+_column(52)    int   b6       :b6       %1f    "Student status in courses in last year"
+_column(54)    int   dvb7     :dvb7     %4f    "Expected year to complete degree/dipl/cert"
+_column(59)    int   b8       :b8       %1f    "Expected activity after graduation"
+_column(61)    int   dveducm  :dveducm  %2f    "Highest completed level of education"
+_column(64)    int   dveda15  :dveda15  %2f    "Field of study for completed degree/dipl/cert"
+_column(67)    int   dvedb3   :dvedb3   %2f    "Field of study for current degree/dipl/cert"
+_column(70)    int   dvede5   :dvede5   %2f    "Field of study for planned degree/dipl/cert"
+_column(73)    int   dvc1     :dvc1     %4f    "Year studies completed/stopped"
+_column(78)    int   c2       :c2       %1f    "Main activity after studies completed"
+_column(80)    int   c3       :c3       %1f    "Ever employed after studies completed?"
+_column(82)    int   c4       :c4       %1f    "Ever employed since studies completed?"
+_column(84)    int   dvc5     :dvc5     %4f    "Year first employed after completing program"
+_column(89)    int   c11      :c11      %1f    "Status of employment since studies completed"
+_column(91)    int   c12      :c12      %1f    "Relationship of employment to education"
+_column(93)    int   dvsicc9  :dvsicc9  %2f    "Industry of work after leaving school"
+_column(96)    int   dvsicd11 :dvsicd11 %2f    "Industry of work before studies"
+_column(99)    int   dvsicg15 :dvsicg15 %2f    "Industry of work in 1988"
+_column(102)   int   dvsick4  :dvsick4  %2f    "Retired: industry of work at retirement"
+_column(105)   int   dvsic84  :dvsic84  %2f    "Industry of work in 1984"
+_column(108)   int   dvsic89  :dvsic89  %2f    "Industry of work in last week"
+_column(111)   int   dvc10soc :dvc10soc %2f    "Occupation of work after leaving school"
+_column(114)   int   dvd12soc :dvd12soc %2f    "Occupation of work before studies"
+_column(117)   int   dvg16soc :dvg16soc %2f    "Occupation of work in 1988"
+_column(120)   int   dvk5soc  :dvk5soc  %2f    "Retired: occupation of work at retirement"
+_column(123)   int   dvl14soc :dvl14soc %2f    "Usual occupation"
+_column(126)   int   dv84soc  :dv84soc  %2f    "Occupation of work in 1984"
+_column(129)   int   dv89soc  :dv89soc  %2f    "Occupation of work in last week"
+_column(132)   int   class    :class    %2f    "Glc class of occupation in last week"
+_column(135)   int   nusco    :nusco    %2f    "Collapsed glc score"
+_column(138)   int   dvd2     :dvd2     %4f    "Year studies started"
+_column(143)   int   d3       :d3       %1f    "Aged < 15 before starting studies?"
+_column(145)   int   d4       :d4       %1f    "Main activity before starting studies"
+_column(147)   int   d5       :d5       %1f    "Ever employed ft for 6+ months before studies?"
+_column(149)   int   d6       :d6       %1f    "Duration of ft work before starting studies"
+_column(151)   int   d7       :d7       %4f    "Year employed ft for 6+ months before studies"
+_column(156)   int   e1       :e1       %1f    "Plan to start new program within 5 years?"
+_column(158)   int   e2       :e2       %1f    "Reason for planning new program"
+_column(160)   int   e3       :e3       %1f    "New degree/dipl/cert desired"
+_column(162)   int   e7       :e7       %1f    "Ever completed an apprenticeship program?"
+_column(164)   int   e8       :e8       %1f    "Ever taken computer courses?"
+_column(166)   int   e9       :e9       %1f    "Can do anything on a computer?"
+_column(168)   int   e10a     :e10a     %1f    "Played computer games in last year?"
+_column(170)   int   e10b     :e10b     %1f    "Did computer word processing in last year?"
+_column(172)   int   e10c     :e10c     %1f    "Did computer data entry in last year?"
+_column(174)   int   e10d     :e10d     %1f    "Did computer record keeping in last year?"
+_column(176)   int   e10e     :e10e     %1f    "Did computer data analysis in last year?"
+_column(178)   int   e10f     :e10f     %1f    "Written computer programs in last year?"
+_column(180)   int   e10g     :e10g     %1f    "Did anything else on computer in last year?"
+_column(182)   int   e11      :e11      %1f    "Personal computer at home?"
+_column(184)   int   e12      :e12      %1f    "Personally use personal computer at home?"
+_column(186)   int   dve13    :dve13    %2f    "Hours per week used"
+_column(189)   int   f1a      :f1a      %1f    "Interest in current affairs"
+_column(191)   int   f1b      :f1b      %1f    "Interest in economic conditions/business issues"
+_column(193)   int   f1c      :f1c      %1f    "Interest in new inventions/technologies"
+_column(195)   int   f1d      :f1d      %1f    "Interest in recent scientific discoveries"
+_column(197)   int   f2a      :f2a      %1f    "Informed about current affairs"
+_column(199)   int   f2b      :f2b      %1f    "Informed about economic conditions/business issues"
+_column(201)   int   f2c      :f2c      %1f    "Informed about new inventions/technologies"
+_column(203)   int   f2d      :f2d      %1f    "Informed about recent scientific discoveries"
+_column(205)   int   f3a      :f3a      %1f    "Attention paid to science/tech tv programs"
+_column(207)   int   f3b      :f3b      %1f    "Attention paid to science/tech radio programs"
+_column(209)   int   f4a      :f4a      %1f    "Read science/tech newspaper articles"
+_column(211)   int   f4b      :f4b      %1f    "Read science/tech magazine articles"
+_column(213)   int   dvf5a    :dvf5a    %1f    "Opinion: science/tech making our lives better"
+_column(215)   int   dvf5b    :dvf5b    %1f    "Opinion: science/tech making work more interesting"
+_column(217)   int   dvf5c    :dvf5c    %1f    "Opinion: computers/automation a net job creator"
+_column(219)   int   dvf5d    :dvf5d    %1f    "Opinion: science changes life too fast"
+_column(221)   int   f6a      :f6a      %1f    "Opinion on govt expenses: health care"
+_column(223)   int   f6b      :f6b      %1f    "Opinion on govt expenses: helping elderly"
+_column(225)   int   f6c      :f6c      %1f    "Opinion on govt expenses: education"
+_column(227)   int   f6d      :f6d      %1f    "Opinion on govt expenses: helping unemployed"
+_column(229)   int   f6e      :f6e      %1f    "Opinion on govt expenses: scientific research"
+_column(231)   int   f6f      :f6f      %1f    "Opinion on govt expenses: helping poor"
+_column(233)   int   f6g      :f6g      %1f    "Opinion on govt expenses: reducing pollution"
+_column(235)   int   g2       :g2       %1f    "Main activity in 1988"
+_column(237)   int   g3       :g3       %1f    "Ever employed in 1988?"
+_column(239)   int   g4g26    :g4g26    %1f    "Any employment last week?"
+_column(241)   int   g5g28    :g5g28    %1f    "Look for work in last 4 weeks?"
+_column(243)   int   g6g30    :g6g30    %1f    "Main activity last week"
+_column(245)   int   g8       :g8       %1f    "Ever employed?"
+_column(247)   int   g9       :g9       %2f    "Weeks worked in 1988"
+_column(250)   int   g10      :g10      %1f    "Worked mostly ft or pt in 1988"
+_column(252)   int   g11      :g11      %1f    "Employment status in 1988"
+_column(254)   int   dvg11h5  :dvg11h5  %1f    "Work status in last week"
+_column(256)   int   g12      :g12      %1f    "Any paid employees in 1988?"
+_column(258)   int   dvg12h6  :dvg12h6  %1f    "Any paid employees last week?"
+_column(260)   int   dvg13    :dvg13    %2f    "Number of paid employees in 1988"
+_column(263)   int   dvg13h7  :dvg13h7  %2f    "Number of paid employees last week"
+_column(266)   int   g17      :g17      %1f    "Same employer last week?"
+_column(268)   int   g18      :g18      %1f    "Same kind of work last week?"
+_column(270)   int   g21      :g21      %1f    "Main job last week?"
+_column(272)   int   g22ah2a  :g22ah2a  %2f    "Usual hours/week at main job"
+_column(275)   int   g22bh2b  :g22bh2b  %2f    "Usual hours/week at other jobs"
+_column(278)   int   g24h4a   :g24h4a   %1f    "Reason work <30 hrs/wk: illness/disability?"
+_column(280)   int   g24h4b   :g24h4b   %1f    "Reason work <30 hrs/wk: family responsibility?"
+_column(282)   int   g24h4c   :g24h4c   %1f    "Reason work <30 hrs/wk: go to school?"
+_column(284)   int   g24h4d   :g24h4d   %1f    "Reason work <30 hrs/wk: only pt work available?"
+_column(286)   int   g24h4e   :g24h4e   %1f    "Reason work <30 hrs/wk: not want ft work?"
+_column(288)   int   g24h4f   :g24h4f   %1f    "Reason work <30 hrs/wk: nature of job?"
+_column(290)   int   g24h4g   :g24h4g   %1f    "Reason work <30 hrs/wk: other?"
+_column(292)   int   g27      :g27      %1f    "Have job at which expected to return last week?"
+_column(294)   int   g29      :g29      %1f    "Did not look last week as no j0bs available?"
+_column(296)   int   g32      :g32      %2f    "Reason did not work at job last week"
+_column(299)   int   dvg34    :dvg34    %2f    "Weeks since last worked"
+_column(302)   int   dvg35    :dvg35    %2f    "Weeks to expected return to job"
+_column(305)   int   j84d88   :j84d88   %1f    "Ever employed in 1984-88?"
+_column(307)   int   dvdifjb  :dvdifjb  %2f    "Number of jobs in 1984-88"
+_column(310)   int   dvh11    :dvh11    %1f    "Satisfaction with main job"
+_column(312)   int   dvh12    :dvh12    %4f    "Year started working for business/company"
+_column(317)   int   h13      :h13      %2f    "Usual months/year at main job"
+_column(320)   int   h14      :h14      %1f    "Main job permanent?"
+_column(322)   int   h15h21   :h15h21   %1f    "Directly supervise people?"
+_column(324)   int   h17h23   :h17h23   %1f    "% of time supervising"
+_column(326)   int   h18h24   :h18h24   %1f    "No. Of persons in business/company"
+_column(328)   int   h20      :h20      %1f    "Permanent job preferred?"
+_column(330)   int   dvh29a   :dvh29a   %1f    "Opinion: work surroundings are pleasant"
+_column(332)   int   dvh29b   :dvh29b   %1f    "Opinion: a lot freedom at work"
+_column(334)   int   dvh29c   :dvh29c   %1f    "Opinion: work is repetitive"
+_column(336)   int   dvh29d   :dvh29d   %1f    "Opinion: job requires high level of skill"
+_column(338)   int   dvh29e   :dvh29e   %1f    "Opinion: pay is good"
+_column(340)   int   dvh29f   :dvh29f   %1f    "Opinion: chances for promotion are good"
+_column(342)   int   dvh16h22 :dvh16h22 %2f    "Number of persons directly supervised last week"
+_column(345)   int   h25      :h25      %1f    "Type of work"
+_column(347)   int   h26      :h26      %1f    "Management class"
+_column(349)   int   h27      :h27      %1f    "Participation in planning business activities"
+_column(351)   int   h28      :h28      %1f    "Time spent planning business activities"
+_column(353)   int   dvsupdr  :dvsupdr  %2f    "Type of employment/supervision responsibilities"
+_column(356)   int   h30a     :h30a     %1f    "Employer provides pension plan?"
+_column(358)   int   h30b     :h30b     %1f    "Employer provides medical insurance?"
+_column(360)   int   h30c     :h30c     %1f    "Employer provides dental plan?"
+_column(362)   int   h31      :h31      %1f    "Employer provides paid maternity leave?"
+_column(364)   int   dvh32    :dvh32    %1f    "Number of promotions in last 5 years"
+_column(366)   int   dvh34    :dvh34    %2f    "Hours/week computers normally used at job"
+_column(369)   int   dvmain7  :dvmain7  %1f    "Main activity last week"
+_column(371)   int   dvjob7   :dvjob7   %1f    "Number of jobs in last week"
+_column(373)   int   h33      :h33      %1f    "Computer used in job?"
+_column(375)   int   h35      :h35      %1f    "Impact of computers on job in last 5 years"
+_column(377)   int   h36      :h36      %1f    "Impact of computers on skills reqd in last 5 years"
+_column(379)   int   h37      :h37      %1f    "Impact of computers on job security in last 5 yrs"
+_column(381)   int   h38      :h38      %1f    "Impact of computers on job interest in last 5 yrs"
+_column(383)   int   h39      :h39      %1f    "Relationship of job to education"
+_column(385)   int   h40      :h40      %2f    "Education level normally required for job"
+_column(388)   int   h41      :h41      %1f    "Feel overqualified for job?"
+_column(390)   int   h42      :h42      %1f    "Likely to lose job/be laid off in next year?"
+_column(392)   int   h43      :h43      %1f    "Lose job/be laid off in next yr due to computers?"
+_column(394)   int   dvk1     :dvk1     %1f    "Satisfaction with retirement"
+_column(396)   int   dvk2ret  :dvk2ret  %1f    "Year of retirement"
+_column(398)   int   k6       :k6       %1f    "Retired: relationship of old job to education"
+_column(400)   int   k7       :k7       %1f    "Retired: due to mandatory retirement age?"
+_column(402)   int   k8a      :k8a      %1f    "Retired: due to early retirement incentive?"
+_column(404)   int   k8b      :k8b      %1f    "Retired: due to new technology?"
+_column(406)   int   k8c      :k8c      %1f    "Retired : due to health?"
+_column(408)   int   k8d      :k8d      %1f    "Retired: due to other reason?"
+_column(410)   int   k9       :k9       %1f    "Retired: pension/benefits from former employers?"
+_column(412)   int   k10      :k10      %1f    "Retired: pension/benefits adjusted for cola?"
+_column(414)   int   k11      :k11      %1f    "Retired: life enjoyment vs. Before"
+_column(416)   int   k12      :k12      %1f    "Retired: reason enjoy life more"
+_column(418)   int   k14      :k14      %1f    "Retired: reason enjoy life less"
+_column(420)   int   k18      :k18      %3f    "Retired: days worked in 1988"
+_column(424)   int   agertre  :agertre  %2f    "Age plan to retire"
+_column(427)   int   manrtre  :manrtre  %1f    "Mandatory retirement a good idea?"
+_column(429)   int   dvmage   :dvmage   %1f    "Desired age for mandatory retirement"
+_column(431)   int   l1       :l1       %1f    "Looking for ft or pt job"
+_column(433)   int   l2       :l2       %1f    "Chances of finding j0b in 6 months"
+_column(435)   int   dvl4     :dvl4     %1f    "Satisfaction with keeping house as main activity"
+_column(437)   int   l5       :l5       %1f    "Like to have a paying job now?"
+_column(439)   int   l6a      :l6a      %1f    "No job: because unavailable/hard to find?"
+_column(441)   int   l6b      :l6b      %1f    "No job: because lack skills/qualifications?"
+_column(443)   int   l6c      :l6c      %1f    "No job: because of illness/disability"
+_column(445)   int   l6d      :l6d      %1f    "No job: because no suitable day care?"
+_column(447)   int   l6e      :l6e      %1f    "No job: because prefer to stay with children?"
+_column(449)   int   l6f      :l6f      %1f    "No job: because spouse wants respondent at home?"
+_column(451)   int   l6g      :l6g      %1f    "No job: because of personal responsibilities?"
+_column(453)   int   l6h      :l6h      %1f    "No job: because of other reasons?"
+_column(455)   int   l20      :l20      %1f    "Feel overqualified for most of jobs held?"
+_column(457)   int   l27      :l27      %1f    "Intend to work in future?"
+_column(459)   int   k33l25   :k33l25   %1f    "Look for work when unemployed in 1984-88?"
+_column(461)   int   lookjd   :lookjd   %1f    "Ever look for work in 1984-88?"
+_column(463)   int   monlook  :monlook  %2f    "Months looked for work 1984-88"
+_column(466)   int   m1a      :m1a      %1f    "Involved in charity/service/vol org. In last year?"
+_column(468)   int   m1b      :m1b      %1f    "Involved in nbhood/comm/schl assoc. In last year?"
+_column(470)   int   m1c      :m1c      %1f    "Involved in religious/church group in last year?"
+_column(472)   int   m1d      :m1d      %1f    "Involved in social/ethnic group in last year?"
+_column(474)   int   m1e      :m1e      %1f    "Involved in sports assoc. In last year?"
+_column(476)   int   m1f      :m1f      %1f    "Involved in public interest group in last year?"
+_column(478)   int   m1g      :m1g      %1f    "Involved in work-related org. In last year?"
+_column(480)   int   m1h      :m1h      %1f    "Involved in political org. In last year?"
+_column(482)   int   m3       :m3       %2f    "Average hours/month involved in organizations?"
+_column(485)   int   m4       :m4       %1f    "Member of a labour union?"
+_column(487)   int   dvm5     :dvm5     %2f    "Average hours/month on union activities"
+_column(490)   int   n2       :n2       %1f    "Personal happiness"
+_column(492)   int   dvn3a    :dvn3a    %1f    "Satisfaction with health"
+_column(494)   int   dvn3b    :dvn3b    %1f    "Satisfaction with education"
+_column(496)   int   dvn3c    :dvn3c    %1f    "Satisfaction with job or main activity"
+_column(498)   int   dvn3d    :dvn3d    %1f    "Satisfaction with other time spent"
+_column(500)   int   dvn3e    :dvn3e    %1f    "Satisfaction with finances"
+_column(502)   int   dvn3f    :dvn3f    %1f    "Satisfaction with housing"
+_column(504)   int   dvn3g    :dvn3g    %1f    "Satisfaction with spouse/single status"
+_column(506)   int   dvn3h    :dvn3h    %1f    "Satisfaction with friends/family members"
+_column(508)   int   dvn3i    :dvn3i    %1f    "Satisfaction with self"
+_column(510)   int   dvn4     :dvn4     %1f    "Satisfaction with life"
+_column(512)   int   p2       :p2       %1f    "Dwelling"
+_column(514)   int   p4       :p4       %1f    "Tenure of dwelling"
+_column(516)   int   p10      :p10      %1f    "Limited from long-term condition/health problem?"
+_column(518)   int   p12      :p12      %1f    "Can not work due to health condition/problem?"
+_column(520)   int   p16eng   :p16eng   %1f    "Mother tongue: english?"
+_column(522)   int   p16fre   :p16fre   %1f    "Mother tongue: french?"
+_column(524)   int   p16steng :p16steng %1f    "Still understand mother tongue: english?"
+_column(526)   int   p16stfre :p16stfre %1f    "Still understand mother tongue: french?"
+_column(528)   int   dvp16ot  :dvp16ot  %1f    "Mother tongue: other?"
+_column(530)   int   dvp16sot :dvp16sot %1f    "Still understand mother tongue: other?"
+_column(532)   int   p17eng   :p17eng   %1f    "Home language: english?"
+_column(534)   int   p17fre   :p17fre   %1f    "Home language: french?"
+_column(536)   int   dvp17ot  :dvp17ot  %1f    "Home language: other?"
+_column(538)   int   dvp18    :dvp18    %2f    "Religion"
+_column(541)   int   p19      :p19      %1f    "Attendance at religious services in last year"
+_column(543)   int   p20fre   :p20fre   %1f    "Ethnic/cultural group: french?"
+_column(545)   int   p20eng   :p20eng   %1f    "Ethnic/cultural group: english?"
+_column(547)   int   p20iri   :p20iri   %1f    "Ethnic/cultural group: irish?"
+_column(549)   int   p20sco   :p20sco   %1f    "Ethnic/cultural group: scottish?"
+_column(551)   int   p20ger   :p20ger   %1f    "Ethnic/cultural group: german?"
+_column(553)   int   p20ita   :p20ita   %1f    "Ethnic/cultural group: italian?"
+_column(555)   int   p20ukr   :p20ukr   %1f    "Ethnic/cultural group: ukrainian?"
+_column(557)   int   dvp20oth :dvp20oth %1f    "Ethnic/cultural group: other?"
+_column(559)   int   p22      :p22      %2f    "Spouse: highest level of education"
+_column(562)   int   p23      :p23      %1f    "Spouse: main activity in 1988"
+_column(564)   int   p24      :p24      %1f    "Spouse: ever employed in 1988?"
+_column(566)   int   p25      :p25      %2f    "Spouse: weeks worked in 1988"
+_column(569)   int   p26a     :p26a     %1f    "Wages/salary//self-employment income in 1988?"
+_column(571)   int   p26b     :p26b     %1f    "Government transfers in 1988?"
+_column(573)   int   p26c     :p26c     %1f    "Investment/pension income in 1988?"
+_column(575)   int   p26d     :p26d     %1f    "Other income in 1988?"
+_column(577)   int   p27a     :p27a     %1f    "Any income in 1988?"
+_column(579)   int   p28a     :p28a     %2f    "Household income in 1988 - 1"
+_column(582)   int   p28b     :p28b     %2f    "Household income in 1988 - 2"
+_column(585)   int   p28c     :p28c     %2f    "Household income in 1988 - 3"
+_column(588)   long  dvsalp27 :dvsalp27 %5f    "Total income in 1988"
+_column(594)   double weigt              %10.4f "Weight"
+_column(605)   int   act1984  :act1984  %1f    "Main activity in 1984"
+_column(607)   int   job1984  :job1984  %1f    "Ever employed in 1984?"
+_column(609)   int   relat84  :relat84  %1f    "Relationship of employment to education in 1984"
+_column(611)   int   jobloss  :jobloss  %1f    "Lose a job in 1984-88?"
+_column(613)   int   jblosa   :jblosa   %1f    "Reason job lost 1984-88: employer out of business?"
+_column(615)   int   jblosb   :jblosb   %1f    "Reason job lost 1984-88: plant closing/moving?"
+_column(617)   int   jblosc   :jblosc   %1f    "Reason job lost 1984-88: new technology?"
+_column(619)   int   jblosd   :jblosd   %1f    "Reason job lost 1984-88: staff reduction?"
+_column(621)   int   jblose   :jblose   %1f    "Reason job lost 1984-88: seasonal job?"
+_column(623)   int   jblosf   :jblosf   %1f    "Reason job lost 1984-88: work shortage?"
+_column(625)   int   jblosg   :jblosg   %1f    "Reason job lost 1984-88: other?"
+_column(627)   int   timewrk  :timewrk  %2f    "Months worked 1984-88"
+_column(630)   int   lookwrk  :lookwrk  %2f    "Months looked for work 1984-88"
+_column(633)   int   prov     :prov     %1f    "Province"
+_column(635)   int   dvms     :dvms     %1f    "Marital status"
+_column(637)   int   dvsex    :dvsex    %1f    "Sex"
+_column(639)   int   dvagegr  :dvagegr  %2f    "Age group"
+_column(642)   int   dvimmig  :dvimmig  %1f    "Year of immigration"
+_column(644)   int   dvbornr  :dvbornr  %1f    "Birthplace information"
+_column(646)   int   dvlvgar1 :dvlvgar1 %2f    "Living arrangements"
+_column(649)   int   dvhhldsz :dvhhldsz %1f    "Household size"
+_column(651)   int   dvagrsp  :dvagrsp  %2f    "Spouse: age group"
+_column(654)   int   dvchild  :dvchild  %1f    "Number of children at home"
+_column(656)   int   dvchdag  :dvchdag  %1f    "Age group of children at home"
+}

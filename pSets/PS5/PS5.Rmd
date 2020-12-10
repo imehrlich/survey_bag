@@ -1,0 +1,30 @@
+---
+title: "Academic Equals Reliable Source of Mental Health Support"
+author: "Isaac Ehrlich"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+abstract: "Students and academic professionals alike are experiencing increased instances of poor mental health (Morrish 2019). A survey conducted and published by eLife, a biomedical and life science journal, aimed to investigate the means by which students and academics seek assistance. The answers to this survey indicate that regardless of the support systems universities and administrations may or may not have in place, students and academics consistently both seek and provide support to their peers (Loissel 2020). Our investigation into these results further uncovers reliable pathways academics have found for mental health support: namely those from confident peers who have also experienced trouble with mental health. \\par\\textbf{Keywords:} Mental Health, Regression, Support Systems, Academia"
+output: pdf_document
+toc: FALSE
+bibliography: references.bib
+nocite: | 
+  @R2020, @morrish2019
+---
+
+# Introduction
+Recently, the prevalence of mental health problems has been steadily increasing among post-secondary students and academics - with work and organizational context identified as a key predictor of mental health [@levecque2017]. In the absence of comprehensive support from their respective institutions, the support academics are able to find from their peers are a vital component of this context. As such, eLife, a biomedical and life science journal, surveyed students and academics to elucidate the specific ways in which they have provided assistance to colleagues and peers struggling with mental health [@loissel2020]. The survey explored questions including the mental health history of the providers, available institutional resources, information on the help given, and an evaluation of the relevant mental health issues.
+
+The analysis published by eLife on their own survey focuses on the experience of those who provide support, such as their emotional state during the time of assistance and the support they themselves received from their administration [@loissel2020]. While this provides invaluable insight on how institutions can better supplement these support systems, it does not necessarily explore or inform how those struggling with mental health problems can best take advantage of their peers' assistance. In the following sections, applying regression analyses to the data, we uncover factors predictive of reliable pathways towards effective support. The results of this analysis therefore have greater potential to suggest immediate direction for those seeking support with mental health issues.
+
+# Data
+
+# Model
+
+# Results
+
+# Discussion
+
+# Limitations
+
+# Appendix
+
+# References

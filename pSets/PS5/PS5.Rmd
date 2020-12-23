@@ -2,29 +2,217 @@
 title: "Academic Equals Reliable Source of Mental Health Support"
 author: "Isaac Ehrlich"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "Students and academic professionals alike are experiencing increased instances of poor mental health (Morrish 2019). A survey conducted and published by eLife, a biomedical and life science journal, aimed to investigate the means by which students and academics seek assistance. The answers to this survey indicate that regardless of the support systems universities and administrations may or may not have in place, students and academics consistently both seek and provide support to their peers (Loissel 2020). Our investigation into these results further uncovers reliable pathways academics have found for mental health support: namely those from confident peers who have also experienced trouble with mental health. \\par\\textbf{Keywords:} Mental Health, Regression, Support Systems, Academia"
+abstract: "Students and academic professionals alike are experiencing increased instances of poor mental health (Morrish 2019). A survey conducted and published by eLife, a biomedical and life science journal, aimed to investigate the means by which students and academics seek assistance. The answers to this survey indicate that regardless of the support systems universities and administrations may or may not have in place, students and academics consistently both seek and provide support to their peers (Loissel 2020). Our investigation into these results further uncovers reliable pathways academics have used for mental health support: namely those from confident peers who have also experienced trouble with mental health. \\par\\textbf{Keywords:} Mental Health, Regression, Support Systems, Academia"
 output: pdf_document
 toc: FALSE
 bibliography: references.bib
 nocite: | 
-  @R2020, @morrish2019
+  @R2020, @Wickham2019, @kable2020, @grid2017
 ---
 
 # Introduction
 Recently, the prevalence of mental health problems has been steadily increasing among post-secondary students and academics - with work and organizational context identified as a key predictor of mental health [@levecque2017]. In the absence of comprehensive support from their respective institutions, the support academics are able to find from their peers are a vital component of this context. As such, eLife, a biomedical and life science journal, surveyed students and academics to elucidate the specific ways in which they have provided assistance to colleagues and peers struggling with mental health [@loissel2020]. The survey explored questions including the mental health history of the providers, available institutional resources, information on the help given, and an evaluation of the relevant mental health issues.
 
-The analysis published by eLife on their own survey focuses on the experience of those who provide support, such as their emotional state during the time of assistance and the support they themselves received from their administration [@loissel2020]. While this provides invaluable insight on how institutions can better supplement these support systems, it does not necessarily explore or inform how those struggling with mental health problems can best take advantage of their peers' assistance. In the following sections, applying regression analyses to the data, we uncover factors predictive of reliable pathways towards effective support. The results of this analysis therefore have greater potential to suggest immediate direction for those seeking support with mental health issues.
+The analysis published by eLife on their own survey focuses on the experience of those who provide support, such as their emotional state during the time of assistance and the support they themselves received from their administration [@loissel2020]. While this provides invaluable insight on how institutions can better supplement these support systems, it does not necessarily explore or inform how those struggling with mental health problems can best take advantage of their peers' assistance. In the following sections, applying a logistic regression analyses to the data provided by eLife, we uncover that career stage is a powereful factor in the prediction of reliable pathways towards effective support. The results of this analysis therefore have greater potential to suggest immediate direction for those seeking support with mental health issues.
+
+In the following sections, we discuss the eLife survey data used in analysis, the predictors and from of the proposed logistic regression model, as well as the results and implications of our findings which suggest that academics struggling with mental health issues can reasonably expect support from their peers. We also discuss the limitations of the our findings and potential investigations to address the shortcomings. Finally, detailed code and analysis of this model can be found at [https://github.com/imehrlich/STA304/tree/master/pSets/PS5](https://github.com/imehrlich/STA304/tree/master/pSets/PS5)
 
 # Data
+```{r, include = FALSE, warning = FALSE}
+# load library and data", uncomment if package install is required
+#install.packages("tidyverse")
+#install.packages("gridExtra")
+#install.packages("kableExtra")
+
+library(tidyverse)
+library(gridExtra)
+library(kableExtra)
+
+mh_data <- read.csv("data/data_clean.csv")
+```
+
+## Data Provided by eLife
+Data for this model is obtained from the results of a survey made through the collaboration of eLife and the University of Cambridge. The online survey platform Survey Monkey was used to create the survey, which consisted of a mixture of 54 forced choice and open response questions, and was available to take from 23rd October 2019 to 5th January 2020 [@report2020]. 
+
+As the focus of this survey was to gather information on the experiences of those who support researchers struggling with mental health, the population of this survey were all people involved in university or academic life who had either helped or had been approached to help with regard to issues of mental health. Rather than surveying members of the University of Cambridge, in the interest of obtaining a diverse sample, the survey was advertised through eLife's newsletters and social media channels. Respondents were also recruited by reaching out to relevant professional groups such as academic slack channels and graduate student unions in the US and the UK [@report2020]. With over 65% of responses coming from eLife's newsletter and social media accounts, the email addresses and social media accounts that eLife had previously collected proved to be the most effective frame for the survey.
+
+While the survey contained 54 questions, there were no questions that the respondents were required to answer. Additionally, all forced choice answers included either a "Prefer Not to Say" or "Other" option. However, the answers provided were not recorded if the respondents did not finish the survey, as this was taken as a withdrawal of consent. After removing participants who withdrew from the survey (477), as well as participants who misinterpreted questions by improperly answering or contradicting themselves in open response questions (56), eLife published 1,889 of the original 2,422 responses.
+
+Collecting this data through social media and newsletters can create potential for great scope and diversity in collected responses. However, since the majority of responses came from past readers of eLife, there are likely trends in readership demographics that were amplified by this method of survey recruitment. The presence of this response bias is difficult to establish in this survey as eLife did not publish demographic data as part of the responses. Consequently, in order to make any broad conclusion from this data, we would be forced to continue under the assumption that respondents to this survey are representative of the broader population.
+
+## Reclassification and Descriptives
+Data was generally provided at a higher degree of specificity than necessary for the purposes of this regression analysis. To avoid unecessary complexity in the analysis, certain data was reclassified. For example, in the survey, most binary questions allowed for multiple "Yes" or "No" answers based on reasoning. In this reclassification, regardless of the "Yes" or "No" reasoning provided, the responses were truncated to interpret the data as binary. 
+
+Additionally, while separating students into level of study and separating staff into groups by position would be useful as these groups likely exhibit differences in behavior, there were few responses in some of these groups. As a result, in this analysis, all students (Undergraduate, Masters, and PhD) were reclassified as Students, and all staff and faculty were classified as Staff. Figure 1 shows the uneven distribution of responses by career stage in the raw data.
+```{r, echo = FALSE, fig.width = 8, fig.align = "center"}
+# Graph of Respondent Career Stage
+
+fig1 <- ggplot(mh_data, aes(x = Supporter_CareerStage_Simple, fill = Supporter_CareerStage_Split)) + 
+  geom_bar(na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 1: Career Stage of Respondents", x = "Career Stage",
+       y = "Number of Respondents") +
+  scale_x_discrete(limits = c("Academic Staff", "Non-Academic Staff",
+                              "Undergraduate", "Masters Student",
+                              "PhD Student", "Other")) +
+  scale_fill_discrete(name = "Academic Group:", labels = c("Staff", "Students", "Other")) + 
+  theme(legend.position = "top")
+fig1
+```
+Since the career stage of both the respondents to the survey as well as the recipients of their support is critical to this analysis, the respondents were classified as either Students or Staff in order to obtain substantial observations in each group. Recipient career stage was then reclassified to match the system of respondent classification. Figures 2 and 3 show the Staff and Student distributions after classifying both respondent and recipient career stage.
+
+```{r, echo = FALSE, fig.height = 4}
+# Graph of Respondent Career Stage
+
+fig2 <- ggplot(mh_data, aes(x = Supporter_CareerStage_Split, fill = Supporter_CareerStage_Split)) + 
+  geom_bar(na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 2: Career Stage of Respondents", x = "Career Stage",
+       y = "Number of Respondents") +
+  scale_fill_discrete(name = "Academic Group:", labels = c("Staff", "Students", "Other")) + 
+  scale_x_discrete(limits = c("Staff", "Student")) +
+  theme(legend.position = "top", legend.text=element_text(size=6), legend.title=element_text(size=8),
+        plot.title = element_text(size = 10))
+
+# Graph of Recipient Career Stage
+
+fig3 <- ggplot(mh_data, aes(x = Receiver_CareerStage, fill = Receiver_CareerStage)) + 
+  geom_bar(na.rm=TRUE) + theme_minimal() +
+  labs(title = "Figure 3: Career Stage of Recipients", x = "Career Stage",
+       y = "Number of Respondents") +
+  scale_fill_discrete(name = "Academic Group:", labels = c("Staff", "Students", "Other")) + 
+  scale_x_discrete(limits = c("Staff", "Student")) +
+  theme(legend.position = "top", legend.text=element_text(size=8), legend.title=element_text(size=8),
+        plot.title = element_text(size = 10))
+
+# Format Graphs
+grid.arrange(fig2, fig3, ncol=2)
+```
+\newpage
+Figures 2 and 3 show that more staff responded to the survey, but students were more likely to be indicated as recipients of support.
+
+An understanding of data concerning recipient is also vital, as we aim to predict based on their features. Respondents were asked to identify specific issues that the person they were supporting was struggling with as part of the data collected on those receiving support. Although the numerous categories provided in the survey make it difficult to use each potential issue as a predictor in a regression model, the number of issues any particular recipient of support is dealing with is another variable of interest, shown in Figure 4.
+```{r, echo = FALSE, fig.align = "center", fig.height = 4.5}
+# Remove responses with 0 mental health issues
+# - these respones contradict previous responses indicating struggle with mental health
+subset <- mh_data %>% filter(Receiver_MH_Answered_Sum > 0)
+
+# Graph of Number of Mental Health Challenges
+fig4 <- ggplot(subset, aes(x=Receiver_MH_Answered_Sum)) + 
+  geom_histogram(bins = 12, fill = "darkorchid4", color = "black") + theme_minimal() +
+  labs(title = "Figure 4: Number of Problems Recipient Struggles With", x = "Number of Mental Health Problems",
+       y = "Number of Respondents") + 
+  scale_x_continuous(breaks = pretty(subset$Receiver_MH_Answered_Sum))
+fig4
+```
+Figure 4 shows that most respondents evaluated that the recipient of support struggles with four or less specific mental health problems, although some respondents indicated as many as 12 potential problems.
+
+Finally, while not necessarily useful for the regression analysis, it is important to establish whether or not academics struggling with mental health can actually reliably expect support from members of the community upon approach. Figure 5 shows the proportion of respondents, by career stage, that indicated whether or not they supported those who asked for assistance.
+
+```{r, echo = FALSE, fig.align = "center", fig.height = 4.5}
+# Graph of Provided Support
+
+fig5 <- ggplot(mh_data, aes(x=Provided_Support, fill = Supporter_CareerStage_Split)) + 
+  geom_bar(na.rm=TRUE, position="stack") + theme_minimal() +
+  labs(title = "Figure 5: Respondent Provided Support", x = "Provided",
+       y = "Number of Respondents") +
+  scale_fill_discrete(name = "Academic Group", labels = c("Staff", "Students", "No Response"))
+fig5
+```
+
+While Figure 5 shows that the academic status of respondents who did not support those struggling is unknown, over 80% of respondents indicated they provided support. Furthermore, it is unclear whether or not those who indicated no support were ever approached for assistance. Overall, Figure 3 shows that most academics provided support when necessary, which agrees with research indicating that academics often turn to peers for support [@levecque2017]. As such, it is reasonable to continue with analysis and attempt to establish pathways of support for academics struggling with mental health.
 
 # Model
+In order to establish "pathways" for mental health support, we will use the a regression model to predict who those struggling with mental health are more likely to receive aid from by career stage. As the career stage of supporters is now split into two categories (Staff and Students), we can apply a logistic regression model, since they are suitable for predicting binary distributions with multiple predictors. We therefore propose the following logistic regression model:
+$$\hat{y}_{Supporter} = \mbox{logit}(\beta_0 + \beta_{RecStage}x_{RecStage} + \beta_{nProb}x_{nProb} )$$
+where $\hat{y}_{Supporter}$ is a binomial variable where $0$ denotes support from Students and $1$ denotes support from Academic Staff. In the model, $x_{RecStage}$ represents the career stage of the person struggling with mental health, and $x_{nProb}$ represents the number of mental health challenges as reported by the respondent. In other words, we are predicting whether students or staff are a more common, and perhaps likely, source of support for academics struggling with mental health, based on the number of challenges and career stage of those seeking aid. This model was run using the R programming language.
+
+Career stage and the number of challenges are used as predictors since it is reasonable to expect that the behavior of a person seeking assistance may vary based on these characteristics. For example, a tenured professor may be unlikely to seek support from an undergraduate student, and those suffering with many severe problems may prefer to seek support from more established figures. Career state is a binomial distribution, where obeservations are either encoded as students or staff, and number of mental health challenges is a numerical variable. 
+
+While there may be other variables predictive of differing behavior among academics, only career stage and the number of problems were included as they encompass all the information collected about recipients of support in this survey. As the survey focused on the experiences of supporters, there is limited information concerning the recipients themselves. However, the limited number of predictors in the model does not necessarily limit its ability to establish relationships between relevant variables.
+
+```{r, echo = FALSE}
+# Fit logistic regression model
+
+support_model <- glm(Supporter_CareerStage_Binary ~ Receiver_CareerStage + Receiver_MH_Answered_Sum,
+                          data = mh_data, family = "binomial")
+```
+
 
 # Results
+Table 1 displayes the results of the logistic regression model.
+```{r, echo = FALSE}
+# Table for Support Model
+table1 <- support_model %>%
+  broom::tidy() %>%
+  mutate(
+    p.value = scales::pvalue(p.value),
+    term = c("Intercept", "Career Stage - Student", "Number of Health Challenges")
+  ) %>%
+  kableExtra::kable(
+    caption = "Model Fitted to Establish Support Pathways",
+    col.names = c("Predictor", "Coefficient", "SE", "t", "p"),
+    digits = c(0, 2, 3, 2, 3)
+  )
+
+# Format Output
+kable_styling(table1, latex_options = "hold_position")
+```
+
+Table 1 shows that both career stage and the number of health challenges are statistically significant predictors of the career stage of the supporter. The results indicate that if the person struggling with mental health issues is a student, the log odds of receiving support from staff as opposed to students decrease by 1.69. This means that students are more likely to receive support from other students as opposed to staff. The results also indicate that for each additional mental health challenge, the log odds of receiving support from staff as opposed to students decrease by 0.18, which means that those struggling with more mental health issues are also more likely to receive support from students.
+
+Table 2 also serves to reinforce the model's interpretation of career stage as a predictor.
+
+```{r, echo = FALSE}
+# Extract data for supporter/recipient matrix by career stage
+subset <- mh_data %>% filter(Supporter_CareerStage_Split == "Student")
+student_support <- table(subset$Receiver_CareerStage)
+
+subset <- mh_data %>% filter(Supporter_CareerStage_Split == "Staff")
+staff_support <- table(subset$Receiver_CareerStage)
+
+support_matrix <- rbind(staff_support, student_support)
+rownames(support_matrix) <- c("Staff Supporter", "Student Supporter")
+
+# Table for Support Matrix
+table2 <- support_matrix %>%
+  kableExtra::kable(
+    col.names = c("Staff Recipient", "Student Recipient"),
+    digits = c(0, 2, 3, 2, 3),
+    caption = "Supporters and Recepients of Support by Career Stage"
+  )
+
+# Format Output
+kable_styling(table2, latex_options = "hold_position")
+```
+
+As Table 2 shows that staff who struggle with mental health rarely acquire support from students, it intuitively supports the expectation that staff are more likely to seek and receive support from staff, while students are more likely to seek and receive support from students.
 
 # Discussion
 
-# Limitations
+## Conclusions
+The biggest direct takeaway from our analysis is that there are substantial intergroup differences in student and staff behavior in respect to struggles with mental health. Figure 3 suggests that students are the recipients of support more often than staff, and Table 2 shows that within-group support, particularly for staff, occurs more frequently. In other words, while staff provide support for both groups, students and staff both seek support primarily from their peers - academics whose career stages are closest to their own.
 
-# Appendix
+Output of the logistic regression model, shown in Table 1, reaffirms this conclusion, finding that the career stage and number of mental health challenges are both reliable predictors of the career stage of the supporter. Ultimately, the output of the model therefore suggests that students are more likely to receive support from other students, particularly if they experience multiple problems.
+
+At a larger scale, the aim of this study is to establish support pathways that people struggling with mental health issues can use as a framework or foundation in search for mental health support. As instances, or at least reported instances, of mental health issues rise, it is important that surveys such as these, which investigate occupation and context-specific mental health support structures are conducted. However, it is equally important to investigate and conduct informative analysis on the responses to these surveys. While eLife approached the surveying and analysing of data from the perspective of the supporter, we attempt to analyse the same data from the perspective of the person seeking support. 
+
+While we are not attempting to make any concrete or definitive assessments of how those seeking mental health support in academia should act, our analysis does provide insight into how academics might approach mental health challenges. The tendency to provide support, as shown in Figure 5, as well as observed provision across career stages is a positive indicator that there may be support systems available to both university staff and students. Based on this analysis, the best suggestion we can make for those looking for assistance (in the absence of institutional or proffesional aid) is to first seek one's academic peers and equals. 
+
+## Weaknesses and Limitations
+While the data and analysis provide a optimistic account of mental health support structures in academia, generalizations made from this data should be wary of survey and model limitations discussed in the following sections.
+
+### Survey Limitations
+In the report published by eLife, @report2020 admit that the method by which responses were collected is pervious to self-selection and sampling biases. Recruitment through eLife social media and newsletters means that the majority of responses are collected from pre-existing members of the eLife community, which is not necessarily representative of the broader academic community - especially considering the life science focus of the journal. Furthermore, the self-reported nature, as well as the framing of survey questions, may have encouraged greater responses from academics who have provided support, and those that attribute considerable value to mental health support systems. @report2020 offer the idea that the responses to this survey provide more of a snapshot than a representative sample of the current state of mental health support in academia. Given the substantial risk of sampling bias, it is important to consider the potential over-reporting of responses indicating comprehensive and effective support systems.
+
+### Model Limitations
+Since the original purpose of this data is to investigate the experiences of supporters rather than recipients of mental health aid, eLife's survey extensively investigates information pertinent to the supporters, but does not greatly explore the experiences and demographics of the recipients. The limited recipient information provided therefore makes it challenging to construct a model based on recipient information. While the model utilizes two significant predictors, there certainly may be more we simply do not have access to. 
+
+Furthermore, all recipient information is provided by the supporters, who do not necessarily have qualifications for the assessment of mental health issues, nor are meeting with academics on a professional basis. This means that responses that attempt to assess the mental health challenges of recipients, including the predictor used in the model, are more speculative than professional interpretations.
+
+Overall, the data and model provide limited evidence that natural within and intergroup support systems exist that can assist those seeking mental health support. However, any extrapolations and generazliations to the greater academic community must be made cautiously, as the sample is not necessarily representative of the population, nor does the data provided a comprehensive account of relevant recipient information.
+
+## Future Directions
+Adoption of survey data - originally intended for supporter experience -for an analysis based on recipient information, has limited potential for powerful and meaningful conclusions. However, the data nevertheless exposed the occurence of consistent informal support systems in academia. Therefore the collection of data, particularly representative data, focused on recipient information and experience may be useful in further establishing behavior of academics struggling with mental health. If a definitve analysis were completed, both institutions and members of the institution could benefit from the discovery of well-defined support pathways.
+
+Furthermore, since insitution-supported aid as well as support structures may be unique for each institution, in order to provide specific and relevant information to students and staff, as well as identify areas for growth and improvement, universities may want to conduct their own specific and unique surveys.
 
 # References

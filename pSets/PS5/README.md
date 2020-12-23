@@ -8,7 +8,7 @@ Data used in this study is from a survey developed through a collaboration by eL
 
 This repo also contains a script, `data_cleaning.R`, that cleans and prepares the data for use in the analysis.
 
-The code for model and report are in the `PS5.Rmd` file.
+The report can be found in the file marks `PS5.pdf`, and the code for the model and to produce the report are in the `PS5.Rmd` file.
 
 
 

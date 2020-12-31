@@ -9,3 +9,5 @@ PS2: Report and analysis of data for PS2 can be found in *~/pSets/PS2/PS2.Rmd*
 PS3: Report and analysis of data for PS3 can be found in *~/pSets/PS3/PS3.Rmd*
 
 PS4: Report and analysis of data for PS4 can be found in *~/pSets/PS4/PS4.Rmd*
+
+PS5: Report and analysis of data for PS5 can be found in *~/pSets/PS5/PS5.Rmd*

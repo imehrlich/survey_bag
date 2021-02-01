@@ -4,7 +4,7 @@ This repository contains code and data for a simple MRP model forecasting the US
 
 Data used in this study from the Democracy Fund and IPUMS is unavailable to be shared publicly. 
 
-Scripts to clean data are located in /scripts. When obtained, input data should be located in /data.
+Scripts to clean data are located in `/scripts`. When obtained, input data should be located in `/data`.
 
 Code for model and report are in the `election_mrp.Rmd` file.
 

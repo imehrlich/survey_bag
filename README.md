@@ -1,13 +1,18 @@
-# STA304
+# Surveys and Regressions
 
-Website for STA304
+Analysis and Regressions run on various survey data sets:
 
-PS1: Report and analysis of data for PS1 can be found in *~/content/post/PS1.Rmd*
+`academia_health` contains a report and analysis of mental health support structures in education
 
-PS2: Report and analysis of data for PS2 can be found in *~/pSets/PS2/PS2.Rmd*
+`election_mrp` contains a simple example of multilevel regression with poststratification (MRP) applied to the 2020 US Presidential Election.
 
-PS3: Report and analysis of data for PS3 can be found in *~/pSets/PS3/PS3.Rmd*
+`tech_perception` contains a report and regression of tech perceptions based on Canada's 1989 General Social Survey
 
-PS4: Report and analysis of data for PS4 can be found in *~/pSets/PS4/PS4.Rmd*
+`toronto_bikes` contains a brief report and analysis of bike lane preferences in a survey by the City of Toronto
 
-PS5: Report and analysis of data for PS5 can be found in *~/pSets/PS5/PS5.Rmd*
+`voting_simulation` contains a hypothetical survey, simulated data set, and written report on voting in an Edmonton riding
+
+
+
+
+

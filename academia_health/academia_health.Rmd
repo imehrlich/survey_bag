@@ -138,7 +138,7 @@ support_model <- glm(Supporter_CareerStage_Binary ~ Receiver_CareerStage + Recei
 
 
 # Results
-Table 1 displayes the results of the logistic regression model.
+Table 1 displays the results of the logistic regression model.
 ```{r, echo = FALSE}
 # Table for Support Model
 table1 <- support_model %>%
@@ -208,10 +208,10 @@ Since the original purpose of this data is to investigate the experiences of sup
 
 Furthermore, all recipient information is provided by the supporters, who do not necessarily have qualifications for the assessment of mental health issues, nor are meeting with academics on a professional basis. This means that responses that attempt to assess the mental health challenges of recipients, including the predictor used in the model, are more speculative than professional interpretations.
 
-Overall, the data and model provide limited evidence that natural within and intergroup support systems exist that can assist those seeking mental health support. However, any extrapolations and generazliations to the greater academic community must be made cautiously, as the sample is not necessarily representative of the population, nor does the data provided a comprehensive account of relevant recipient information.
+Overall, the data and model provide limited evidence that natural within and intergroup support systems exist that can assist those seeking mental health support. However, any extrapolations and generalizations to the greater academic community must be made cautiously, as the sample is not necessarily representative of the population, nor does the data provided a comprehensive account of relevant recipient information.
 
 ## Future Directions
-Adoption of survey data - originally intended for supporter experience - for an analysis based on recipient information, has limited potential for powerful and meaningful conclusions. However, the data nevertheless exposed the occurrence of consistent informal support systems in academia. Therefore the collection of data, particularly representative data, focused on recipient information and experience may be useful in further establishing behavior of academics struggling with mental health. If a definitive analysis were completed, both institutions and members of the institution could benefit from the discovery of well-defined support pathways.
+Adoption of survey data - originally intended for supporter experience - for an analysis based on recipient information, has limited potential for powerful and meaningful conclusions. However, the data nevertheless exposed the occurrence of consistent informal support systems in academia. Therefore, the collection of data, particularly representative data, focused on recipient information and experience may be useful in further establishing behavior of academics struggling with mental health. If a definitive analysis were completed, both institutions and members of the institution could benefit from the discovery of well-defined support pathways.
 
 Furthermore, since institution-supported aid as well as support structures may be unique for each institution, in order to provide specific and relevant information to students and staff, as well as identify areas for growth and improvement, universities may want to conduct their own specific and unique surveys.
 

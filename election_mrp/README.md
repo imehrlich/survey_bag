@@ -1,6 +1,6 @@
 # Overview
 
-This repository contains code and data for a simple MRP model forecasting the US 2020 presidential election.
+This repository contains code and data for an example of a simple MRP model forecasting the US 2020 presidential election.
 
 Data used in this study from the Democracy Fund and IPUMS is unavailable to be shared publicly. 
 
